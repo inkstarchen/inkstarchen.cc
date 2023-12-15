@@ -1,0 +1,12 @@
+site_name: MkLorum
+nav:
+  - Home: index.md
+  - About: about.md
+  - 社会心理学: social.md
+theme: 
+  name: material
+  features:
+    - search.suggest
+plugins:
+  - search
+  
