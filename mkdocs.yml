@@ -1,4 +1,5 @@
 site_name: MkLorum
+site_url: index.md
 nav:
   - Home: index.md
   - About: about.md
