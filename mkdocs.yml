@@ -1,5 +1,6 @@
 site_name: MkLorum
 site_url: index.md
+repo_name: inkstarchen/inkstarchen.cc
 repo_url: https://github.com/inkstarchen/inkstarchen.cc
 edit_uri: tree/main/docs
 nav:
