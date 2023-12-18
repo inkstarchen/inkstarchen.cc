@@ -1,11 +1,28 @@
-site_name: MkLorum
+site_name: 轻墨星的笔记库
 repo_name: inkstarchen/inkstarchen.cc
 repo_url: https://github.com/inkstarchen/inkstarchen.cc
 edit_uri: tree/main/docs
 nav:
-  - Home: index.md
-  - About: about.md
-  - 社会心理学: social.md
+  - 记录: index.md
+  - 随记: 
+      - 生活: life.md
+      - 感想: thinking.md
+      - 教学: teach.md
+      - 心: heart.md
+  - 中文句子: typing chinese.md
+  - 课程笔记:
+      - 微信小程序: classnote-wx.md
+      - 报告写作: classnote-write.md
+      - 中国近现代史纲: history.md
+  - 阅读笔记:
+      - 黑天鹅: dark.md
+      
+      - 散记: sanji.md
+      - 叔本华: shubenhua.md
+      - 原则: principle.md
+      - 社会心理学: social.md
+      - 学习的本质: note-learning.md
+      - 吴军阅读和写作: note-lectures.md
 theme: 
   name: material
   features:
