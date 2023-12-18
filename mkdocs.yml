@@ -11,12 +11,14 @@ nav:
       - 心: heart.md
   - 中文句子: typing chinese.md
   - 课程笔记:
+      - 中国近现代史纲要: china.md
       - 微信小程序: classnote-wx.md
       - 报告写作: classnote-write.md
       - 中国近现代史纲: history.md
+      - 博弈论基础: game-theory.md
+      - 线性代数: maths.md
   - 阅读笔记:
       - 黑天鹅: dark.md
-      
       - 散记: sanji.md
       - 叔本华: shubenhua.md
       - 原则: principle.md
