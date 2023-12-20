@@ -1,9 +1,10 @@
 site_name: 轻墨星的笔记库
 repo_name: inkstarchen/inkstarchen.cc
 repo_url: https://github.com/inkstarchen/inkstarchen.cc
-edit_uri: tree/main/docs
+edit_uri: tree/main/docs/blog
+use_directory_urls: true
 nav:
-  - 记录: index.md
+  - Getting Started: blog/index.md
   - 随记: 
       - 生活: life.md
       - 感想: thinking.md
@@ -29,6 +30,10 @@ theme:
   name: material
   features:
     - search.suggest
+  
 plugins:
   - search
+  - blog:
+      source: blog
+      post_excerpt: optional
   
