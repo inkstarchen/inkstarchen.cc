@@ -390,5 +390,5 @@ POX 认知平衡理论
 当预言落空时
 轻微威胁改变态度，严重威胁改变行为
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTU1NTcyNzRdfQ==
+eyJoaXN0b3J5IjpbMjE3NDc5Njc0LC0xMjk1NTU3Mjc0XX0=
 -->
