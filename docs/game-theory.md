@@ -424,7 +424,10 @@
 **每个人可以有和别人不一样的价值观
 每个组织需要一个相对统一的价值观。**
 
+**充分沟通必能达成共同认知**
+**要想达成共同认知，需要每个人都能畅所欲言。**
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczMDAzMjUwOSwtMjA4Nzc4OTM5OF19
+eyJoaXN0b3J5IjpbLTE0NDQ4NjM2OCwtMjA4Nzc4OTM5OF19
 -->
