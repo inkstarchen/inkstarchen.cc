@@ -140,5 +140,5 @@ when\\where\\who\\what\\how\\why\\which =\> 推论
 -   第一步应该是读教科书，尤其是中美两国普遍采用的教科书。或者正统读物。
 -   第二步时阅读权威的综述文章。**科学领域，看著名的《科学》杂志，医学进展，看美国医学会的《展望》**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0Nzg5NDY4NV19
+eyJoaXN0b3J5IjpbLTcwMDQxMDMwM119
 -->
