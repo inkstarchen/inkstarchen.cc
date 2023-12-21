@@ -280,6 +280,11 @@
 **3、温故知新**
 （1）让历史告诉未来（重复博弈）
 （2）学习《博弈论基础》课程
+
+### 万元陷阱和智猪博弈
+#### 万元陷阱
+
+#### 智猪博弈
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODE1MTg0MDcxLC00NDg4MDk2NzFdfQ==
+eyJoaXN0b3J5IjpbMTQ3MzIyMTEyNCwtNDQ4ODA5NjcxXX0=
 -->
