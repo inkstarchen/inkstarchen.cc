@@ -325,7 +325,11 @@
 \    | 按  |等
 --   |---- |--
 按   | 7-A，3-A|6-A，4
+等   |9 ， 1-A|0，0
 
+#### 若干启发
+个人理性与集体理性相冲突，还是相一致，取决于制度安排（游戏规则）。
+解决个体理性与集体理性之间的冲突不是靠否定个体理性
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTUwNDU3NjYsLTQ0ODgwOTY3MV19
+eyJoaXN0b3J5IjpbNjA5OTU3MDU4LC00NDg4MDk2NzFdfQ==
 -->
