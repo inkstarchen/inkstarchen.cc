@@ -309,10 +309,12 @@
 
 **学会止损，会让你活的更久！**
 **既然事情已经发生，请坦然接受！**
-**
+**更正错误的最好时机，是当你知道了错误的时候**
+**每个人呢都有犯错的时候，请把注意力放在以后如何避免犯同样的错误！**
+
 ***
 #### 智猪博弈
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDQ2Nzg0OTAsLTQ0ODgwOTY3MV19
+eyJoaXN0b3J5IjpbMjQxMDY1ODk5LC00NDg4MDk2NzFdfQ==
 -->
