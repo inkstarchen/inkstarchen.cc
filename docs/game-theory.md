@@ -226,7 +226,9 @@
 **表面上看囚犯对自身利益的追求是导致囚犯困境的原因。然而，真正的原因是：囚犯们在追求自身利益的同时，是以更多地损害他人利益为代价。（君子爱财，取之有道）**
 
 **囚犯困境的根本原因在于：私人成本与社会成本的差异，即个人行为的负外部性。**
+
+**条件：T（temptation）R（revolt）>P（punishment）>S（sucker）每个参与者抵挡不了诱惑T，背叛R了对方，让对方
 ### 真实世界的囚犯困境
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTk0MjkxOTcwLC00NDg4MDk2NzFdfQ==
+eyJoaXN0b3J5IjpbMjU0MTQ0MzAsLTQ0ODgwOTY3MV19
 -->
