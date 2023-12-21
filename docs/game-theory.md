@@ -319,7 +319,13 @@
 按  |5，1 | 4，4
 等  | 9，-1|0，0
 
-**智猪博弈是一个搭便车的博弈一方付出了
+**智猪博弈是一个搭便车的博弈一方付出了相应的代价，双方共享了所得到的收益。**
+
+#### 智猪博弈的扩展
+\    | 按  |等
+--   |---- |--
+按   | 7-A，3-A|6-A，4
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzMjM3MjExLC00NDg4MDk2NzFdfQ==
+eyJoaXN0b3J5IjpbLTE5MTUwNDU3NjYsLTQ0ODgwOTY3MV19
 -->
