@@ -411,6 +411,13 @@
 **执政党（政府）的利益和老百姓的利益相一致，是一个国家政权稳定、长治久安最根本的保障和最坚实的基础。
 
 **共同的价值观（目标）是合作的基石**
+**要事优先**
+>管理者只做最重要的事情，不做第二重要的事情。
+
+**我们为了一些不重要的事情疲于奔命，
+却忘了在真正重要的事情上多下功夫。**
+
+#### 判断一件事的zhong'yao'x
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODc3ODkzOThdfQ==
+eyJoaXN0b3J5IjpbMTI2Njk2NjUxOSwtMjA4Nzc4OTM5OF19
 -->
