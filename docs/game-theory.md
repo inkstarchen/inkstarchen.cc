@@ -410,8 +410,8 @@
 **在博弈中，如果您希望得到对方的信任，关键是让其相信，双方的利益是一致的！**
 **执政党（政府）的利益和老百姓的利益相一致，是一个国家政权稳定、长治久安最根本的保障和最坚实的基础。
 
-**共同的价值观（目标）是合作的
+**共同的价值观（目标）是合作的基石**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTI4MTQ2NTMsMTY2NDg2MTgxMiwyMj
+eyJoaXN0b3J5IjpbLTIwODc3ODkzOTgsMTY2NDg2MTgxMiwyMj
 cxNjg2NTgsLTQ0ODgwOTY3MV19
 -->
