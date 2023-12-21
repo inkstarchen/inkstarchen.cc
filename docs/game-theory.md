@@ -376,7 +376,11 @@
 猎鹿|4，4|0，2
 猎兔|2，0|2，2
 最优结果：在共同知识的前提
+**合作需要沟通与协调，沟通与协调的成本过高，合作很难成功。**
+**人类社会制度和技术的演进方向：不断减低人与人之间的沟通（协调）成本。
+
+#### 合作博弈的核心
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5NzMzNjczMiwxNjY0ODYxODEyLDIyNz
-E2ODY1OCwtNDQ4ODA5NjcxXX0=
+eyJoaXN0b3J5IjpbNTMxNTA3Nzg1LDE2NjQ4NjE4MTIsMjI3MT
+Y4NjU4LC00NDg4MDk2NzFdfQ==
 -->
