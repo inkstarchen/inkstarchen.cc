@@ -342,8 +342,13 @@
 ***
 
 ## 懦夫博弈和夫妻博弈
-
+### 懦夫博弈
+\  | 进    |退
+---|-------|---
+进  |-5，-5 |10，0
+退
+### 夫妻博弈
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQxNDE2NTM1LDIyNzE2ODY1OCwtNDQ4OD
-A5NjcxXX0=
+eyJoaXN0b3J5IjpbMTc0NjA3NTg1NiwyMjcxNjg2NTgsLTQ0OD
+gwOTY3MV19
 -->
