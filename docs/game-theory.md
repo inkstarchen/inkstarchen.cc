@@ -229,8 +229,8 @@
 
 **条件：T（temptation）R（revolt）>P（punishment）>S（sucker）每个参与者抵挡不了诱惑T，背叛R了对方，让对方成为受骗者S。在（R-S）>（T-R）（等同于2R>T+S）的情况下，每个人都收到了惩罚P。**
 
-**损人利己和损己利人**
+**损人利己和损己利人本质上是一样的，是一个硬币的正反两面；从一方来看是损己利人行为，在另一方来看是损人利己的行为，问题的关键是所损失的部分和所利得的部分哪个更多。（盗窃与）**
 ### 真实世界的囚犯困境
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyMjUxMjg5NywtNDQ4ODA5NjcxXX0=
+eyJoaXN0b3J5IjpbMTMwOTQ3MjM3MywtNDQ4ODA5NjcxXX0=
 -->
