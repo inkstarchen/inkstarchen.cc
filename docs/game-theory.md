@@ -356,8 +356,16 @@
 2、和谁比？（对手）
 3、怎么比？（策略）
 
+**游戏规则决定了你的能力发展方向。**
+>如果你有极大的力量，制定游戏规则；
+>如果你有较大的力量，挑选游戏规则；
+>如果你缺乏足够的力量，适应游戏规则！
+
+**公共物品的供给**
+1、囚犯困境
+2、智猪博弈
 ### 夫妻博弈
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjM3MTY2NTQsMjI3MTY4NjU4LC00ND
+eyJoaXN0b3J5IjpbLTE3OTE5OTE4MDEsMjI3MTY4NjU4LC00ND
 g4MDk2NzFdfQ==
 -->
