@@ -379,8 +379,14 @@
 **合作需要沟通与协调，沟通与协调的成本过高，合作很难成功。**
 **人类社会制度和技术的演进方向：不断减低人与人之间的沟通（协调）成本。
 
-#### 合作博弈的核心
+#### 合作博弈的核心问题
+1、合作剩余（新增收益）怎么分配？
+2、合作风险怎么分担？
+
+#### 基本分配方式：
+第一种，A拿剩余、B拿固定，如雇主和雇员之间。
+第二种，A拿固定，B拿剩余，如银行
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTMxNTA3Nzg1LDE2NjQ4NjE4MTIsMjI3MT
-Y4NjU4LC00NDg4MDk2NzFdfQ==
+eyJoaXN0b3J5IjpbMTQ3NDIzNDM4MiwxNjY0ODYxODEyLDIyNz
+E2ODY1OCwtNDQ4ODA5NjcxXX0=
 -->
