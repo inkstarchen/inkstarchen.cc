@@ -370,8 +370,13 @@
 --|-----|--
 球赛|2，1|0，0
 韩剧|-1，-1|1，2
-### 
+### 猎鹿博弈
+\ |猎鹿|猎兔
+--|----|---
+猎鹿|4，4|0，2
+猎兔|2，0|2，2
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2NzkxMzU3NiwyMjcxNjg2NTgsLTQ0OD
+eyJoaXN0b3J5IjpbMTY2NDg2MTgxMiwyMjcxNjg2NTgsLTQ0OD
 gwOTY3MV19
 -->
