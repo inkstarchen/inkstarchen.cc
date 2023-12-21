@@ -209,8 +209,10 @@
 坦白 |a1，b1 | a2，b2
 抗拒 |a3，b3 | a4，b4
 
->1、双方都有
+>1、双方都有占优策略，即：
+>a1>a3，a2>a4，b1>b2，b3>b4
+>在a1>a3，a2>a4的条件下，A选择坦白是占优策略；在被、>
 ### 真实世界的囚犯困境
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyNzIzMzUzNSwtNDQ4ODA5NjcxXX0=
+eyJoaXN0b3J5IjpbLTE1MzY3NjA2MDgsLTQ0ODgwOTY3MV19
 -->
