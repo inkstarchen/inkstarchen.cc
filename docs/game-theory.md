@@ -227,8 +227,10 @@
 
 **囚犯困境的根本原因在于：私人成本与社会成本的差异，即个人行为的负外部性。**
 
-**条件：T（temptation）R（revolt）>P（punishment）>S（sucker）每个参与者抵挡不了诱惑T，背叛R了对方，让对方
+**条件：T（temptation）R（revolt）>P（punishment）>S（sucker）每个参与者抵挡不了诱惑T，背叛R了对方，让对方成为受骗者S。在（R-S）>（T-R）（等同于2R>T+S）的情况下，每个人都收到了惩罚P。**
+
+**损人利己和损己利人**
 ### 真实世界的囚犯困境
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjU0MTQ0MzAsLTQ0ODgwOTY3MV19
+eyJoaXN0b3J5IjpbLTYyMjUxMjg5NywtNDQ4ODA5NjcxXX0=
 -->
