@@ -204,11 +204,13 @@
 抗拒|-5，0| -0.5，-0.5
 **游戏规则决定游戏的结局**
 #### 囚徒困境的定义及原因分析
-\ | 坦白 | 抗拒
---| ------| ---
-坦白 |-3，-3|0，-5
-抗拒|-5，0| -0.5，-0.5
+\   |  坦白  | 抗拒
+----| ------| -------
+坦白 |a1，b1 | a2，b2
+抗拒 |a3，b3 | a4，b4
+
+>1、双方都有
 ### 真实世界的囚犯困境
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzE1MjA2NDAsLTQ0ODgwOTY3MV19
+eyJoaXN0b3J5IjpbMTYyNzIzMzUzNSwtNDQ4ODA5NjcxXX0=
 -->
