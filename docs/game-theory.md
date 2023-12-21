@@ -364,8 +364,14 @@
 **公共物品的供给**
 1、囚犯困境
 2、智猪博弈
+3、懦夫博弈
 ### 夫妻博弈
+\ |球赛|韩剧
+--|-----|--
+球赛|2，1|0，0
+韩剧|-1，-1|1，2
+### 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTE5OTE4MDEsMjI3MTY4NjU4LC00ND
-g4MDk2NzFdfQ==
+eyJoaXN0b3J5IjpbMTU2NzkxMzU3NiwyMjcxNjg2NTgsLTQ0OD
+gwOTY3MV19
 -->
