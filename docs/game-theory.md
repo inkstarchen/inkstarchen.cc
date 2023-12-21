@@ -427,7 +427,8 @@
 **充分沟通必能达成共同认知**
 **要想达成共同认知，需要每个人都能畅所欲言。**
 
-
+![输入图片说明](/imgs/2023-12-21/8oW825rmhOTQChKi.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDQ4NjM2OCwtMjA4Nzc4OTM5OF19
+eyJoaXN0b3J5IjpbMTY1NTU4NTgzLC0xNDQ0ODYzNjgsLTIwOD
+c3ODkzOThdfQ==
 -->
