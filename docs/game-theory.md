@@ -375,8 +375,8 @@
 --|----|---
 猎鹿|4，4|0，2
 猎兔|2，0|2，2
-
+最优结果：在共同知识的前提
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2NDg2MTgxMiwyMjcxNjg2NTgsLTQ0OD
-gwOTY3MV19
+eyJoaXN0b3J5IjpbLTU5NzMzNjczMiwxNjY0ODYxODEyLDIyNz
+E2ODY1OCwtNDQ4ODA5NjcxXX0=
 -->
