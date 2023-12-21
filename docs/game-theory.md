@@ -268,6 +268,10 @@
 1、上帝与魔鬼
 2、如何购车
 
+#### 二、如何破解
+1、道德教化（文化建设）
+社会学基本定理：
+金迪斯：“如果一个社会都是由自利主义者构成的，”
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwNDM0NTk3OCwtNDQ4ODA5NjcxXX0=
+eyJoaXN0b3J5IjpbLTM1ODA1MTA5NCwtNDQ4ODA5NjcxXX0=
 -->
