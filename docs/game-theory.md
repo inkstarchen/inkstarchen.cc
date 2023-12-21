@@ -283,8 +283,14 @@
 
 ### 万元陷阱和智猪博弈
 #### 万元陷阱
+**陷阱特征**
+>1、有一个明显的诱饵
+>2、通往诱饵之路是单向的，可进不可出
+>3、越想挣脱、就越陷越深
 
+**序列竞争（排名赛）很容易产生万元陷阱**
+**竞技体育**
 #### 智猪博弈
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3MzIyMTEyNCwtNDQ4ODA5NjcxXX0=
+eyJoaXN0b3J5IjpbMTk4NzIwMTkzOSwtNDQ4ODA5NjcxXX0=
 -->
