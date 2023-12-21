@@ -346,9 +346,12 @@
 \  | 进    |退
 ---|-------|---
 进  |-5，-5 |10，0
-退
+退  |0，10  | 0，0
+**先下手为强，后下手遭殃**
+**竞争博弈，领先一步，高人一筹！**
+**奖励要适度，过犹不及》**
 ### 夫妻博弈
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0NjA3NTg1NiwyMjcxNjg2NTgsLTQ0OD
+eyJoaXN0b3J5IjpbLTkxMTI3NjIwOSwyMjcxNjg2NTgsLTQ0OD
 gwOTY3MV19
 -->
