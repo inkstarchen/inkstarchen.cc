@@ -412,6 +412,5 @@
 
 **共同的价值观（目标）是合作的基石**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODc3ODkzOTgsMTY2NDg2MTgxMiwyMj
-cxNjg2NTgsLTQ0ODgwOTY3MV19
+eyJoaXN0b3J5IjpbLTIwODc3ODkzOThdfQ==
 -->
