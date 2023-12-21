@@ -349,9 +349,15 @@
 退  |0，10  | 0，0
 **先下手为强，后下手遭殃**
 **竞争博弈，领先一步，高人一筹！**
-**奖励要适度，过犹不及》**
+**奖励要适度，过犹不及**
+**赢者通吃的行业，容易出现过度竞争**
+#### 竞争博弈的核心问题
+1、比什么？（规则）
+2、和谁比？（对手）
+3、怎么比？（策略）
+
 ### 夫妻博弈
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxMTI3NjIwOSwyMjcxNjg2NTgsLTQ0OD
-gwOTY3MV19
+eyJoaXN0b3J5IjpbLTEyNjM3MTY2NTQsMjI3MTY4NjU4LC00ND
+g4MDk2NzFdfQ==
 -->
