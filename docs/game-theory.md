@@ -437,8 +437,8 @@
 ![输入图片说明](/imgs/2023-12-21/K5VwGitZZMiQ794z.png)换元操作
 ![输入图片说明](/imgs/2023-12-21/b8mbXMLefzhqM6sc.png)![输入图片说明](/imgs/2023-12-21/QbEQApAtsi4z1Vy1.png)![输入图片说明](/imgs/2023-12-21/STye3aYJKBGU5mTX.png)![输入图片说明](/imgs/2023-12-21/HCfQjDd5C04njZhv.png)![输入图片说明](/imgs/2023-12-21/gqkfCb4x4VYjKzSy.png)
 ![输入图片说明](/imgs/2023-12-21/pzDtWmJOA4LssdTk.png)
-![输入图片说明](/imgs/2023-12-21/c9Ezppisbhc0p7Ts.png)![输入图片说明](/imgs/2023-12-21/YAY0kX5OyciT1L8B.png)
+![输入图片说明](/imgs/2023-12-21/c9Ezppisbhc0p7Ts.png)![输入图片说明](/imgs/2023-12-21/YAY0kX5OyciT1L8B.png)中点展开端点带入
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDI1ODk0OTIsMTAyNDg5OTYyNywtMT
+eyJoaXN0b3J5IjpbLTE2MTczOTE0NDQsMTAyNDg5OTYyNywtMT
 Q0NDg2MzY4LC0yMDg3Nzg5Mzk4XX0=
 -->
