@@ -438,7 +438,8 @@
 ![输入图片说明](/imgs/2023-12-21/b8mbXMLefzhqM6sc.png)![输入图片说明](/imgs/2023-12-21/QbEQApAtsi4z1Vy1.png)![输入图片说明](/imgs/2023-12-21/STye3aYJKBGU5mTX.png)![输入图片说明](/imgs/2023-12-21/HCfQjDd5C04njZhv.png)![输入图片说明](/imgs/2023-12-21/gqkfCb4x4VYjKzSy.png)
 ![输入图片说明](/imgs/2023-12-21/pzDtWmJOA4LssdTk.png)
 ![输入图片说明](/imgs/2023-12-21/c9Ezppisbhc0p7Ts.png)![输入图片说明](/imgs/2023-12-21/YAY0kX5OyciT1L8B.png)中点展开端点带入
+泰勒展开，将变现函数展开得到三阶
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTczOTE0NDQsMTAyNDg5OTYyNywtMT
-Q0NDg2MzY4LC0yMDg3Nzg5Mzk4XX0=
+eyJoaXN0b3J5IjpbLTU2MzcxOTAxNywxMDI0ODk5NjI3LC0xND
+Q0ODYzNjgsLTIwODc3ODkzOThdfQ==
 -->
