@@ -220,9 +220,11 @@
 ----| ------| -------
 坦白 |P，P   | T，S
 抗拒 |S，T   | R，R
->在一个2人双策略 对称博弈中，如果满足
+>在一个2人双策略 对称博弈中，如果满足以下条件：T>R>P>S，2R>S+T>2P，那么其占有策略均衡（P，P）就构成了囚徒困境。（个人理性与集体非理想）
 
+#### 原因分析
+**表面上看囚犯对自身利益的
 ### 真实世界的囚犯困境
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2MTEwODQ3OCwtNDQ4ODA5NjcxXX0=
+eyJoaXN0b3J5IjpbLTk5NTgxNTE3MiwtNDQ4ODA5NjcxXX0=
 -->
