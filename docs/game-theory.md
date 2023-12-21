@@ -435,8 +435,8 @@
 
 ![输入图片说明](/imgs/2023-12-21/sQYZS4n2pF1fpfcL.png)njMHuvQckev1Vzp.png)
 ![输入图片说明](/imgs/2023-12-21/K5VwGitZZMiQ794z.png)换元操作
-![输入图片说明](/imgs/2023-12-21/b8mbXMLefzhqM6sc.png)
+![输入图片说明](/imgs/2023-12-21/b8mbXMLefzhqM6sc.png)![输入图片说明](/imgs/2023-12-21/QbEQApAtsi4z1Vy1.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3MTExNTMwNiwxMDI0ODk5NjI3LC0xND
-Q0ODYzNjgsLTIwODc3ODkzOThdfQ==
+eyJoaXN0b3J5IjpbODEyODYzMDAsMTAyNDg5OTYyNywtMTQ0ND
+g2MzY4LC0yMDg3Nzg5Mzk4XX0=
 -->
