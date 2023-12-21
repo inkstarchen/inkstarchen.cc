@@ -295,9 +295,9 @@
 #### 动机
 泰格发现：
 一、是经济（理性）的
->渴望赢得
+>渴望赢得钞票、赢回他的损失、想闭麦你
 二、是非经济（感性）的
 #### 智猪博弈
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3Nzk3OTIzMzAsLTQ0ODgwOTY3MV19
+eyJoaXN0b3J5IjpbLTE4MjA5MTE1OTYsLTQ0ODgwOTY3MV19
 -->
