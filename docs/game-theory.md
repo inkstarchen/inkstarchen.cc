@@ -214,7 +214,15 @@
 >在a1>a3，a2>a4的条件下，A选择坦白是占优策略；在b1>b2，b3>b4的条件下，B选择坦白是占优策略。
 
 >2、存在一个合作解，使双方的收益都优于其在占优策略均衡下的收益，即：a1<a4，b1<b4如果双方能够选择合作（都抗拒），本可以得到更好的结果。
+
+**对称条件下的囚徒困境**
+\   |  坦白  | 抗拒
+----| ------| -------
+坦白 |P，P   | T，S
+抗拒 |S，T   | R，R
+>在一个2人双策略 对称博弈中，如果满足
+
 ### 真实世界的囚犯困境
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcyMDA1NDU3OCwtNDQ4ODA5NjcxXX0=
+eyJoaXN0b3J5IjpbLTM2MTEwODQ3OCwtNDQ4ODA5NjcxXX0=
 -->
