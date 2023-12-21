@@ -390,8 +390,17 @@
 
 **资本雇佣劳动还是劳动雇佣资本，只是一个合作效率的比较问题。**
 
-**农业经济
+**农业经济**：劳动雇佣土地
+**工业经济**：资本雇佣劳动
+**知识经济**：合伙人时代
+1、劳动监督成本
+2、规模经济效应
+3、资本抵押功能
+4、企业家才能定价
+
+#### 如何在合作博弈中实现利益最大化
+贡献越大、机会越多、
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzU0MjcwOTM5LDE2NjQ4NjE4MTIsMjI3MT
-Y4NjU4LC00NDg4MDk2NzFdfQ==
+eyJoaXN0b3J5IjpbLTE5NTA3MzIwNDYsMTY2NDg2MTgxMiwyMj
+cxNjg2NTgsLTQ0ODgwOTY3MV19
 -->
