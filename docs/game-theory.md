@@ -439,7 +439,9 @@
 ![输入图片说明](/imgs/2023-12-21/pzDtWmJOA4LssdTk.png)
 ![输入图片说明](/imgs/2023-12-21/c9Ezppisbhc0p7Ts.png)![输入图片说明](/imgs/2023-12-21/YAY0kX5OyciT1L8B.png)中点展开端点带入
 泰勒展开，将变现函数展开得到三阶
+![输入图片说明](/imgs/2023-12-21/gZQFGO9ZtKoE0VrL.png)
+![输入图片说明](/imgs/2023-12-21/KCJoVL9NEJswcVBC.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2MzcxOTAxNywxMDI0ODk5NjI3LC0xND
+eyJoaXN0b3J5IjpbMTc1NTE0ODc0NiwxMDI0ODk5NjI3LC0xND
 Q0ODYzNjgsLTIwODc3ODkzOThdfQ==
 -->
