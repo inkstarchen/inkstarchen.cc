@@ -441,7 +441,8 @@
 泰勒展开，将变现函数展开得到三阶
 ![输入图片说明](/imgs/2023-12-21/gZQFGO9ZtKoE0VrL.png)
 ![输入图片说明](/imgs/2023-12-21/KCJoVL9NEJswcVBC.png)
+![输入图片说明](/imgs/2023-12-21/sPsH4rT64NW9A4k9.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1NTE0ODc0NiwxMDI0ODk5NjI3LC0xND
-Q0ODYzNjgsLTIwODc3ODkzOThdfQ==
+eyJoaXN0b3J5IjpbLTIxMDU0NjYxNDMsMTAyNDg5OTYyNywtMT
+Q0NDg2MzY4LC0yMDg3Nzg5Mzk4XX0=
 -->
