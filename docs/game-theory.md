@@ -234,7 +234,10 @@
 **让自己获利时尽量减少伤害他人！**
 **道德自律：不做害人大于利己的事！**
 ### 真实世界的囚犯困境
-价格战、独裁与多数人的懦弱、
+价格战、独裁与多数人的懦弱、民主与多数人的暴政。
+**民主必须与法治（不是法制）相辅相成，才能避免多数人的暴政**
+
+### 《国家理论》作者：
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNzI1ODAxNDMsLTQ0ODgwOTY3MV19
+eyJoaXN0b3J5IjpbMTczNDc1MTE3OCwtNDQ4ODA5NjcxXX0=
 -->
