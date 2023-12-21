@@ -385,8 +385,13 @@
 
 #### 基本分配方式：
 第一种，A拿剩余、B拿固定，如雇主和雇员之间。
-第二种，A拿固定，B拿剩余，如银行
+第二种，A拿固定，B拿剩余，如银行和企业之间。
+第三种，AB约定一个分配比例，如分成制，股份制，以及婚姻关系中平分婚后收入的制度安排。（农民和地主）
+
+**资本雇佣劳动还是劳动雇佣资本，只是一个合作效率的比较问题。**
+
+**农业经济
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3NDIzNDM4MiwxNjY0ODYxODEyLDIyNz
-E2ODY1OCwtNDQ4ODA5NjcxXX0=
+eyJoaXN0b3J5IjpbMzU0MjcwOTM5LDE2NjQ4NjE4MTIsMjI3MT
+Y4NjU4LC00NDg4MDk2NzFdfQ==
 -->
