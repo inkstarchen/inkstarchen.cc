@@ -247,6 +247,11 @@
 （1）基于道德自律的
 （2）基于交易各方相互制约的
 （3）基于与交易无关的“第三方”监督的
+
+5、威慑而不当真使用暴力，使得“第三方”的威慑具有一种“规模效益”。
+1把枪，哪怕只有1颗子弹，也足够让100次交易通过第三方得以执行。（囚犯困境二）
+
+6、当交易的执行成本（道德或相互制约）低于交易所实现的“比较优势”时，交易
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwNzcxMzQzMSwtNDQ4ODA5NjcxXX0=
+eyJoaXN0b3J5IjpbLTY1MTE0MDM5NCwtNDQ4ODA5NjcxXX0=
 -->
