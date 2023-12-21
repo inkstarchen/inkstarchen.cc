@@ -211,8 +211,10 @@
 
 >1、双方都有占优策略，即：
 >a1>a3，a2>a4，b1>b2，b3>b4
->在a1>a3，a2>a4的条件下，A选择坦白是占优策略；在被、>
+>在a1>a3，a2>a4的条件下，A选择坦白是占优策略；在b1>b2，b3>b4的条件下，B选择坦白是占优策略。
+
+>2、存在一个合作解，使双方的收益都优于其在占优策略均衡下的收益，即：a1<a4，b1<b4如果双方能够选择合作（都抗拒），本可以得到更好的结果。
 ### 真实世界的囚犯困境
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MzY3NjA2MDgsLTQ0ODgwOTY3MV19
+eyJoaXN0b3J5IjpbMTcyMDA1NDU3OCwtNDQ4ODA5NjcxXX0=
 -->
