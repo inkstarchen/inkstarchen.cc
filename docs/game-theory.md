@@ -428,7 +428,8 @@
 **要想达成共同认知，需要每个人都能畅所欲言。**
 
 ![输入图片说明](/imgs/2023-12-21/8oW825rmhOTQChKi.png)
+![输入图片说明](/imgs/2023-12-21/6GVeplsJd3DcjhHU.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY1NTU4NTgzLC0xNDQ0ODYzNjgsLTIwOD
-c3ODkzOThdfQ==
+eyJoaXN0b3J5IjpbMTAyNDg5OTYyNywtMTQ0NDg2MzY4LC0yMD
+g3Nzg5Mzk4XX0=
 -->
