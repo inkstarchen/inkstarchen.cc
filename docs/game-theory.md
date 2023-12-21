@@ -417,7 +417,14 @@
 **我们为了一些不重要的事情疲于奔命，
 却忘了在真正重要的事情上多下功夫。**
 
-#### 判断一件事的zhong'yao'x
+#### 判断一件事的重要性
+1、需要做吗？
+2、需要你来做吗？
+3、你该怎么做？
+**每个人可以有和别人不一样的价值观
+每个组织需要一个相对统一的价值观。**
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2Njk2NjUxOSwtMjA4Nzc4OTM5OF19
+eyJoaXN0b3J5IjpbMTczMDAzMjUwOSwtMjA4Nzc4OTM5OF19
 -->
