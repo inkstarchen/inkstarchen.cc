@@ -196,6 +196,12 @@
 **磨刀不误砍柴工（误与不误取决于你要砍多少的柴）**
 
 ## 囚徒困境和破解之道
+### 囚徒困境及原因
+#### 囚徒困境的来源
+\ | 坦白 | 抗拒
+-----------------
+
+### 真实世界的囚犯困境
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MzczODM0NDldfQ==
+eyJoaXN0b3J5IjpbLTg1ODM2ODkwN119
 -->
