@@ -399,8 +399,12 @@
 4、企业家才能定价
 
 #### 如何在合作博弈中实现利益最大化
-贡献越大、机会越多、
+贡献越大、机会越多、沟通越易、做事越稳、收益越大。
+
+**竞争博弈：出其不意、攻其不备（难预期）**
+**合作博弈：言而有信、行而可期（可预期）**
+**一般情况下，请不要相信阴谋论**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTA3MzIwNDYsMTY2NDg2MTgxMiwyMj
-cxNjg2NTgsLTQ0ODgwOTY3MV19
+eyJoaXN0b3J5IjpbLTY2ODE1NTI2LDE2NjQ4NjE4MTIsMjI3MT
+Y4NjU4LC00NDg4MDk2NzFdfQ==
 -->
