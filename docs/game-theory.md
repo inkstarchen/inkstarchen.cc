@@ -404,7 +404,12 @@
 **竞争博弈：出其不意、攻其不备（难预期）**
 **合作博弈：言而有信、行而可期（可预期）**
 **一般情况下，请不要相信阴谋论**
+>竞争博弈中阴谋的成本在上升，作用在下降
+>合作博弈中阴谋不但没好处，而且往往有害
+
+**在博弈中，如果您希望得到对方的信任，关键是让其相信，双方的利益是一致的！**
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2ODE1NTI2LDE2NjQ4NjE4MTIsMjI3MT
-Y4NjU4LC00NDg4MDk2NzFdfQ==
+eyJoaXN0b3J5IjpbLTkxMzYxMDgwMCwxNjY0ODYxODEyLDIyNz
+E2ODY1OCwtNDQ4ODA5NjcxXX0=
 -->
