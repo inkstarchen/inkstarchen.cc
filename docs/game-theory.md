@@ -314,7 +314,12 @@
 
 ***
 #### 智猪博弈
+\   |  按 |  等
+--- |----| ----
+按  |5，1 | 4，4
+等  | 9，-1|0，0
 
+**智猪博弈是一个搭便车的博弈一方付出了
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQxMDY1ODk5LC00NDg4MDk2NzFdfQ==
+eyJoaXN0b3J5IjpbMTMzMjM3MjExLC00NDg4MDk2NzFdfQ==
 -->
