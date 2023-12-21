@@ -289,8 +289,15 @@
 >3、越想挣脱、就越陷越深
 
 **序列竞争（排名赛）很容易产生万元陷阱**
-**竞技体育**
+**竞技体育是一个典型的万元陷阱**
+**奥运会就是一帮最需要运动的人在观看一帮最需要休息的人在剧烈的运动**
+
+#### 动机
+泰格发现：
+一、是经济（理性）的
+>渴望赢得
+二、是非经济（感性）的
 #### 智猪博弈
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk4NzIwMTkzOSwtNDQ4ODA5NjcxXX0=
+eyJoaXN0b3J5IjpbLTE3Nzk3OTIzMzAsLTQ0ODgwOTY3MV19
 -->
