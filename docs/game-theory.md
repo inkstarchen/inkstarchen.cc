@@ -434,7 +434,8 @@
 ![输入图片说明](/imgs/2023-12-21/z
 
 ![输入图片说明](/imgs/2023-12-21/sQYZS4n2pF1fpfcL.png)njMHuvQckev1Vzp.png)
+![输入图片说明](/imgs/2023-12-21/K5VwGitZZMiQ794z.png)换元操作
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMTI0MTQ1ODcsMTAyNDg5OTYyNywtMT
-Q0NDg2MzY4LC0yMDg3Nzg5Mzk4XX0=
+eyJoaXN0b3J5IjpbMjg4NDMwNDgzLDEwMjQ4OTk2MjcsLTE0ND
+Q4NjM2OCwtMjA4Nzc4OTM5OF19
 -->
