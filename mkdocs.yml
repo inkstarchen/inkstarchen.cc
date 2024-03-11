@@ -27,7 +27,10 @@ nav:
       - 社会心理学: social.md
       - 学习的本质: note-learning.md
       - 吴军阅读和写作: note-lectures.md
-
+  - 工作笔记:
+      - Learn Git: LearnGit.md
+      - Learn Latex: LearnLatex.md
+      - Learn Markdown: LearnMarkdown.md
 markdown_extensions:
   - admonition
   - pymdownx.details
