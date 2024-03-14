@@ -276,7 +276,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../china/" class="md-tabs__link">
+        <a href="../classnote-wx/" class="md-tabs__link">
           
   
     
@@ -324,6 +324,26 @@
     
   
   工作笔记
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../time/" class="md-tabs__link">
+          
+  
+    
+  
+  构建工作
 
         </a>
       </li>
@@ -677,8 +697,6 @@
       
         
       
-        
-      
     
     
       
@@ -709,27 +727,6 @@
             课程笔记
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../china/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    中国近现代史纲要
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -1241,6 +1238,122 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    构建工作
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            构建工作
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../time/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    时间
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../daily/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    日常
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../span/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    延展
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1329,37 +1442,43 @@
 <p>如果你想忽略位于根目录下的<code>text.txt</code>文件，可以添加：
 <div class="highlight"><pre><span></span><code>/text.txt
 </code></pre></div>
-如果想要忽略根目录下的<code>test</code>目录中的<code>text.txt</code>文件，可以添加：<code>/test/text.txt
+如果想要忽略根目录下的<code>test</code>目录中的<code>text.txt</code>文件，可以添加：
+<div class="highlight"><pre><span></span><code>/test/text.txt
 or
-test/text.txt</code></p>
+test/text.txt
+</code></pre></div></p>
 </details>
 <details class="同名同后缀文件忽略">
 <summary>同名同后缀文件忽略</summary>
 <p>以<code>text.txt</code>为例，你可以添加：
-<div class="highlight"><pre><span></span><code>
+<div class="highlight"><pre><span></span><code>text.txt
 </code></pre></div></p>
 </details>
-<p>??? 同目录下所有文件（包括目录）
-    以<code>test</code>为例，你可以添加：
-    <code>text/</code></p>
+<details class="同目录下所有文件">
+<summary>同目录下所有文件</summary>
+<p>以<code>test</code>为例，你可以添加：
+<div class="highlight"><pre><span></span><code>text/
+</code></pre></div></p>
+</details>
 <details class="所有同名文件及目录">
 <summary>所有同名文件及目录</summary>
 <p>以<code>test</code>为例，你可以添加：
-<div class="highlight"><pre><span></span><code>
+<div class="highlight"><pre><span></span><code>test
 </code></pre></div></p>
 </details>
 <details class="相同开头的文件及目录">
 <summary>相同开头的文件及目录</summary>
 <p>示例：
-<code>img*</code></p>
+<div class="highlight"><pre><span></span><code>img*
+</code></pre></div></p>
 </details>
 <details class="所有扩展名文件">
 <summary>所有扩展名文件</summary>
 <p>示例：
-<code>*.md
-<div class="highlight"><pre><span></span><code>排除文件(无法对忽略的目录下的文件做)
-</code></pre></div>
-!README.md</code></p>
+<code>*.md</code>
+排除文件(无法对忽略的目录下的文件做)
+<div class="highlight"><pre><span></span><code>!README.md
+</code></pre></div></p>
 </details>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
