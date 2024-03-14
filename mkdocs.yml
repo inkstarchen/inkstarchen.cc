@@ -13,7 +13,6 @@ nav:
     - 打字:
         - 中文: typing chinese.md
   - 课程笔记:
-      - 中国近现代史纲要: china.md
       - 微信小程序: classnote-wx.md
       - 报告写作: classnote-write.md
       - 中国近现代史纲: history.md
@@ -31,6 +30,10 @@ nav:
       - Learn Git: LearnGit.md
       - Learn Latex: LearnLatex.md
       - Learn Markdown: LearnMarkdown.md
+  - 构建工作:
+      - 时间: time.md
+      - 日常: daily.md
+      - 延展: span.md
 markdown_extensions:
   - admonition
   - pymdownx.details
