@@ -17,7 +17,8 @@ nav:
       - 报告写作: classnote-write.md
       - 中国近现代史纲: history.md
       - 博弈论基础: game-theory.md
-      - 线性代数: maths.md
+      - 线性代数: 
+        - 总论: maths.md
   - 阅读笔记:
       - 黑天鹅: dark.md
       - 散记: sanji.md
@@ -30,11 +31,19 @@ nav:
       - Learn Git: LearnGit.md
       - Learn Latex: LearnLatex.md
       - Learn Markdown: LearnMarkdown.md
+      - Learn Internet: LearnInternet.md
   - 构建工作:
       - 时间: time.md
       - 日常: daily.md
       - 延展: span.md
       - 注意力: attention.md
+  - 文海拾遗:
+      - 行事: action.md
+      - 态度: attitude.md
+      - 存在主义哲学: philosophy.md
+      - 留给自己的: leave.md
+      - 杂记: note.md
+      - 长期主义: longterm.md
 markdown_extensions:
   - admonition
   - pymdownx.details
