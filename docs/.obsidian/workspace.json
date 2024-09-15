@@ -1,0 +1,258 @@
+{
+  "main": {
+    "id": "14353b54e660c956",
+    "type": "split",
+    "children": [
+      {
+        "id": "94d23fc91a2157db",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bfb569e4c131ea1e",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "d9e9b8e6b72806c7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "classnote-write.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2891a29afdbc3684",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "未命名.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "815a967f7eeabae3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "computer-system.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d429a93508314798",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "computer-system.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "24be2800a41c5ac5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "LearnGit.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "726594d6257426f5",
+    "type": "split",
+    "children": [
+      {
+        "id": "c89341ad79d71682",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ea58aa820bc99184",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "858e1018cac590ea",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          },
+          {
+            "id": "7d3ebff877c8f9e9",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "7957f5e7bcb3c098",
+    "type": "split",
+    "children": [
+      {
+        "id": "a5b3911bbfd7ec41",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "67bd292872c6b3c4",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "computer-system.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "0a8748a23197ce44",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "computer-system.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d2cd0a23f44af108",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": false
+              }
+            }
+          },
+          {
+            "id": "c12e98b05dce8e9e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "computer-system.md"
+              }
+            }
+          },
+          {
+            "id": "0892b5761fefef4c",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "random-note:开始漫游笔记": false,
+      "flashcards-obsidian:Generate flashcards": false,
+      "float-search:Search Obsidian In Modal": false
+    }
+  },
+  "active": "815a967f7eeabae3",
+  "lastOpenFiles": [
+    "classnote-write.md",
+    "Computer-graphics.md",
+    "未命名.md",
+    "git-error.md",
+    "sys-1.md",
+    "reg.md",
+    "system.md",
+    "Kotlin-datatype.md",
+    "Kotlin-error.md",
+    "2024-07-05.md",
+    "2024-07-11.md",
+    "LearnInternet.md",
+    "note-learning.md",
+    "2024-06-15.md",
+    "2024-04-29.md",
+    "2024-03-16.md",
+    "2024-03-22.md",
+    "2024-03-24.md",
+    "2024-04-22.md",
+    "2024-05-06.md",
+    "2024-04-21.md",
+    "2024-04-20.md",
+    "2024-04-14.md",
+    "2024-04-13.md",
+    "2024-03-27.md",
+    "2024-04-06.md",
+    "images/Pasted image 20240420141720.png",
+    "images/Pasted image 20240420141608.png",
+    "images/Pasted image 20240420141101.png",
+    "images/Pasted image 20240420140753.png",
+    "images/Pasted image 20240408193125.png",
+    "images/Pasted image 20240408192402.png",
+    "images/Pasted image 20240408192147.png",
+    "images/Pasted image 20240408191954.png",
+    "images/Pasted image 20240408190955.png",
+    "images/Pasted image 20240408190730.png",
+    "images",
+    "未命名.canvas",
+    "template"
+  ]
+}

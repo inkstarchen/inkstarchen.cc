@@ -1,0 +1,12 @@
+{
+  "accentColor": "#2eb9ff",
+  "theme": "moonstone",
+  "nativeMenus": false,
+  "baseFontSize": 17,
+  "enabledCssSnippets": [],
+  "cssTheme": "Mado 11",
+  "textFontFamily": "Maple Mono NF",
+  "interfaceFontFamily": "Maple Mono NF",
+  "monospaceFontFamily": "Maple Mono NF",
+  "translucency": true
+}
