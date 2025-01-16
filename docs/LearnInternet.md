@@ -1,54 +1,53 @@
-??? 什么是公网
-	公网IP是可以通过Internet直接访问的IP地址.(IP与主机或服务区一对一唯一)
-??? 什么是私网
-	在局域网中每台连接到互联网的设备都有一个私有IP，以供路由器来识别.
-??? 什么是端口
-	端口是用于提供不同的服务所使用的(应用程序的标识)
+-  什么是公网
+	- 公网IP是可以通过Internet直接访问的IP地址.(IP与主机或服务区一对一唯一)
+- 什么是私网
+	- 在局域网中每台连接到互联网的设备都有一个私有IP，以供路由器来识别.
+- 什么是端口
+	- 端口是用于提供不同的服务所使用的(应用程序的标识)
 
-??? 什么是传输协议
-	即对数据传输的规定规则.
-
+- 什么是传输协议
+	- 即对数据传输的规定规则.
 	- TCP协议：安全协议，三次握手，速度慢
 	- UDP协议：不安全协议，速度快
 	- 应用层的传输协议，如HTTP,IMAP等，都是基于上述协议
-??? "What is the FTP"
-	**FTP**:File Transfer Protocol is a TCP protocol for downloading files between computers.
+- "What is the FTP"
+	- **FTP**:File Transfer Protocol is a TCP protocol for downloading files between computers.
 
-??? "How to use FTP"
-	**First**:install vsftpd with`sudo apt install vsftpd`
+- "How to use FTP"
+	- **First**:install vsftpd with`sudo apt install vsftpd`
 	
-	**Second**:set up User Authenticated FTP Configuration 
+	- **Second**:set up User Authenticated FTP Configuration 
 		
-	edit `/etc/vsftpd.conf`
-	``write_enable=YES``
-	Now restart the service with `sudo systemctl restart vsftpd.service`
+	- edit `/etc/vsftpd.conf`
+	- ``write_enable=YES``
+	- Now restart the service with `sudo systemctl restart vsftpd.service`
 
-??? "What is the SFTP"
-	**SFTP**: Secure File Transfer Protocol is a protocol for transferring files between computers over an encrypted connection.
+- "What is the SFTP"
+	- **SFTP**: Secure File Transfer Protocol is a protocol for transferring files between computers over an encrypted connection.
 
-??? "How to use SFTP"
-	**First**:install ssh with`sudo apt install ssh`
+- "How to use SFTP"
+	- **First**:install ssh with`sudo apt install ssh`
 	
-	**Second**:Creating a new user group for SFTP with `sudo addgroup [group-name]`
+	- **Second**:Creating a new user group for SFTP with `sudo addgroup [group-name]`
 	
-	**Third**:Creating a new user for SFTP with `sudo adduser [user-name] `
+	- **Third**:Creating a new user for SFTP with `sudo adduser [user-name] `
 	
-	and add a password for the user with `sudo passwd [user-name]` 
+	- and add a password for the user with `sudo passwd [user-name]` 
 	
-	then add the user to the group with `sudo usermod -a -G [group-name] [user-name]`
+	- then add the user to the group with `sudo usermod -a -G [group-name] [user-name]`
 
-	**Fourth**:Create and configure a directory for SFTP
-	So first,create a new directory with `sudo mkdir `sudo mkdir -p /var/sftp/[directory-name]`
-	then change the ownership of the directory with `sudo chown root:root /var/sftp`
-	Next, change the permissions for the same directory by giving all rights to the root and others can only read and execute
+	- **Fourth**:Create and configure a directory for SFTP
+	- So first,create a new directory with `sudo mkdir `sudo mkdir -p /var/sftp/[directory-name]`
+	- then change the ownership of the directory with `sudo chown root:root /var/sftp`
+	- Next, change the permissions for the same directory by giving all rights to the root and others can only read and execute
 	`sudo chmod 755 /var/sftp`
-	And finally, change the ownership of the directory you've created for SFTP for the recently created user:
-	`sudo chown inkstar:inkstar /var/sftp/inkstar`
+	- And finally, change the ownership of the directory you've created for SFTP for the recently created user:
+	- `sudo chown inkstar:inkstar /var/sftp/inkstar`
 
-	**Fifth**:Make changes to the SSHD config file
-	edit `/etc/ssh/sshd_config` with `sudo vim /etc/ssh/sshd_config`
-	add the following lines to the file:
-	``Match group sftp
+	- **Fifth**:Make changes to the SSHD config file
+	- edit `/etc/ssh/sshd_config` with `sudo vim /etc/ssh/sshd_config`
+	- add the following lines to the file:
+	- ``Match group sftp
 	ChrootDirectory /var/sftp
 	X11Forwarding no
 	AllowTcpForwarding no

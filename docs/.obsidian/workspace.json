@@ -12,19 +12,19 @@
             "type": "leaf",
             "state": {
               "type": "empty",
-              "state": {}
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
             }
           },
           {
             "id": "d9e9b8e6b72806c7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "classnote-write.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
             }
           },
           {
@@ -36,7 +36,9 @@
                 "file": "未命名.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "未命名"
             }
           },
           {
@@ -45,22 +47,22 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "computer-system.md",
+                "file": "class/tea/tea-industry.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "tea-industry"
             }
           },
           {
             "id": "d429a93508314798",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "computer-system.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
             }
           },
           {
@@ -72,7 +74,9 @@
                 "file": "LearnGit.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "LearnGit"
             }
           }
         ],
@@ -96,7 +100,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
             }
           },
           {
@@ -104,7 +110,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
             }
           },
           {
@@ -119,14 +127,17 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "7957f5e7bcb3c098",
@@ -142,7 +153,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "computer-system.md",
+                "file": "class/tea/tea-industry.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -150,7 +161,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": false
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "tea-industry 的反向链接列表"
             }
           },
           {
@@ -159,10 +172,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "computer-system.md",
+                "file": "class/ai-introduction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "ai-introduction 的出链列表"
             }
           },
           {
@@ -173,7 +188,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": false
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
             }
           },
           {
@@ -182,8 +199,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "computer-system.md"
-              }
+                "file": "class/ai-introduction.md"
+              },
+              "icon": "lucide-list",
+              "title": "ai-introduction 的大纲"
             }
           },
           {
@@ -191,7 +210,9 @@
             "type": "leaf",
             "state": {
               "type": "calendar",
-              "state": {}
+              "state": {},
+              "icon": "lucide-file",
+              "title": "插件不再活动"
             }
           }
         ]
@@ -215,42 +236,50 @@
   },
   "active": "815a967f7eeabae3",
   "lastOpenFiles": [
-    "classnote-write.md",
-    "Computer-graphics.md",
-    "未命名.md",
-    "git-error.md",
-    "sys-1.md",
-    "reg.md",
-    "system.md",
-    "Kotlin-datatype.md",
-    "Kotlin-error.md",
-    "2024-07-05.md",
-    "2024-07-11.md",
-    "LearnInternet.md",
-    "note-learning.md",
-    "2024-06-15.md",
-    "2024-04-29.md",
-    "2024-03-16.md",
-    "2024-03-22.md",
-    "2024-03-24.md",
-    "2024-04-22.md",
-    "2024-05-06.md",
-    "2024-04-21.md",
-    "2024-04-20.md",
-    "2024-04-14.md",
-    "2024-04-13.md",
-    "2024-03-27.md",
-    "2024-04-06.md",
-    "images/Pasted image 20240420141720.png",
-    "images/Pasted image 20240420141608.png",
-    "images/Pasted image 20240420141101.png",
-    "images/Pasted image 20240420140753.png",
-    "images/Pasted image 20240408193125.png",
-    "images/Pasted image 20240408192402.png",
-    "images/Pasted image 20240408192147.png",
-    "images/Pasted image 20240408191954.png",
-    "images/Pasted image 20240408190955.png",
-    "images/Pasted image 20240408190730.png",
+    "learning/design/design.md",
+    "learning/design",
+    "class/tea/tea-culture-tea-health-review.md",
+    "images/Pasted image 20250112153206.png",
+    "images/Pasted image 20250112153155.png",
+    "class/tea/tea-science.md",
+    "class/tea/tea-industry.md",
+    "images/Pasted image 20250112153041.png",
+    "images/Pasted image 20250112153033.png",
+    "images/Pasted image 20250112153021.png",
+    "images/Pasted image 20250112153009.png",
+    "images/Pasted image 20250112153001.png",
+    "images/Pasted image 20250112152954.png",
+    "images/Pasted image 20250112152942.png",
+    "images/Pasted image 20250112152931.png",
+    "class/tea/tea-culture.md",
+    "class/tea/tea-health.md",
+    "class/physics.md",
+    "class/tea",
+    "knowledge/pass/writing.md",
+    "class/chinese-literature/zhao-shu-li.md",
+    "class/chinese-literature/yu-da-fu.md",
+    "class/chinese-literature/xiao-hong.md",
+    "class/chinese-literature/wen-xue-hui-yan.md",
+    "class/chinese-literature/shi-zhe-cun.md",
+    "class/chinese-literature/mu-shi-ying.md",
+    "class/chinese-literature/lu-xun.md",
+    "class/chinese-literature/fei-ming.md",
+    "class/chinese-literature",
+    "class/chinese-literature.md",
+    "class/probability.md",
+    "class/distribution.md",
+    "class/possibility.md",
+    "knowledge/know.md",
+    "knowledge/know..md",
+    "knowledge/know.,md",
+    "knowledge/education.md",
+    "knowledge/pass/ppt.md",
+    "knowledge/pass/listen.md",
+    "knowledge/pass/paper.md",
+    "knowledge/pass/report",
+    "knowledge/pass",
+    "knowledge",
+    "knowle",
     "images",
     "未命名.canvas",
     "template"

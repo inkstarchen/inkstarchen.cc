@@ -3,51 +3,94 @@ repo_name: inkstarchen/inkstarchen.cc
 repo_url: https://github.com/inkstarchen/inkstarchen.cc
 use_directory_urls: true
 nav:
-  - 欢迎: index.md
-  - 学习:
-      - 动手学深度学习: 
-          - 预备知识:
-              - 概率: learning/deeplearning/2/2.6.md
-          - 线性神经网络:
-              - 线性回归: learning/deeplearning/3/3.1.md
-  - 课程笔记:
+  - 首页: index.md
+  - 学习笔记:
+      - 人工智能引论: class/ai-introduction.md
       - 微信小程序: class/classnote-wx.md
-      - 报告写作: class/classnote-write.md
       - 中国近现代史纲: class/history.md
       - 博弈论基础: class/game-theory.md
       - 计算机系统: 
+        - 计算机简史: class/computer-history.md
         - 理论知识: class/computer-system.md
         - Verilog使用: class/verilog.md
         - reg和时序电路: class/reg.md
         - 阻塞赋值和非阻塞赋值: class/sys-1.md
-  - 工作笔记:
-      - Learn Git: 
-        - 基础知识: LearnGit.md
-        - 错误汇总: git-error.md
-      - Learn Latex: LearnLatex.md
-      - Learn Markdown: LearnMarkdown.md
-      - Learn Internet: 
+      - 物理学: class/physics.md
+      - 概率论: 
+        - 概率论知识: class/probability.md
+        - 分布函数表: class/distribution.md
+      - 中国现代文学经典选读:
+        - 废名: class/chinese-literature/fei-ming.md
+        - 鲁迅: class/chinese-literature/lu-xun.md
+        - 穆时英: class/chinese-literature/mu-shi-ying.md
+        - 施蛰存: class/chinese-literature/shi-zhe-cun.md
+        - 文学研究会: class/chinese-literature/wen-xue-hui-yan.md
+        - 萧红: class/chinese-literature/xiao-hong.md
+        - 郁达夫: class/chinese-literature/yu-da-fu.md
+        - 赵树理: class/chinese-literature/zhao-shu-li.md
+      - 茶文化与茶健康:
+        - 茶文化: class/tea/tea-culture.md
+        - 茶健康: class/tea/tea-health.md
+        - 茶科技: class//tea/tea-science.md
+        - 茶产业: class/tea/tea-industry.md
+        - 茶文化与茶健康复习提纲: class/tea/tea-culture-tea-health-review.md
+      - 设计: class/design.md
+      - 互联网: 
         - 杂七杂八: LearnInternet.md
         - 服务器软件: learn-softwareweb.md
         - Nginx介绍: learn-Nginx.md
-  - 编程语言学习:
+  - 知识论:
+      - 知识的传递: 
+        - 写作: knowledge/pass/writing.md
+        - 报告写作: knowledge/pass/report.md
+        - 论文写作: knowledge/pass/paper.md
+        - 听的艺术: knowledge/pass/listen.md
+        - 内容呈现: knowledge/pass/ppt.md
+      - 学习与教育: knowledge/education.md
+      - 知识论: knowledge/know.md
+  - 人与社会: 
+    - 工作生活: human-society/society.md
+    - 迈向社会: human-society/school-society.md
+  - 软件与程序语言:
       - C++:
         - 基本语法: Cpp-basic.md
       - Kotlin: 
         - 数据类型: Kotlin-datatype.md
         - 错误汇总: Kotlin-error.md
-  - 软件使用:
       - Android Studio: As.md
+      - Learn Git: 
+        - 基础知识: LearnGit.md
+        - 错误汇总: git-error.md
+      - Learn Latex: LearnLatex.md
+      - Learn Markdown: LearnMarkdown.md
+  - 网站搭建:
+    - mkdocs配置:
+      - pydownx: Website/mkdocs-pydownx.md
+      - Admonitions: Website/mkdocs-admonition.md
+      - 技巧: Website/mkdocs-tips.md
+      - 基础设置: Website/mkdocs-setting.md
+  - 名人名言:
+    - 爱因斯坦: quotes/Einstein.md
+
 markdown_extensions:
+  - md_in_html  
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.mark
+  - attr_list
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
   - pymdownx.arithmatex:
       generic: true
 
@@ -57,6 +100,8 @@ theme:
     primary: blue
   features:
     - search.suggest
+    - content.code.annotate
+    - content.code.select #付费功能
     - content.code.annotate
     - content.code.copy
     - navigation.tracking
@@ -78,7 +123,8 @@ theme:
       bug: octicons/bug-16
       example: octicons/beaker-16
       quote: octicons/quote-16
-
+extra_css:
+  - css/counter.css
 extra_javascript:
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
