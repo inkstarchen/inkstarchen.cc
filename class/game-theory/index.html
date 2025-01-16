@@ -1,0 +1,4555 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../history/">
+      
+      
+        <link rel="next" href="../computer-system/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>博弈论基础 - 轻墨星的笔记库</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.35f28582.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.75 1.75 0 0 1 1 7.775m1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/></svg>');--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M2.5 1.75v11.5c0 .138.112.25.25.25h3.17a.75.75 0 0 1 0 1.5H2.75A1.75 1.75 0 0 1 1 13.25V1.75C1 .784 1.784 0 2.75 0h8.5C12.216 0 13 .784 13 1.75v7.736a.75.75 0 0 1-1.5 0V1.75a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25m13.274 9.537zl-4.557 4.45a.75.75 0 0 1-1.055-.008l-1.943-1.95a.75.75 0 0 1 1.062-1.058l1.419 1.425 4.026-3.932a.75.75 0 1 1 1.048 1.074M4.75 4h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5M4 7.75A.75.75 0 0 1 4.75 7h2a.75.75 0 0 1 0 1.5h-2A.75.75 0 0 1 4 7.75"/></svg>');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13M6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75M8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/></svg>');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.499.75a.75.75 0 0 1 1.5 0v.996C5.9 2.903 6.793 3.65 7.662 4.376l.24.202c-.036-.694.055-1.422.426-2.163C9.1.873 10.794-.045 12.622.26 14.408.558 16 1.94 16 4.25c0 1.278-.954 2.575-2.44 2.734l.146.508.065.22c.203.701.412 1.455.476 2.226.142 1.707-.4 3.03-1.487 3.898C11.714 14.671 10.27 15 8.75 15h-6a.75.75 0 0 1 0-1.5h1.376a4.5 4.5 0 0 1-.563-1.191 3.84 3.84 0 0 1-.05-2.063 4.65 4.65 0 0 1-2.025-.293.75.75 0 0 1 .525-1.406c1.357.507 2.376-.006 2.698-.318l.009-.01a.747.747 0 0 1 1.06 0 .75.75 0 0 1-.012 1.074c-.912.92-.992 1.835-.768 2.586.221.74.745 1.337 1.196 1.621H8.75c1.343 0 2.398-.296 3.074-.836.635-.507 1.036-1.31.928-2.602-.05-.603-.216-1.224-.422-1.93l-.064-.221c-.12-.407-.246-.84-.353-1.29a2.4 2.4 0 0 1-.507-.441 3.1 3.1 0 0 1-.633-1.248.75.75 0 0 1 1.455-.364c.046.185.144.436.31.627.146.168.353.305.712.305.738 0 1.25-.615 1.25-1.25 0-1.47-.95-2.315-2.123-2.51-1.172-.196-2.227.387-2.706 1.345-.46.92-.27 1.774.019 3.062l.042.19.01.05c.348.443.666.949.94 1.553a.75.75 0 1 1-1.365.62c-.553-1.217-1.32-1.94-2.3-2.768L6.7 5.527c-.814-.68-1.75-1.462-2.692-2.619a3.7 3.7 0 0 0-1.023.88c-.406.495-.663 1.036-.722 1.508.116.122.306.21.591.239.388.038.797-.06 1.032-.19a.75.75 0 0 1 .728 1.31c-.515.287-1.23.439-1.906.373-.682-.067-1.473-.38-1.879-1.193L.75 5.677V5.5c0-.984.48-1.94 1.077-2.664.46-.559 1.05-1.055 1.673-1.353z"/></svg>');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 .018-1.042.75.75 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0"/></svg>');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13M6.92 6.085h.001a.749.749 0 1 1-1.342-.67c.169-.339.436-.701.849-.977C6.845 4.16 7.369 4 8 4a2.76 2.76 0 0 1 1.637.525c.503.377.863.965.863 1.725 0 .448-.115.83-.329 1.15-.205.307-.47.513-.692.662-.109.072-.22.138-.313.195l-.006.004a6 6 0 0 0-.26.16 1 1 0 0 0-.276.245.75.75 0 0 1-1.248-.832c.184-.264.42-.489.692-.661q.154-.1.313-.195l.007-.004c.1-.061.182-.11.258-.161a1 1 0 0 0 .277-.245C8.96 6.514 9 6.427 9 6.25a.61.61 0 0 0-.262-.525A1.27 1.27 0 0 0 8 5.5c-.369 0-.595.09-.74.187a1 1 0 0 0-.34.398M9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/></svg>');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0M9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/></svg>');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M2.344 2.343za8 8 0 0 1 11.314 11.314A8.002 8.002 0 0 1 .234 10.089a8 8 0 0 1 2.11-7.746m1.06 10.253a6.5 6.5 0 1 0 9.108-9.275 6.5 6.5 0 0 0-9.108 9.275M6.03 4.97 8 6.94l1.97-1.97a.749.749 0 0 1 1.275.326.75.75 0 0 1-.215.734L9.06 8l1.97 1.97a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L8 9.06l-1.97 1.97a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L6.94 8 4.97 6.03a.75.75 0 0 1 .018-1.042.75.75 0 0 1 1.042-.018"/></svg>');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M9.504.43a1.516 1.516 0 0 1 2.437 1.713L10.415 5.5h2.123c1.57 0 2.346 1.909 1.22 3.004l-7.34 7.142a1.25 1.25 0 0 1-.871.354h-.302a1.25 1.25 0 0 1-1.157-1.723L5.633 10.5H3.462c-1.57 0-2.346-1.909-1.22-3.004zm1.047 1.074L3.286 8.571A.25.25 0 0 0 3.462 9H6.75a.75.75 0 0 1 .694 1.034l-1.713 4.188 6.982-6.793A.25.25 0 0 0 12.538 7H9.25a.75.75 0 0 1-.683-1.06l2.008-4.418.003-.006-.004-.009-.006-.006-.008-.001q-.005 0-.009.004"/></svg>');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4.72.22a.75.75 0 0 1 1.06 0l1 .999a3.5 3.5 0 0 1 2.441 0l.999-1a.748.748 0 0 1 1.265.332.75.75 0 0 1-.205.729l-.775.776c.616.63.995 1.493.995 2.444v.327q0 .15-.025.292c.408.14.764.392 1.029.722l1.968-.787a.75.75 0 0 1 .556 1.392L13 7.258V9h2.25a.75.75 0 0 1 0 1.5H13v.5q-.002.615-.141 1.186l2.17.868a.75.75 0 0 1-.557 1.392l-2.184-.873A5 5 0 0 1 8 16a5 5 0 0 1-4.288-2.427l-2.183.873a.75.75 0 0 1-.558-1.392l2.17-.868A5 5 0 0 1 3 11v-.5H.75a.75.75 0 0 1 0-1.5H3V7.258L.971 6.446a.75.75 0 0 1 .558-1.392l1.967.787c.265-.33.62-.583 1.03-.722a1.7 1.7 0 0 1-.026-.292V4.5c0-.951.38-1.814.995-2.444L4.72 1.28a.75.75 0 0 1 0-1.06m.53 6.28a.75.75 0 0 0-.75.75V11a3.5 3.5 0 1 0 7 0V7.25a.75.75 0 0 0-.75-.75ZM6.173 5h3.654A.17.17 0 0 0 10 4.827V4.5a2 2 0 1 0-4 0v.327c0 .096.077.173.173.173"/></svg>');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M5 5.782V2.5h-.25a.75.75 0 0 1 0-1.5h6.5a.75.75 0 0 1 0 1.5H11v3.282l3.666 5.76C15.619 13.04 14.543 15 12.767 15H3.233c-1.776 0-2.852-1.96-1.899-3.458Zm-2.4 6.565a.75.75 0 0 0 .633 1.153h9.534a.75.75 0 0 0 .633-1.153L12.225 10.5h-8.45ZM9.5 2.5h-3V6c0 .143-.04.283-.117.403L4.73 9h6.54L9.617 6.403A.75.75 0 0 1 9.5 6Z"/></svg>');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1.75 2.5h10.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5m4 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5m0 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5M2.5 7.75v6a.75.75 0 0 1-1.5 0v-6a.75.75 0 0 1 1.5 0"/></svg>');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/counter.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="轻墨星的笔记库" class="md-header__button md-logo" aria-label="轻墨星的笔记库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            轻墨星的笔记库
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              博弈论基础
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/inkstarchen/inkstarchen.cc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    inkstarchen/inkstarchen.cc
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  欢迎
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../learning/deeplearning/2/2.6/" class="md-tabs__link">
+          
+  
+    
+  
+  学习
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../ai-introduction/" class="md-tabs__link">
+          
+  
+    
+  
+  课程笔记
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../LearnGit/" class="md-tabs__link">
+          
+  
+    
+  
+  工作笔记
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../knowledge/pass/writing/" class="md-tabs__link">
+          
+  
+    
+  
+  知识论
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Cpp-basic/" class="md-tabs__link">
+          
+  
+    
+  
+  编程语言学习
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../As/" class="md-tabs__link">
+          
+  
+    
+  
+  软件使用
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Website/mkdocs-pydownx/" class="md-tabs__link">
+          
+  
+    
+  
+  网站搭建
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../quotes/Einstein/" class="md-tabs__link">
+          
+  
+    
+  
+  名人名言
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="轻墨星的笔记库" class="md-nav__button md-logo" aria-label="轻墨星的笔记库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    轻墨星的笔记库
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/inkstarchen/inkstarchen.cc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    inkstarchen/inkstarchen.cc
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    欢迎
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    学习
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            学习
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    动手学深度学习
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            动手学深度学习
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_1" id="__nav_2_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    预备知识
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            预备知识
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learning/deeplearning/2/2.6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    概率
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_2" id="__nav_2_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    线性神经网络
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            线性神经网络
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learning/deeplearning/3/3.1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    线性回归
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learning/design/design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    设计的心理
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    课程笔记
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            课程笔记
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    人工智能引论
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../classnote-wx/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    微信小程序
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../history/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    中国近现代史纲
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    博弈论基础
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    博弈论基础
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      博弈论简介
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      概述
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="概述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      何为博弈
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      发展简史
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      理论的诞生与发展
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      术语解读和基本假设
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="术语解读和基本假设">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      术语解读
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="术语解读">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      博弈的术语
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      均衡的含义
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      博弈的分类
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      基本假设
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="基本假设">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      理性假设
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      蜈蚣博弈
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      策略
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      最后通牒与讨价还价
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="最后通牒与讨价还价">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      最后通牒
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="最后通牒">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      最后通牒的含义
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      独裁者博弈
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      讨价还价
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="讨价还价">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      讨价还价的含义
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      均衡解
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      贴现因子
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      囚徒困境和破解之道
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="囚徒困境和破解之道">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      囚徒困境及原因
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="囚徒困境及原因">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      囚徒困境的来源
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      囚徒困境的定义及原因分析
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      原因分析
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      真实世界的囚犯困境
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      《国家理论》作者：约拉姆巴泽尔
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="《国家理论》作者：约拉姆巴泽尔">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      特别提醒
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何破解囚徒困境
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="如何破解囚徒困境">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、如何利用(两个例子)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、如何破解
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      万元陷阱和智猪博弈
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="万元陷阱和智猪博弈">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      万元陷阱
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="万元陷阱">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      应对万元陷阱的建议（鲁宾）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      智猪博弈
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      懦夫博弈和夫妻博弈
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="懦夫博弈和夫妻博弈">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      懦夫博弈
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="懦夫博弈">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      竞争博弈的核心问题
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      夫妻博弈
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      猎鹿博弈
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="猎鹿博弈">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    <span class="md-ellipsis">
+      合作博弈的核心问题
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    <span class="md-ellipsis">
+      基本分配方式：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何在合作博弈中实现利益最大化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    <span class="md-ellipsis">
+      判断一件事的重要性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    计算机系统
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            计算机系统
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../computer-system/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    理论知识
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../verilog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Verilog使用
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reg/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    reg和时序电路
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sys-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    阻塞赋值和非阻塞赋值
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../physics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    物理学
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    概率论
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            概率论
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../probability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    概率论知识
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../distribution/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    分布函数表
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    中国现代文学经典选读
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            中国现代文学经典选读
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chinese-literature/fei-ming/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    废名
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chinese-literature/lu-xun/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    鲁迅
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chinese-literature/mu-shi-ying/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    穆时英
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chinese-literature/shi-zhe-cun/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    施蛰存
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chinese-literature/wen-xue-hui-yan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    文学研究会
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chinese-literature/xiao-hong/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    萧红
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chinese-literature/yu-da-fu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    郁达夫
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chinese-literature/zhao-shu-li/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    赵树理
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    茶文化与茶健康
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_9">
+            <span class="md-nav__icon md-icon"></span>
+            茶文化与茶健康
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tea/tea-culture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    茶文化
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tea/tea-health/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    茶健康
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tea/tea-science/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    茶科技
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tea/tea-industry/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    茶产业
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tea/tea-culture-tea-health-review/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    茶文化与茶健康复习提纲
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    工作笔记
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            工作笔记
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Learn Git
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Learn Git
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LearnGit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    基础知识
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git-error/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    错误汇总
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LearnLatex/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Learn Latex
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LearnMarkdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Learn Markdown
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Learn Internet
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Learn Internet
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LearnInternet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    杂七杂八
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learn-softwareweb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    服务器软件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../learn-Nginx/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nginx介绍
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    知识论
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            知识论
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    知识的传递
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            知识的传递
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../knowledge/pass/writing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    写作
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../knowledge/pass/report/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    报告写作
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../knowledge/pass/paper/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    论文写作
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../knowledge/pass/listen/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    听的艺术
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../knowledge/pass/ppt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    内容呈现
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../knowledge/education/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    学习与教育
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../knowledge/know/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    知识论
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    编程语言学习
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            编程语言学习
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    C++
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            C++
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Cpp-basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    基本语法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Kotlin
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Kotlin
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Kotlin-datatype/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据类型
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Kotlin-error/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    错误汇总
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    软件使用
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            软件使用
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../As/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Android Studio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    网站搭建
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            网站搭建
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    mkdocs配置
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_1">
+            <span class="md-nav__icon md-icon"></span>
+            mkdocs配置
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Website/mkdocs-pydownx/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pydownx
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Website/mkdocs-admonition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Admonitions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Website/mkdocs-tips/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    技巧
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Website/mkdocs-setting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    基础设置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    名人名言
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            名人名言
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quotes/Einstein/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    爱因斯坦
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      博弈论简介
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      概述
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="概述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      何为博弈
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      发展简史
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      理论的诞生与发展
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      术语解读和基本假设
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="术语解读和基本假设">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      术语解读
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="术语解读">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      博弈的术语
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      均衡的含义
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      博弈的分类
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      基本假设
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="基本假设">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      理性假设
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      蜈蚣博弈
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      策略
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      最后通牒与讨价还价
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="最后通牒与讨价还价">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      最后通牒
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="最后通牒">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      最后通牒的含义
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      独裁者博弈
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      讨价还价
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="讨价还价">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      讨价还价的含义
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      均衡解
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      贴现因子
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      囚徒困境和破解之道
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="囚徒困境和破解之道">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      囚徒困境及原因
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="囚徒困境及原因">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      囚徒困境的来源
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      囚徒困境的定义及原因分析
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      原因分析
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      真实世界的囚犯困境
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      《国家理论》作者：约拉姆巴泽尔
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="《国家理论》作者：约拉姆巴泽尔">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      特别提醒
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何破解囚徒困境
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="如何破解囚徒困境">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、如何利用(两个例子)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      二、如何破解
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      万元陷阱和智猪博弈
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="万元陷阱和智猪博弈">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      万元陷阱
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="万元陷阱">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      应对万元陷阱的建议（鲁宾）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      智猪博弈
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      懦夫博弈和夫妻博弈
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="懦夫博弈和夫妻博弈">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      懦夫博弈
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="懦夫博弈">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      竞争博弈的核心问题
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      夫妻博弈
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      猎鹿博弈
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="猎鹿博弈">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    <span class="md-ellipsis">
+      合作博弈的核心问题
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    <span class="md-ellipsis">
+      基本分配方式：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何在合作博弈中实现利益最大化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    <span class="md-ellipsis">
+      判断一件事的重要性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>博弈论基础</h1>
+
+<h2 id="_1">博弈论简介</h2>
+<blockquote>
+<p>博弈的第一步，选择你要进行博弈的主题或赛道（选对赛道比选对策略更重要），博弈的基础，判断参与者与你的利益一致性。</p>
+</blockquote>
+<h2 id="_2">概述</h2>
+<h3 id="_3">何为博弈</h3>
+<p>博弈，是指在一定的 <mark>游戏规则</mark> 约束下，基于 <mark>直接相互作用</mark> 的环境条件，各参与人依据所掌握的 <mark>信息</mark> ，选择各自的 <mark>策略</mark> （行动），以实现 <mark>利益最大化</mark> 的过程。</p>
+<ul>
+<li>博弈既有对抗也有合作</li>
+</ul>
+<p>世上有两种博弈：</p>
+<ul>
+<li>一种博弈（有限游戏）以取胜为目的，</li>
+<li>一种博弈（无限游戏）以共赢为目的。</li>
+</ul>
+<p><strong>用心选合适的，而不是费心去改变不合适的！（人与人之间的关系：只筛选，不改变。改变自己筛选他人。）即成本前移</strong></p>
+<blockquote>
+<p><strong>胜兵先胜而求战，败兵先战而求胜</strong>只有当我有十足的把握是或者超过六成的把握时，我才开始这场竞争。</p>
+</blockquote>
+<h3 id="_4">发展简史</h3>
+<div class="admonition info">
+<p class="admonition-title">商业博弈模型</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">古诺模型</label><label for="__tabbed_1_2">伯川德模型</label><label for="__tabbed_1_3">斯塔克尔伯格模型</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<blockquote>
+<p>参加博弈的双方以各自在同一时间内相互独立的产量作为决策的变量，是一个产量竞争模型。</p>
+</blockquote>
+</div>
+<div class="tabbed-block">
+<blockquote>
+<p>该模型与古诺模型的不同之处在于，企业把其产品的价格而不是产量作为竞争的手段和决策的变量，通过制定一个最优的销售价格来是实现利润的最大化。</p>
+</blockquote>
+<p>伯川德悖论：寡头竞争，削价到边际成本。</p>
+<p>1、寡头市场的均衡价格为：P=MC（价格等于产品的边际成本）</p>
+<p>2、寡头企业的长期经济利润为0。</p>
+<p><strong>没有差别，按成本定价。</strong></p>
+<p><strong>没有差别，就没有利润。</strong></p>
+</div>
+<div class="tabbed-block">
+<p><strong>博弈的魅力就在于每个人在做决策的时候，必须考虑对手的反应（甚至反应的反应的反应），并把该反应（甚至反应的反应的反应）作为决策的依据之一。</strong></p>
+<blockquote>
+<p>一个产量领导模型，厂商之间存在着行动次序的区别。领导厂商所决定的产量将是一个以跟随厂商的反应函数为约束的利润最大化产量。</p>
+</blockquote>
+</div>
+</div>
+</div>
+</div>
+<h3 id="_5">理论的诞生与发展</h3>
+<p>1、二十世纪四十年代的社会变化。</p>
+<p>2、约翰冯诺依曼的卓越贡献。1944年冯诺依曼和摩根斯坦发表《博弈论和经济行为》</p>
+<p>3、约翰福布斯纳什的发扬光大</p>
+<p>4、发展方向</p>
+<ul>
+<li>
+<p>对纳什均衡的弱化（一般化）</p>
+</li>
+<li>
+<p>对纳什均衡的精炼（筛选）</p>
+</li>
+<li>
+<p>对博弈论基本假设的研究</p>
+</li>
+<li>
+<p>对博弈论应用的研究</p>
+</li>
+</ul>
+<h2 id="_6">术语解读和基本假设</h2>
+<h3 id="_7">术语解读</h3>
+<h4 id="_8">博弈的术语</h4>
+<ul>
+<li>
+<p>参与人（players）：理性选择的主体。</p>
+</li>
+<li>
+<p>信息（information）：参与者有关博弈的知识。</p>
+</li>
+<li>
+<p>行动（action）：参与者能够选择的变量</p>
+</li>
+<li>
+<p>策略（srtategies）：参与者在行动之前所准备好的一套完整的行动方案
+（预案）。</p>
+<ol>
+<li>完整性</li>
+<li>多样性</li>
+<li>不可观察性</li>
+</ol>
+</li>
+<li>
+<p>损益（payoff）：参与者的得与失。</p>
+</li>
+<li>结局（outcome）：所有参与者选择各自的策略后的结果。</li>
+<li>均衡（equilibrium）：所有参与者的最优策略组合。</li>
+<li>弈的规则（rules of the game）：参与者、行动和结果合起来统称为博弈的规则。</li>
+</ul>
+<h4 id="_9">均衡的含义</h4>
+<blockquote>
+<p>如果参与人事前达成一个协议，在不存在外部强制的情况下，每个人都有积极性遵守这个协议，这个协议就是纳什均衡。</p>
+</blockquote>
+<p><strong>改革需要理由，不改革不需要理由</strong></p>
+<h4 id="_10">博弈的分类</h4>
+<div class="grid">
+<div class="admonition note">
+<p class="admonition-title">合作博弈和非合作博弈</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1"><strong>合作博弈</strong></label><label for="__tabbed_2_2"><strong>非合作博弈</strong></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>指参与者能够达成一种具有约束力的协议，在协议范围内选择有利于双方的策略。</p>
+</div>
+<div class="tabbed-block">
+<p>指参与者无法达成这样一种协议。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">静态博弈和动态博弈</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1"><strong>静态博弈</strong></label><label for="__tabbed_3_2"><strong>动态博弈</strong></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>指在博弈中，参与者同时选择，或虽非同时选择，但是在逻辑时间上是同时的。</p>
+</div>
+<div class="tabbed-block">
+<p>指在博弈中，参与者的行动有先后顺序，且后行动者能够观察到先行动者的行动。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">完全信息博弈与不完全信息博弈</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1"><strong>完全信息博弈</strong></label><label for="__tabbed_4_2"><strong>不完全信息博弈</strong></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>指在博弈中，每个参与者对其他参与者的类型、策略空间及损益函数都有准确的信息。</p>
+</div>
+<div class="tabbed-block">
+<p>总有一些信息不是所有参与者都知道的。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">零和博弈与非零和博弈</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1"><strong>零和博弈</strong></label><label for="__tabbed_5_2"><strong>非零和博弈</strong></label><label for="__tabbed_5_3"><strong>建议</strong></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>指博弈前的损益总和与博弈后的损益总和相等。</p>
+</div>
+<div class="tabbed-block">
+<p>指博弈后的损益大于（小于）博弈前的损益总和。（正和或负和）</p>
+</div>
+<div class="tabbed-block">
+<p><strong>不玩负和游戏，少玩零和游戏，多玩正和游戏</strong></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h3 id="_11">基本假设</h3>
+<h4 id="_12">理性假设</h4>
+<blockquote>
+<p><strong>在互动关系中，完全理性的选择未必是最好的选择</strong> </p>
+</blockquote>
+<div class="grid">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:4"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><input id="__tabbed_6_3" name="__tabbed_6" type="radio" /><input id="__tabbed_6_4" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">认知理性</label><label for="__tabbed_6_2">行为理性</label><label for="__tabbed_6_3">情境理性</label><label for="__tabbed_6_4">共同知识假设</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>人是自我利益的判断者</li>
+<li>偏好具有完备性 （completeness）和传递性 （transitivity）</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>自我利益的追求者（行为者）</li>
+<li>利益最大化 （两利相权取其重，两害相权取其轻）</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p><strong>理性不能独立于场景而存在</strong></p>
+<p><strong>理性必然依场景的改变而改变</strong></p>
+<blockquote>
+<p>情境理性给出了学校存在的一个重要理由</p>
+</blockquote>
+</div>
+<div class="tabbed-block">
+<p><strong>共同知识</strong>：指各参与者在无穷递归意义上均知悉的事实。</p>
+<p><strong>信息传递不能确保信息的完全接收</strong></p>
+<p><strong>达成共识是一件非常困难的事情</strong></p>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">特别提醒</p>
+<ul>
+<li><strong>顾客需要的不是便宜，而是占到了便宜。</strong></li>
+<li><strong>教育与洗脑的根本区别，在于是否屏蔽异见。</strong></li>
+<li><strong>如果不给对方您的两利让其相权，那么对方就很可能会把您的一利和他人的一利相权，从而离您而去。（多做选择题，少做判断题）</strong></li>
+</ul>
+</div>
+</div>
+<h3 id="_13">蜈蚣博弈</h3>
+<blockquote>
+<p>蜈蚣博弈（Centipede game）是一个双人博弈，两人轮流行动，轮到一方时有两种选择：不合作，博弈将直接结束，直接获得收益P；合作，博弈将继续进行，且轮到对方选择。如果对手选择不合作将结束博弈，玩家将会获得一个稍微低于P的收益，但如果对手也选择继续博弈，该玩家将在之后的博弈中获得一个高于P的收益。随着博弈的不断进行，两玩家的收益之和将越来越高。博弈进行有限轮，若两玩家一直选择合作，两人最后的收益相同。</p>
+</blockquote>
+<p>玩到最后的前提是：</p>
+<ul>
+<li>更看重对方的利益</li>
+<li>大家都愿意吃眼前亏</li>
+</ul>
+<h3 id="_14">策略</h3>
+<p><strong>策略让我们建立起从信息到行动的快速反应机制，从而能够以最快的速度做出行动选择。</strong>
+<strong>中国的立法精神：公民有退让义务</strong></p>
+<p><strong>出门在外，不清楚对方的行为模式或反应函数之前</strong></p>
+<ul>
+<li>尽量避免与他人发生正面冲突是你的占优策略。</li>
+<li>如果冲突发生了，尽量避免暴力升级是你的占优策略。</li>
+<li>当面临人身或财产的严重危险时，尽快寻求警方帮助是你的占优策略。</li>
+</ul>
+<h2 id="_15">最后通牒与讨价还价</h2>
+<h3 id="_16">最后通牒</h3>
+<h4 id="_17">最后通牒的含义</h4>
+<blockquote>
+<p>一人提出方案，另一人表决。若表决不痛过，则一无所得。</p>
+</blockquote>
+<ul>
+<li><strong>人在博弈中，会追求利益以外的价值（不患寡，患不均）</strong></li>
+<li><strong>越是成熟的组织，越是使用最后通牒的博弈</strong></li>
+<li><strong>决定您出价高低的是：贪婪和恐惧</strong></li>
+</ul>
+<blockquote>
+<p>职务提升制度直接影响组织的管理效率。尽可能建立基于绩效和能力的职务提升制度，并坚持公开竞争性原则。</p>
+</blockquote>
+<p><strong>谁来承担决策的后果就谁来做决策</strong></p>
+<h4 id="_18">独裁者博弈</h4>
+<blockquote>
+<p>第一，人们在决定其行动时，并不会仅仅考虑到其经济利益，虽然这可能时最主要的一个考量，他们也会考虑一些道德和社会规范，比如公平原则，“己所不欲，勿施于人。”</p>
+<p>第二，一个社会如果在制度安排上能够给人民更多可以拒绝（可以说“不”）的权利，那么这个社会就会产生更多的公平性，甚至会带来更多的效率改善。</p>
+<p>第三，一个社会在制度安排上给了机构（官员）更多可以拒绝（可以说“不”）的权力（比如行政审批制度），那么拥有审批权的机构（官员）一定能够从中获利丰厚。（如社会抚养费）</p>
+</blockquote>
+<h3 id="_19">讨价还价</h3>
+<h4 id="_20">讨价还价的含义</h4>
+<p>也称为<strong>议价</strong>或<strong>谈判</strong>，主要时指参与者通过协商方式解决利益的分配问题，称讨价还价时主要强调其动作或过程，称谈判时则强调其状态或结果。</p>
+<h4 id="_21">均衡解</h4>
+<p>均衡解：X*=(1-δ)/(1-δδ)</p>
+<p><strong>先动优势</strong></p>
+<p>δ代表对长期利益的看重程度</p>
+<p><strong>谈判过程中总能找到一个均衡解</strong></p>
+<p><strong>知识的互补性</strong></p>
+<p>关键在于沟通交流，要建立沟通理性和交流理性</p>
+<h4 id="_22">贴现因子</h4>
+<p><strong>是指一个份额经过一段时间后，等同的现在份额，其由参与者的耐心所决定</strong></p>
+<p>寿命、财富、未来收益的确定性、知识水平</p>
+<p>组织有比人更长的寿命预期，从而提高了贴现因子</p>
+<p><strong>磨刀不误砍柴工（误与不误取决于你要砍多少的柴）</strong></p>
+<h2 id="_23">囚徒困境和破解之道</h2>
+<h3 id="_24">囚徒困境及原因</h3>
+<h4 id="_25">囚徒困境的来源</h4>
+<blockquote>
+<p><strong>游戏规则决定游戏的结局</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>\</th>
+<th>坦白</th>
+<th>抗拒</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>坦白</td>
+<td>-3，-3</td>
+<td>0，-5</td>
+</tr>
+<tr>
+<td>抗拒</td>
+<td>-5，0</td>
+<td>-0.5，-0.5</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_26">囚徒困境的定义及原因分析</h4>
+<table>
+<thead>
+<tr>
+<th>\</th>
+<th>坦白</th>
+<th>抗拒</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>坦白</td>
+<td>a1，b1</td>
+<td>a2，b2</td>
+</tr>
+<tr>
+<td>抗拒</td>
+<td>a3，b3</td>
+<td>a4，b4</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>1、双方都有占优策略，即：
+a1&gt;a3，a2&gt;a4，b1&gt;b2，b3&gt;b4
+在a1&gt;a3，a2&gt;a4的条件下，A选择坦白是占优策略；在b1&gt;b2，b3&gt;b4的条件下，B选择坦白是占优策略。</p>
+<p>2、存在一个合作解，使双方的收益都优于其在占优策略均衡下的收益，即：a1&lt;a4，b1&lt;b4如果双方能够选择合作（都抗拒），本可以得到更好的结果。</p>
+</blockquote>
+<p><strong>对称条件下的囚徒困境</strong></p>
+<table>
+<thead>
+<tr>
+<th>\</th>
+<th>坦白</th>
+<th>抗拒</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>坦白</td>
+<td>P，P</td>
+<td>T，S</td>
+</tr>
+<tr>
+<td>抗拒</td>
+<td>S，T</td>
+<td>R，R</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>在一个2人双策略 对称博弈中，如果满足以下条件：T&gt;R&gt;P&gt;S，2R&gt;S+T&gt;2P，那么其占有策略均衡（P，P）就构成了囚徒困境。（个人理性与集体非理想）</p>
+</blockquote>
+<h4 id="_27">原因分析</h4>
+<blockquote>
+<p>表面上看囚犯对自身利益的追求是导致囚犯困境的原因。然而，真正的原因是：囚犯们在追求自身利益的同时，是以更多地损害他人利益为代价。（君子爱财，取之有道）</p>
+</blockquote>
+<p><strong>囚犯困境的根本原因在于：私人成本与社会成本的差异，即个人行为的负外部性。</strong></p>
+<p><strong>条件</strong>：T（temptation）R（revolt）&gt;P（punishment）&gt;S（sucker）每个参与者抵挡不了诱惑T，背叛R了对方，让对方成为受骗者S。在（R-S）&gt;（T-R）（等同于2R&gt;T+S）的情况下，每个人都收到了惩罚P。</p>
+<p><strong>损人利己和损己利人本质上是一样的，是一个硬币的正反两面；从一方来看是损己利人行为，在另一方来看是损人利己的行为，问题的关键是所损失的部分和所利得的部分哪个更多。（盗窃与抢劫）</strong></p>
+<p><strong>让自己获利时尽量减少伤害他人！</strong></p>
+<p><strong>道德自律：不做害人大于利己的事！</strong></p>
+<h3 id="_28">真实世界的囚犯困境</h3>
+<ul>
+<li>
+<p>价格战、独裁与多数人的懦弱、民主与多数人的暴政。</p>
+</li>
+<li>
+<p><strong>民主必须与法治（不是法制）相辅相成，才能避免多数人的暴政</strong></p>
+</li>
+</ul>
+<h3 id="_29">《国家理论》作者：约拉姆巴泽尔</h3>
+<ol>
+<li>人类成员散局于不同的生存环境内，具有相似的智力，故而积累了不同的技能与知识。</li>
+<li>当具有不同生活技能与生产知识的人类成员偶然相遇时，他们发现了各自的“比较优势”以比他人更低的可比成本提供某种财货的能力（技能与知识）</li>
+<li>
+<p>于是不同的人类成员之间存在着“交易”的潜在可能性。（“交易”（transactions）不同于“贸易”（trages）。后者可以视为“临时性的交易”，前者则指称更长期和多次的互惠交换）</p>
+</li>
+<li>
+<p>交易的执行方式可以划分为I三类：</p>
+<ol>
+<li>基于道德自律的</li>
+<li>基于交易各方相互制约的</li>
+<li>基于与交易无关的“第三方”监督的</li>
+</ol>
+</li>
+<li>
+<p>威慑而不当真使用暴力，使得“第三方”的威慑具有一种“规模效益”。
+1把枪，哪怕只有1颗子弹，也足够让100次交易通过第三方得以执行。（囚犯困境二）</p>
+</li>
+<li>
+<p>当交易的执行成本（道德或相互制约）低于交易所实现的“比较优势”时，交易各方就会自愿订立交易合约。当购买“第三方执行”服务的成本低于采取“相互制约”方式的成本时，交易各方就会自愿订立购买“第三方执行”服务的合约。</p>
+</li>
+<li>
+<p>国家一旦确立，就很难被瓦解。如霍布斯所描述的，交易各方自愿购买的“第三方执行”服务，最终将成为他们不得不“购买”的“利维坦”（Leviathan）怪兽（囚犯困境四，与囚犯困境二类似）。
+由于国家的规模收益递增性质，人类社会的“财富创造”过程很可能因为“第三方执行”服务提供者的横征暴敛而被“锁入”一个“财富毁灭的过程内”。</p>
+</li>
+<li>
+<p>如果能找到某种集体行动机制，人类社会就能从传统的“自然国家”过渡到现代的“法治国家”。如果找不到这样一种集体行动机制，人类社会要么停留在自然国家状态，要么长期处于“利维坦”的独裁通知。这就是“独裁政权”与“臣民控制的政权”之间的差异，也是代表强权利益的“法制国”（Rule by law）与代表大众利益的“法治国”（Rule of law）之间的差异。</p>
+</li>
+</ol>
+<h4 id="_30">特别提醒</h4>
+<p><strong>政府既要有能力制止老百姓乱来，又要确保自己不能乱来（让老百姓有能力制止政府的乱来）。</strong></p>
+<blockquote>
+<p>“人类千万年的历史，最珍贵的不是令人炫目的科技，不是浩瀚的大师们的经典著作，不是政客天花乱坠的演讲，而是实现了对统治者的驯服，实现了把他们关在笼子里的梦想。因为只有驯服了他们，把他们关起来，才不会害人。我现在就是站在笼子里向你们讲话。”--布什</p>
+</blockquote>
+<h3 id="_31">如何破解囚徒困境</h3>
+<h4 id="_32">一、如何利用(两个例子)</h4>
+<p>1、上帝与魔鬼
+2、如何购车</p>
+<h4 id="_33">二、如何破解</h4>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:3"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><input id="__tabbed_7_3" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1"><strong>道德教化（文化建设）</strong></label><label for="__tabbed_7_2"><strong>2、制度建设</strong></label><label for="__tabbed_7_3"><strong>3、温故知新</strong></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>社会学基本定理：</p>
+<blockquote>
+<p>“如果一个社会都是由自利主义者构成的，那么，长期而言，这个社会将消亡。而如果一个社会，通过“说服教育”以及其他说教机构的努力，长期保持一定比例的利他主义者，它就能够稳定地繁衍下去” ————金迪斯</p>
+</blockquote>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>圈地运动（减少负外部性）</li>
+<li>人民公社（自由退社权）</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>让历史告诉未来（重复博弈）</li>
+<li>学习《博弈论基础》课程</li>
+</ul>
+</div>
+</div>
+</div>
+<h2 id="_34">万元陷阱和智猪博弈</h2>
+<h3 id="_35">万元陷阱</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:3"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><input id="__tabbed_8_3" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1"><strong>陷阱特征</strong></label><label for="__tabbed_8_2">典型的万元陷阱</label><label for="__tabbed_8_3">动机</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<blockquote>
+<ol>
+<li>有一个明显的诱饵</li>
+<li>通往诱饵之路是单向的，可进不可出</li>
+<li>越想挣脱、就越陷越深</li>
+</ol>
+</blockquote>
+<p><strong>存量绑架、目标偏移</strong></p>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>序列竞争（排名赛）</li>
+<li>竞技体育</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>
+<p>是经济（理性）的</p>
+<blockquote>
+<p>渴望赢得钞票、赢回他的损失、想避免更多的损失</p>
+</blockquote>
+</li>
+<li>
+<p>是非经济（感性）的</p>
+<blockquote>
+<p>渴望挽回面子、证明自己是最好的玩家及处罚对手等。（鼓掌）</p>
+</blockquote>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<h4 id="_36">应对万元陷阱的建议（鲁宾）</h4>
+<ol>
+<li>确立你投入的极限及预先的约定：譬如投资多少钱或多少时间？</li>
+<li>极限一经确立，就要坚持到底。（止损）</li>
+<li>自己打定主意，不必看别人</li>
+</ol>
+<blockquote>
+<p><strong>既然事情已经发生，请坦然接受！</strong></p>
+<p><strong>更正错误的最好时机，是当你知道了错误的时候</strong></p>
+<p><strong>每个人呢都有犯错的时候，请把注意力放在以后如何避免犯同样的错误！</strong></p>
+</blockquote>
+<hr />
+<h3 id="_37">智猪博弈</h3>
+<blockquote>
+<p><strong>智猪博弈是一个搭便车的博弈一方付出了相应的代价，双方共享了所得到的收益。</strong></p>
+</blockquote>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:4"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><input id="__tabbed_9_3" name="__tabbed_9" type="radio" /><input id="__tabbed_9_4" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">原模型</label><label for="__tabbed_9_2">扩展模型</label><label for="__tabbed_9_3">若干启发</label><label for="__tabbed_9_4">实例分析</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>\</th>
+<th>按</th>
+<th>等</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>按</td>
+<td>5，1</td>
+<td>4，4</td>
+</tr>
+<tr>
+<td>等</td>
+<td>9，-1</td>
+<td>0，0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>\</th>
+<th>按</th>
+<th>等</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>按</td>
+<td>7-A，3-A</td>
+<td>6-A，4</td>
+</tr>
+<tr>
+<td>等</td>
+<td>9 ， 1-A</td>
+<td>0，0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>
+<p>个人理性与集体理性相冲突，还是相一致，取决于制度安排（游戏规则）。</p>
+</li>
+<li>
+<p>解决个体理性与集体理性之间的冲突不是靠否定个体理性，而是靠修改制度（游戏规则），从而在满足个体理性的基础上实现集体理性。</p>
+</li>
+<li>从智猪博弈中还可以发现，在A&lt;10时，任一方去按都是集体理性的选择，而收入分配的不均将有助于减少个体理性与集体理性的冲突。</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>山寨现象（盗版）</li>
+<li>网络购物</li>
+<li>抄（复印）笔记</li>
+<li>汽车定位系统</li>
+<li>好货不便宜，便宜没好货</li>
+</ol>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="_38">懦夫博弈和夫妻博弈</h2>
+<h3 id="_39">懦夫博弈</h3>
+<table>
+<thead>
+<tr>
+<th>\</th>
+<th>进</th>
+<th>退</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>进</td>
+<td>-5，-5</td>
+<td>10，0</td>
+</tr>
+<tr>
+<td>退</td>
+<td>0，10</td>
+<td>0，0</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>先下手为强，后下手遭殃</strong></p>
+<p><strong>赢者通吃的行业，容易出现过度竞争</strong></p>
+</blockquote>
+<h4 id="_40">竞争博弈的核心问题</h4>
+<ol>
+<li>比什么？（规则）</li>
+<li>和谁比？（对手）</li>
+<li>怎么比？（策略）</li>
+</ol>
+<p><strong>游戏规则决定了你的能力发展方向。</strong></p>
+<blockquote>
+<p>如果你有极大的力量，制定游戏规则；</p>
+<p>如果你有较大的力量，挑选游戏规则；</p>
+<p>如果你缺乏足够的力量，适应游戏规则！</p>
+</blockquote>
+<p><strong>公共物品的供给</strong></p>
+<ol>
+<li>囚犯困境</li>
+<li>智猪博弈</li>
+<li>懦夫博弈</li>
+</ol>
+<h3 id="_41">夫妻博弈</h3>
+<table>
+<thead>
+<tr>
+<th>\</th>
+<th>球赛</th>
+<th>韩剧</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>球赛</td>
+<td>2，1</td>
+<td>0，0</td>
+</tr>
+<tr>
+<td>韩剧</td>
+<td>-1，-1</td>
+<td>1，2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_42">猎鹿博弈</h3>
+<table>
+<thead>
+<tr>
+<th>\</th>
+<th>猎鹿</th>
+<th>猎兔</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>猎鹿</td>
+<td>4，4</td>
+<td>0，2</td>
+</tr>
+<tr>
+<td>猎兔</td>
+<td>2，0</td>
+<td>2，2</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>合作需要沟通与协调，沟通与协调的成本过高，合作很难成功。</strong></p>
+<p><strong>人类社会制度和技术的演进方向：不断减低人与人之间的沟通（协调）成本。</strong></p>
+</blockquote>
+<h4 id="_43">合作博弈的核心问题</h4>
+<ol>
+<li>合作剩余（新增收益）怎么分配？</li>
+<li>合作风险怎么分担？</li>
+</ol>
+<h4 id="_44">基本分配方式：</h4>
+<p>第一种，A拿剩余、B拿固定，如雇主和雇员之间。</p>
+<p>第二种，A拿固定，B拿剩余，如银行和企业之间。</p>
+<p>第三种，AB约定一个分配比例，如分成制，股份制，以及婚姻关系中平分婚后收入的制度安排。（农民和地主）</p>
+<blockquote>
+<p><strong>资本雇佣劳动还是劳动雇佣资本，只是一个合作效率的比较问题。</strong></p>
+</blockquote>
+<p><strong>农业经济</strong>：劳动雇佣土地
+<strong>工业经济</strong>：资本雇佣劳动
+<strong>知识经济</strong>：合伙人时代</p>
+<ol>
+<li>劳动监督成本</li>
+<li>规模经济效应</li>
+<li>资本抵押功能</li>
+<li>企业家才能定价</li>
+</ol>
+<h4 id="_45">如何在合作博弈中实现利益最大化</h4>
+<p>贡献越大、机会越多、沟通越易、做事越稳、收益越大。</p>
+<p><strong>竞争博弈：出其不意、攻其不备（难预期）</strong>
+<strong>合作博弈：言而有信、行而可期（可预期）</strong>
+<strong>一般情况下，请不要相信阴谋论</strong></p>
+<blockquote>
+<p>竞争博弈中阴谋的成本在上升，作用在下降
+合作博弈中阴谋不但没好处，而且往往有害</p>
+</blockquote>
+<p><strong>在博弈中，如果您希望得到对方的信任，关键是让其相信，双方的利益是一致的！</strong>
+**执政党（政府）的利益和老百姓的利益相一致，是一个国家政权稳定、长治久安最根本的保障和最坚实的基础。</p>
+<p><strong>共同的价值观（目标）是合作的基石</strong>
+<strong>要事优先</strong></p>
+<blockquote>
+<p>管理者只做最重要的事情，不做第二重要的事情。</p>
+</blockquote>
+<p><strong>我们为了一些不重要的事情疲于奔命，
+却忘了在真正重要的事情上多下功夫。</strong></p>
+<h4 id="_46">判断一件事的重要性</h4>
+<p>1、需要做吗？
+2、需要你来做吗？
+3、你该怎么做？</p>
+<p><strong>每个人可以有和别人不一样的价值观,每个组织需要一个相对统一的价值观。</strong></p>
+<p><strong>充分沟通必能达成共同认知</strong></p>
+<p><strong>要想达成共同认知，需要每个人都能畅所欲言。</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "content.code.annotate", "content.code.select", "content.code.annotate", "content.code.copy", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
