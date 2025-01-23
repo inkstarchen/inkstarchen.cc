@@ -5,40 +5,40 @@ use_directory_urls: true
 nav:
   - 首页: index.md
   - 学习笔记:
-      - 人工智能引论: class/ai-introduction.md
-      - 微信小程序: class/classnote-wx.md
-      - 中国近现代史纲: class/history.md
-      - 博弈论基础: class/game-theory.md
+      - 人工智能引论: learning/ai-introduction.md
+      - 微信小程序: learning/classnote-wx.md
+      - 中国近现代史纲: learning/history.md
+      - 博弈论基础: learning/game-theory.md
       - 计算机系统: 
-        - 计算机简史: class/computer-history.md
-        - 理论知识: class/computer-system.md
-        - Verilog使用: class/verilog.md
-        - reg和时序电路: class/reg.md
-        - 阻塞赋值和非阻塞赋值: class/sys-1.md
-      - 物理学: class/physics.md
+        - 计算机简史: learning/computer-sys/computer-history.md
+        - 理论知识: learning/computer-sys/computer-system.md
+        - Verilog使用: learning/computer-sys/verilog.md
+        - reg和时序电路: learning/computer-sys/reg.md
+        - 阻塞赋值和非阻塞赋值: learning/computer-sys/sys-1.md
+      - 物理学: learning/physics.md
       - 概率论: 
-        - 概率论知识: class/probability.md
-        - 分布函数表: class/distribution.md
+        - 概率论知识: learning/probability.md
+        - 分布函数表: learning/distribution.md
       - 中国现代文学经典选读:
-        - 废名: class/chinese-literature/fei-ming.md
-        - 鲁迅: class/chinese-literature/lu-xun.md
-        - 穆时英: class/chinese-literature/mu-shi-ying.md
-        - 施蛰存: class/chinese-literature/shi-zhe-cun.md
-        - 文学研究会: class/chinese-literature/wen-xue-hui-yan.md
-        - 萧红: class/chinese-literature/xiao-hong.md
-        - 郁达夫: class/chinese-literature/yu-da-fu.md
-        - 赵树理: class/chinese-literature/zhao-shu-li.md
+        - 废名: learning/chinese-literature/fei-ming.md
+        - 鲁迅: learning/chinese-literature/lu-xun.md
+        - 穆时英: learning/chinese-literature/mu-shi-ying.md
+        - 施蛰存: learning/chinese-literature/shi-zhe-cun.md
+        - 文学研究会: learning/chinese-literature/wen-xue-hui-yan.md
+        - 萧红: learning/chinese-literature/xiao-hong.md
+        - 郁达夫: learning/chinese-literature/yu-da-fu.md
+        - 赵树理: learning/chinese-literature/zhao-shu-li.md
       - 茶文化与茶健康:
-        - 茶文化: class/tea/tea-culture.md
-        - 茶健康: class/tea/tea-health.md
-        - 茶科技: class//tea/tea-science.md
-        - 茶产业: class/tea/tea-industry.md
-        - 茶文化与茶健康复习提纲: class/tea/tea-culture-tea-health-review.md
-      - 设计: class/design.md
+        - 茶文化: learning/tea/tea-culture.md
+        - 茶健康: learning/tea/tea-health.md
+        - 茶科技: learning//tea/tea-science.md
+        - 茶产业: learning/tea/tea-industry.md
+        - 茶文化与茶健康复习提纲: learning/tea/tea-culture-tea-health-review.md
+      - 设计: learning/design.md
       - 互联网: 
-        - 杂七杂八: LearnInternet.md
-        - 服务器软件: learn-softwareweb.md
-        - Nginx介绍: learn-Nginx.md
+        - 杂七杂八: learning/LearnInternet.md
+        - 服务器软件: learning/learn-softwareweb.md
+        - Nginx介绍: learning/learn-Nginx.md
   - 知识论:
       - 知识的传递: 
         - 写作: knowledge/pass/writing.md
@@ -49,28 +49,42 @@ nav:
       - 学习与教育: knowledge/education.md
       - 知识论: knowledge/know.md
   - 人与社会: 
+    - 社会幻象: human-society/social-illusions.md
+    -  政府: human-society/government.md
     - 工作生活: human-society/society.md
     - 迈向社会: human-society/school-society.md
+    - 注意力: human-society/attention.md
+  - 人之体验:
+    - 生活: Experience/index.md
+    - 杂言: Experience/mix.md
+    - 摄影: Experience/photo/photograph.md
+    - 前人之言:
+      - 爱因斯坦: Experience/quotes/Einstein.md
+      - 乔布斯: Experience/quotes/SteveJobs.md
+    - 感受:
+      - 情绪: Experience/Feeling/emotion.md
+      - 禅: Experience/Feeling/zen.md
+    - 书籍:
+      - 雕刻时光: Experience/Books/curve_time.md
   - 软件与程序语言:
       - C++:
-        - 基本语法: Cpp-basic.md
+        - 基本语法: soft-lan/Cpp-basic.md
       - Kotlin: 
-        - 数据类型: Kotlin-datatype.md
-        - 错误汇总: Kotlin-error.md
-      - Android Studio: As.md
+        - 数据类型: soft-lan/Kotlin-datatype.md
+        - 错误汇总: soft-lan/Kotlin-error.md
+      - Android Studio: soft-lan/As.md
       - Learn Git: 
-        - 基础知识: LearnGit.md
-        - 错误汇总: git-error.md
-      - Learn Latex: LearnLatex.md
-      - Learn Markdown: LearnMarkdown.md
+        - 基础知识: soft-lan/LearnGit.md
+        - 错误汇总: soft-lan/git-error.md
+      - Learn Latex: soft-lan/LearnLatex.md
+      - Learn Markdown: soft-lan/LearnMarkdown.md
   - 网站搭建:
     - mkdocs配置:
       - pydownx: Website/mkdocs-pydownx.md
       - Admonitions: Website/mkdocs-admonition.md
       - 技巧: Website/mkdocs-tips.md
       - 基础设置: Website/mkdocs-setting.md
-  - 名人名言:
-    - 爱因斯坦: quotes/Einstein.md
+ 
 
 markdown_extensions:
   - md_in_html  
