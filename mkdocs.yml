@@ -4,17 +4,21 @@ repo_url: https://github.com/inkstarchen/inkstarchen.cc
 use_directory_urls: true
 nav:
   - 首页: index.md
-  - 学习笔记:
+  - 思维与知识:
+      - 机器人学: learning/robotics.md
       - 人工智能引论: learning/ai-introduction.md
-      - 微信小程序: learning/classnote-wx.md
-      - 中国近现代史纲: learning/history.md
+      - 技术原则: learning/tech_prin.md
+      - 历史经验: learning/history.md
       - 博弈论基础: learning/game-theory.md
+      - 数据库系统:
+        - Mysql使用: learning/database/mysql.md
       - 计算机系统: 
         - 计算机简史: learning/computer-sys/computer-history.md
         - 理论知识: learning/computer-sys/computer-system.md
         - Verilog使用: learning/computer-sys/verilog.md
         - reg和时序电路: learning/computer-sys/reg.md
         - 阻塞赋值和非阻塞赋值: learning/computer-sys/sys-1.md
+        - Virtual Memory: learning/computer-sys/virtual-memory.md
       - 物理学: learning/physics.md
       - 概率论: 
         - 概率论知识: learning/probability.md
@@ -71,6 +75,7 @@ nav:
         - 基本语法: soft-lan/Cpp/Cpp-basic.md
         - 编写规范: soft-lan/Cpp/Cpp-rule.md
         - Vector 容器的使用: soft-lan/Cpp/Cpp-vector.md
+        - 类的使用: soft-lan/Cpp/Cpp-class.md
         - G++ 编译事项: soft-lan/Cpp/g++.md
       - Kotlin: 
         - 数据类型: soft-lan/Kotlin-datatype.md
