@@ -22,8 +22,8 @@ nav:
         - Virtual Memory: learning/computer-sys/virtual-memory.md
       - 物理学: learning/physics.md
       - 概率论: 
-        - 概率论知识: learning/probability.md
-        - 分布函数表: learning/distribution.md
+        - 概率论知识: learning/probability/probability.md
+        - 分布函数表: learning/probability/distribution.md
       - 中国现代文学经典选读:
         - 废名: learning/chinese-literature/fei-ming.md
         - 鲁迅: learning/chinese-literature/lu-xun.md

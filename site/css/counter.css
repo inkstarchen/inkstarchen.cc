@@ -50,6 +50,12 @@ p {
 
 li p{
   text-indent: 0px;
+  font-size: .64rem;
+}
+
+li {
+  text-indent: 0px;
+  font-size: .64rem;
 }
 
 .quote-card{
