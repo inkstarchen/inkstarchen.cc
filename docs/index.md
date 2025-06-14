@@ -19,7 +19,7 @@
 
     记录在大学期间学习的各种课程，以及自学的各种知识。
 
-    [:octicons-arrow-right-24: Getting started](learning/ai-introduction.md)
+    [:octicons-arrow-right-24: Getting started](learning/AI/ai-introduction.md)
 
 -   :mage:{ .lg .middle } __知识论__
 

@@ -5,6 +5,26 @@ use_directory_urls: true
 nav:
   - 首页: index.md
   - 思维与知识:
+      - 总论: learning/index.md
+      - 马克思主义: learning/marxism/marxism.md
+      - 数据科学:
+        - 数据结构: learning/data_science/data_structure.md
+        - 基本算法: learning/data_science/algorithm.md
+        - 排序: learning/data_science/sort.md
+        - 搜索: learning/data_science/search.md
+        - 并行: learning/data_science/parallel.md
+      - 计算机系统: 
+        - 计算机简史: learning/computer-sys/computer-history.md
+        - 基础: learning/computer-sys/foundation.md
+        - CPU组成: learning/computer-sys/construction.md
+        - 机制: learning/computer-sys/mechanism.md
+        - Verilog使用: learning/computer-sys/verilog.md
+        - reg和时序电路: learning/computer-sys/reg.md
+        - 阻塞赋值和非阻塞赋值: learning/computer-sys/sys-1.md
+        - Virtual Memory: learning/computer-sys/virtual-memory.md
+      - 计算机网络: learning/computer-network/network.md
+      - 软件工程: 
+        - 前端: learning/software_construction/front-end.md
       - 机器人学: learning/robotics.md
       - 人工智能: 
         - 基本概念: learning/AI/basic-know.md
@@ -13,16 +33,17 @@ nav:
       - 历史经验: learning/history.md
       - 博弈论基础: learning/game-theory.md
       - 数据库系统:
-        - 理论知识: learning/database/theory.md
+        - 理论知识:
+          - 总览: learning/database/theory.md
+          - 物理存储: learning/database/physical-level.md
+          - 关系模型: learning/database/relation_schema.md
+          - 数据库设计: learning/database/base_design.md
+          - 索引: learning/database/indexes.md
+          - 查询开销估计与优化: learning/database/query.md
+          - 事务:  learning/database/transaction.md
         - Mysql使用: learning/database/mysql.md
         - Mysql知识: learning/database/mysql-know.md
-      - 计算机系统: 
-        - 计算机简史: learning/computer-sys/computer-history.md
-        - 理论知识: learning/computer-sys/computer-system.md
-        - Verilog使用: learning/computer-sys/verilog.md
-        - reg和时序电路: learning/computer-sys/reg.md
-        - 阻塞赋值和非阻塞赋值: learning/computer-sys/sys-1.md
-        - Virtual Memory: learning/computer-sys/virtual-memory.md
+      
       - 通信原理: 
         - 相关数学知识: learning/communication/communication-theory.md
         - 信号:  learning/communication/signal.md
