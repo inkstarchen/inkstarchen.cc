@@ -10,25 +10,33 @@ nav:
       - 数据科学:
         - 数据结构: learning/data_science/data_structure.md
         - 基本算法: learning/data_science/algorithm.md
+        - 近似算法: learning/data_science/approximate_algorithm.md
         - 排序: learning/data_science/sort.md
         - 搜索: learning/data_science/search.md
         - 并行: learning/data_science/parallel.md
       - 计算机系统: 
+        - 总论: learning/computer-sys/computer-system.md
         - 计算机简史: learning/computer-sys/computer-history.md
-        - 基础: learning/computer-sys/foundation.md
-        - CPU组成: learning/computer-sys/construction.md
-        - 机制: learning/computer-sys/mechanism.md
-        - Verilog使用: learning/computer-sys/verilog.md
-        - reg和时序电路: learning/computer-sys/reg.md
-        - 阻塞赋值和非阻塞赋值: learning/computer-sys/sys-1.md
-        - Virtual Memory: learning/computer-sys/virtual-memory.md
+        - 计算机系统三: learning/computer-sys/sys-3.md
+        - 指标计算与思想: learning/computer-sys/mechanism.md
+        - 电路基础: learning/computer-sys/foundation.md
+        - 电路设计与Verilog使用: learning/computer-sys/verilog.md
+        - 进程与线程: learning/computer-sys/process.md
       - 计算机网络: learning/computer-network/network.md
       - 软件工程: 
         - 前端: learning/software_construction/front-end.md
+        - 软件设计: learning/software_construction/design.md
       - 机器人学: learning/robotics.md
+      - 数理逻辑: 
+        - 命题逻辑与谓词逻辑: learning/mathematical_logic/statement_predicate_logic.md
+        - 推理: learning/mathematical_logic/infer.md
       - 人工智能: 
-        - 基本概念: learning/AI/basic-know.md
-        - 人工智能引论课: learning/AI/ai-introduction.md
+        - 引论: learning/AI/ai-introduction.md
+        - 机器学习: learning/AI/machine-learning.md
+        - 监督学习: learning/AI/supervised_learning.md
+        - 深度学习: learning/AI/deep-learning.md
+        - 强化学习: learning/AI/reinforcement-learning.md
+        - 决策与博弈算法: learning/AI/game-algorithm.md
       - 技术原则: learning/tech_prin.md
       - 历史经验: learning/history.md
       - 博弈论基础: learning/game-theory.md
@@ -41,9 +49,9 @@ nav:
           - 索引: learning/database/indexes.md
           - 查询开销估计与优化: learning/database/query.md
           - 事务:  learning/database/transaction.md
+          - 恢复管理器: learning/database/recoverymanager.md
         - Mysql使用: learning/database/mysql.md
         - Mysql知识: learning/database/mysql-know.md
-      
       - 通信原理: 
         - 相关数学知识: learning/communication/communication-theory.md
         - 信号:  learning/communication/signal.md
@@ -51,6 +59,7 @@ nav:
       - 概率论: 
         - 概率论知识: learning/probability/probability.md
         - 分布函数表: learning/probability/distribution.md
+      - 社会心理学: learning/social-psychology.md
       - 中国现代文学经典选读:
         - 废名: learning/chinese-literature/fei-ming.md
         - 鲁迅: learning/chinese-literature/lu-xun.md
@@ -71,6 +80,7 @@ nav:
         - 杂七杂八: learning/LearnInternet.md
         - 服务器软件: learning/learn-softwareweb.md
         - Nginx介绍: learning/learn-Nginx.md
+      - 毛泽东思想与中国特色社会主义理论体系概论: learning/maogai.md
   - 知识论:
       - 知识的传递: 
         - 写作: knowledge/pass/writing.md
@@ -114,6 +124,11 @@ nav:
         - Vector 容器的使用: tech-know/Cpp/Cpp-vector.md
         - 类的使用: tech-know/Cpp/Cpp-class.md
         - G++ 编译事项: tech-know/Cpp/g++.md
+        - Allocator: tech-know/Cpp/Cpp-allocator.md
+        - 异常: tech-know/Cpp/Cpp-exception.md
+        - 迭代器: tech-know/Cpp/Cpp-iterators.md
+      - 鸿蒙应用开发经验:
+        - 基础知识: tech-know/Harmony/HOS-basic.md
       - Python: tech-know/Python.md
       - Kotlin: 
         - 数据类型: tech-know/Kotlin-datatype.md
@@ -125,6 +140,7 @@ nav:
       - Learn Latex: tech-know/LearnLatex.md
       - Learn Markdown: tech-know/LearnMarkdown.md
       - 文件类型: tech-know/file-type.md
+      - Learn Makefile: tech-know/Makefile.md
   - 网站搭建:
     - mkdocs配置:
       - pydownx: Website/mkdocs-pydownx.md
