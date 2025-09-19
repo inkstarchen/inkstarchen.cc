@@ -1,4 +1,0 @@
-/docs/.obsidian/
-/docs/.trash/
-/docs/template/
-/docs/test/

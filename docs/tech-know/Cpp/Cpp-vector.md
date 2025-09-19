@@ -15,7 +15,7 @@
 
 ## 方法一览
 
-![](./assets/vector_function.png)
+![](assets/vector_function.png)
 
 #### 创建Vector容器
 

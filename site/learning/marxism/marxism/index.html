@@ -1,0 +1,8383 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../">
+      
+      
+        <link rel="next" href="../../data_science/data_structure/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>马克思主义 - 轻墨星的笔记库</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M1%207.775V2.75C1%201.784%201.784%201%202.75%201h5.025c.464%200%20.91.184%201.238.513l6.25%206.25a1.75%201.75%200%200%201%200%202.474l-5.026%205.026a1.75%201.75%200%200%201-2.474%200l-6.25-6.25A1.75%201.75%200%200%201%201%207.775m1.5%200c0%20.066.026.13.073.177l6.25%206.25a.25.25%200%200%200%20.354%200l5.025-5.025a.25.25%200%200%200%200-.354l-6.25-6.25a.25.25%200%200%200-.177-.073H2.75a.25.25%200%200%200-.25.25ZM6%205a1%201%200%201%201%200%202%201%201%200%200%201%200-2%22/%3E%3C/svg%3E');--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M2.5%201.75v11.5c0%20.138.112.25.25.25h3.17a.75.75%200%200%201%200%201.5H2.75A1.75%201.75%200%200%201%201%2013.25V1.75C1%20.784%201.784%200%202.75%200h8.5C12.216%200%2013%20.784%2013%201.75v7.736a.75.75%200%200%201-1.5%200V1.75a.25.25%200%200%200-.25-.25h-8.5a.25.25%200%200%200-.25.25m13.274%209.537zl-4.557%204.45a.75.75%200%200%201-1.055-.008l-1.943-1.95a.75.75%200%200%201%201.062-1.058l1.419%201.425%204.026-3.932a.75.75%200%201%201%201.048%201.074M4.75%204h4.5a.75.75%200%200%201%200%201.5h-4.5a.75.75%200%200%201%200-1.5M4%207.75A.75.75%200%200%201%204.75%207h2a.75.75%200%200%201%200%201.5h-2A.75.75%200%200%201%204%207.75%22/%3E%3C/svg%3E');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M0%208a8%208%200%201%201%2016%200A8%208%200%200%201%200%208m8-6.5a6.5%206.5%200%201%200%200%2013%206.5%206.5%200%200%200%200-13M6.5%207.75A.75.75%200%200%201%207.25%207h1a.75.75%200%200%201%20.75.75v2.75h.25a.75.75%200%200%201%200%201.5h-2a.75.75%200%200%201%200-1.5h.25v-2h-.25a.75.75%200%200%201-.75-.75M8%206a1%201%200%201%201%200-2%201%201%200%200%201%200%202%22/%3E%3C/svg%3E');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M3.499.75a.75.75%200%200%201%201.5%200v.996C5.9%202.903%206.793%203.65%207.662%204.376l.24.202c-.036-.694.055-1.422.426-2.163C9.1.873%2010.794-.045%2012.622.26%2014.408.558%2016%201.94%2016%204.25c0%201.278-.954%202.575-2.44%202.734l.146.508.065.22c.203.701.412%201.455.476%202.226.142%201.707-.4%203.03-1.487%203.898C11.714%2014.671%2010.27%2015%208.75%2015h-6a.75.75%200%200%201%200-1.5h1.376a4.5%204.5%200%200%201-.563-1.191%203.84%203.84%200%200%201-.05-2.063%204.65%204.65%200%200%201-2.025-.293.75.75%200%200%201%20.525-1.406c1.357.507%202.376-.006%202.698-.318l.009-.01a.747.747%200%200%201%201.06%200%20.75.75%200%200%201-.012%201.074c-.912.92-.992%201.835-.768%202.586.221.74.745%201.337%201.196%201.621H8.75c1.343%200%202.398-.296%203.074-.836.635-.507%201.036-1.31.928-2.602-.05-.603-.216-1.224-.422-1.93l-.064-.221c-.12-.407-.246-.84-.353-1.29a2.4%202.4%200%200%201-.507-.441%203.1%203.1%200%200%201-.633-1.248.75.75%200%200%201%201.455-.364c.046.185.144.436.31.627.146.168.353.305.712.305.738%200%201.25-.615%201.25-1.25%200-1.47-.95-2.315-2.123-2.51-1.172-.196-2.227.387-2.706%201.345-.46.92-.27%201.774.019%203.062l.042.19.01.05c.348.443.666.949.94%201.553a.75.75%200%201%201-1.365.62c-.553-1.217-1.32-1.94-2.3-2.768L6.7%205.527c-.814-.68-1.75-1.462-2.692-2.619a3.7%203.7%200%200%200-1.023.88c-.406.495-.663%201.036-.722%201.508.116.122.306.21.591.239.388.038.797-.06%201.032-.19a.75.75%200%200%201%20.728%201.31c-.515.287-1.23.439-1.906.373-.682-.067-1.473-.38-1.879-1.193L.75%205.677V5.5c0-.984.48-1.94%201.077-2.664.46-.559%201.05-1.055%201.673-1.353z%22/%3E%3C/svg%3E');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M13.78%204.22a.75.75%200%200%201%200%201.06l-7.25%207.25a.75.75%200%200%201-1.06%200L2.22%209.28a.75.75%200%200%201%20.018-1.042.75.75%200%200%201%201.042-.018L6%2010.94l6.72-6.72a.75.75%200%200%201%201.06%200%22/%3E%3C/svg%3E');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M0%208a8%208%200%201%201%2016%200A8%208%200%200%201%200%208m8-6.5a6.5%206.5%200%201%200%200%2013%206.5%206.5%200%200%200%200-13M6.92%206.085h.001a.749.749%200%201%201-1.342-.67c.169-.339.436-.701.849-.977C6.845%204.16%207.369%204%208%204a2.76%202.76%200%200%201%201.637.525c.503.377.863.965.863%201.725%200%20.448-.115.83-.329%201.15-.205.307-.47.513-.692.662-.109.072-.22.138-.313.195l-.006.004a6%206%200%200%200-.26.16%201%201%200%200%200-.276.245.75.75%200%200%201-1.248-.832c.184-.264.42-.489.692-.661q.154-.1.313-.195l.007-.004c.1-.061.182-.11.258-.161a1%201%200%200%200%20.277-.245C8.96%206.514%209%206.427%209%206.25a.61.61%200%200%200-.262-.525A1.27%201.27%200%200%200%208%205.5c-.369%200-.595.09-.74.187a1%201%200%200%200-.34.398M9%2011a1%201%200%201%201-2%200%201%201%200%200%201%202%200%22/%3E%3C/svg%3E');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M6.457%201.047c.659-1.234%202.427-1.234%203.086%200l6.082%2011.378A1.75%201.75%200%200%201%2014.082%2015H1.918a1.75%201.75%200%200%201-1.543-2.575Zm1.763.707a.25.25%200%200%200-.44%200L1.698%2013.132a.25.25%200%200%200%20.22.368h12.164a.25.25%200%200%200%20.22-.368Zm.53%203.996v2.5a.75.75%200%200%201-1.5%200v-2.5a.75.75%200%200%201%201.5%200M9%2011a1%201%200%201%201-2%200%201%201%200%200%201%202%200%22/%3E%3C/svg%3E');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M2.344%202.343za8%208%200%200%201%2011.314%2011.314A8.002%208.002%200%200%201%20.234%2010.089a8%208%200%200%201%202.11-7.746m1.06%2010.253a6.5%206.5%200%201%200%209.108-9.275%206.5%206.5%200%200%200-9.108%209.275M6.03%204.97%208%206.94l1.97-1.97a.749.749%200%200%201%201.275.326.75.75%200%200%201-.215.734L9.06%208l1.97%201.97a.749.749%200%200%201-.326%201.275.75.75%200%200%201-.734-.215L8%209.06l-1.97%201.97a.749.749%200%200%201-1.275-.326.75.75%200%200%201%20.215-.734L6.94%208%204.97%206.03a.75.75%200%200%201%20.018-1.042.75.75%200%200%201%201.042-.018%22/%3E%3C/svg%3E');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M9.504.43a1.516%201.516%200%200%201%202.437%201.713L10.415%205.5h2.123c1.57%200%202.346%201.909%201.22%203.004l-7.34%207.142a1.25%201.25%200%200%201-.871.354h-.302a1.25%201.25%200%200%201-1.157-1.723L5.633%2010.5H3.462c-1.57%200-2.346-1.909-1.22-3.004zm1.047%201.074L3.286%208.571A.25.25%200%200%200%203.462%209H6.75a.75.75%200%200%201%20.694%201.034l-1.713%204.188%206.982-6.793A.25.25%200%200%200%2012.538%207H9.25a.75.75%200%200%201-.683-1.06l2.008-4.418.003-.006-.004-.009-.006-.006-.008-.001q-.005%200-.009.004%22/%3E%3C/svg%3E');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M4.72.22a.75.75%200%200%201%201.06%200l1%20.999a3.5%203.5%200%200%201%202.441%200l.999-1a.748.748%200%200%201%201.265.332.75.75%200%200%201-.205.729l-.775.776c.616.63.995%201.493.995%202.444v.327q0%20.15-.025.292c.408.14.764.392%201.029.722l1.968-.787a.75.75%200%200%201%20.556%201.392L13%207.258V9h2.25a.75.75%200%200%201%200%201.5H13v.5q-.002.615-.141%201.186l2.17.868a.75.75%200%200%201-.557%201.392l-2.184-.873A5%205%200%200%201%208%2016a5%205%200%200%201-4.288-2.427l-2.183.873a.75.75%200%200%201-.558-1.392l2.17-.868A5%205%200%200%201%203%2011v-.5H.75a.75.75%200%200%201%200-1.5H3V7.258L.971%206.446a.75.75%200%200%201%20.558-1.392l1.967.787c.265-.33.62-.583%201.03-.722a1.7%201.7%200%200%201-.026-.292V4.5c0-.951.38-1.814.995-2.444L4.72%201.28a.75.75%200%200%201%200-1.06m.53%206.28a.75.75%200%200%200-.75.75V11a3.5%203.5%200%201%200%207%200V7.25a.75.75%200%200%200-.75-.75ZM6.173%205h3.654A.17.17%200%200%200%2010%204.827V4.5a2%202%200%201%200-4%200v.327c0%20.096.077.173.173.173%22/%3E%3C/svg%3E');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M5%205.782V2.5h-.25a.75.75%200%200%201%200-1.5h6.5a.75.75%200%200%201%200%201.5H11v3.282l3.666%205.76C15.619%2013.04%2014.543%2015%2012.767%2015H3.233c-1.776%200-2.852-1.96-1.899-3.458Zm-2.4%206.565a.75.75%200%200%200%20.633%201.153h9.534a.75.75%200%200%200%20.633-1.153L12.225%2010.5h-8.45ZM9.5%202.5h-3V6c0%20.143-.04.283-.117.403L4.73%209h6.54L9.617%206.403A.75.75%200%200%201%209.5%206Z%22/%3E%3C/svg%3E');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M1.75%202.5h10.5a.75.75%200%200%201%200%201.5H1.75a.75.75%200%200%201%200-1.5m4%205h8.5a.75.75%200%200%201%200%201.5h-8.5a.75.75%200%200%201%200-1.5m0%205h8.5a.75.75%200%200%201%200%201.5h-8.5a.75.75%200%200%201%200-1.5M2.5%207.75v6a.75.75%200%200%201-1.5%200v-6a.75.75%200%200%201%201.5%200%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/counter.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="轻墨星的笔记库" class="md-header__button md-logo" aria-label="轻墨星的笔记库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            轻墨星的笔记库
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              马克思主义
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/inkstarchen/inkstarchen.cc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    inkstarchen/inkstarchen.cc
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  思维与知识
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../maths/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  数学工具
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../knowledge/pass/writing/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  知识论
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../know/Software/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  认知
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../human-society/social-illusions/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  人与社会
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Experience/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  人之体验
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../tech-know/SSH/SSH/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  技术知识
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Website/mkdocs-pydownx/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  网站搭建
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="轻墨星的笔记库" class="md-nav__button md-logo" aria-label="轻墨星的笔记库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    轻墨星的笔记库
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/inkstarchen/inkstarchen.cc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    inkstarchen/inkstarchen.cc
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    首页
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    思维与知识
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            思维与知识
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    马克思主义
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    马克思主义
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      世界观、方法论和哲学
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      马克思主义的产生
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="马克思主义的产生">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      物质与运动
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      意识观
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="意识观">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      物质与意识的辩证关系
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      唯物主义辩证法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="唯物主义辩证法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      两个总特征：普遍联系和永恒发展
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="两个总特征：普遍联系和永恒发展">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      联系
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      发展
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      五大范畴
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      唯物辩证法的三大基本规律
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="唯物辩证法的三大基本规律">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      对立统一规律
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      量变质变规律
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      否定之否定规律
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      实践与认识
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="实践与认识">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      实践的本质
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="实践的本质">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      从认识到实践
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      真理与价值
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="真理与价值">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      真理与谬误
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      逻辑证明
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      实践标准
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      价值
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      唯物史观
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="唯物史观">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      人类社会发展的基本规律
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="人类社会发展的基本规律">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      生产力与生产关系矛盾运动的规律
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      经济基础与上层建筑矛盾运动的基础
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      社会基本矛盾
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      资本主义的本质及规律
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="资本主义的本质及规律">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      商品经济和价值规律
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="商品经济和价值规律">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      商品二因素
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      劳动二重性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      劳动力成为商品与货币转化为资本
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      资本主义所有制的本质
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      资本循环与周转
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      剩余价值理论的意义
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      资本主义国家的职能和本质
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      资本主义的发展及其趋势
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="资本主义的发展及其趋势">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      国家垄断资本主义
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      经济全球化及其影响
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="经济全球化及其影响">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      经济全球化的表现
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      经济全球化的动因
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      经济全球化的影响
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    <span class="md-ellipsis">
+      当代资本主义的新变化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    <span class="md-ellipsis">
+      资本主义的历史地位
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    <span class="md-ellipsis">
+      资本主义为社会主义所代替的历史必然性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    <span class="md-ellipsis">
+      启示
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    数据科学
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            数据科学
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data_science/data_structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    数据结构
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data_science/algorithm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    基本算法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data_science/approximate_algorithm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    近似算法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data_science/sort/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    排序
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data_science/search/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    搜索
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data_science/parallel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    并行
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    计算机系统
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            计算机系统
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer-sys/computer-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    总论
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer-sys/computer-history/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    计算机简史
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer-sys/sys-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    计算机系统三
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer-sys/mechanism/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    指标计算与思想
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer-sys/foundation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    电路基础
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer-sys/verilog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    电路设计与Verilog使用
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer-sys/ELF/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ELF文件
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer-sys/structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    操作系统结构
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer-sys/process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    进程
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer-sys/thread/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    线程
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer-sys/how-computer-work/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    计算机如何运作
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    计算机网络
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            计算机网络
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer-network/network/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    网络
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer-network/other/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    杂七杂八
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer-network/serversoftware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    服务器软件
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer-network/learn-Nginx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Nginx介绍
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    计算机视觉
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            计算机视觉
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../computer-vision/introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    引子
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../computer-graphics/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    计算机图形学
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            计算机图形学
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    信息安全
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            信息安全
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../information_security/encryption/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    加密算法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    量子计算
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            量子计算
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quantum/quantum/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    总论
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../brain-interface/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    脑机接口
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            脑机接口
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../brain-interface/brain/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    大脑模拟
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_11" id="__nav_2_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    软件工程
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_11">
+            <span class="md-nav__icon md-icon"></span>
+            软件工程
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software_construction/front-end/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    前端
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software_construction/design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    软件设计模式
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../robotics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    机器人学
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_13" id="__nav_2_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    人工智能
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_13">
+            <span class="md-nav__icon md-icon"></span>
+            人工智能
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/ai-introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    引论
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/machine-learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    机器学习
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/supervised_learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    监督学习
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/deep-learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    深度学习
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/reinforcement-learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    强化学习
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/game-algorithm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    决策与博弈算法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/multi-agent-reinforcement-learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    多智能体强化学习
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech_prin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    技术原则
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../history/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    历史经验
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../game-theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    博弈论基础
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_17" id="__nav_2_17_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    数据库系统
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_17">
+            <span class="md-nav__icon md-icon"></span>
+            数据库系统
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_17_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_17_1" id="__nav_2_17_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    理论知识
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_17_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_17_1">
+            <span class="md-nav__icon md-icon"></span>
+            理论知识
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    总览
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/physical-level/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    物理存储
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/relation_schema/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    关系模型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/base_design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    数据库设计
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/indexes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    索引
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/query/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    查询开销估计与优化
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/transaction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    事务
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/recoverymanager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    恢复管理器
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/mysql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mysql使用
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../database/mysql-know/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mysql知识
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_18" id="__nav_2_18_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    通信原理
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_18">
+            <span class="md-nav__icon md-icon"></span>
+            通信原理
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../communication/communication-theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    相关数学知识
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../communication/signal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    信号
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../physics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    物理学
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../social-psychology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    社会心理学
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    设计
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../maogai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    毛泽东思想与中国特色社会主义理论体系概论
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_23" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_23" id="__nav_2_23_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    文件类型
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_23_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_23">
+            <span class="md-nav__icon md-icon"></span>
+            文件类型
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../files/gltf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GLTF文件
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../files/so/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SO文件
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../maths/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    数学工具
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            数学工具
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    数理逻辑
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            数理逻辑
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../maths/mathematical_logic/statement_predicate_logic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    命题逻辑与谓词逻辑
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../maths/mathematical_logic/infer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    推理
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    优化基础理论
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            优化基础理论
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../maths/optimization/Lec1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Lec1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    理论计算机科学导引
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            理论计算机科学导引
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../maths/Theorical/encoding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    编码
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    数学分析
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            数学分析
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../maths/calculate/function/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    函数
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../maths/calculate/functionlimit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    函数极限
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../maths/calculate/Pfunction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    函数性质
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../maths/calculate/cal2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    微积分定理
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../maths/calculate/cal1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    无界函数反常积分
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../maths/calculate/otherTheorem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    其它定理
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../maths/calculate/number/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    数列
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../maths/calculate/Theorem1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    实数系完备性定理
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    线性代数
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            线性代数
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../maths/linear/linear/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    线性代数：我能做什么
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../maths/linear/abstract/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    抽象部分
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../maths/linear/matrix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    矩阵
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../maths/linear/specialMatrix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    特殊矩阵分类
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../maths/linear/characteristic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    特征值与特征向量
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../maths/linear/proof/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    线性代数证明
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../maths/linear/space/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    线性空间
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../maths/linear/mapping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    线性映射
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../maths/linear/vector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    向量
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../maths/linear/matrix2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    行列式
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    概率论
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            概率论
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../maths/probability/probability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    概率论知识
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../maths/probability/distribution/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    分布函数表
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    知识论
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            知识论
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    知识的传递
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            知识的传递
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../knowledge/pass/writing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    写作
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../knowledge/pass/report/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    报告写作
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../knowledge/pass/paper/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    论文写作
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../knowledge/pass/listen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    听的艺术
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../knowledge/pass/ppt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    内容呈现
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../knowledge/education/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    学习与教育
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../knowledge/know/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    知识论
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../knowledge/research/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    研究之路
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    认知
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            认知
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../know/Software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    软件调研
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../know/noun/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    名词解释
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    人与社会
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            人与社会
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../human-society/social-illusions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    社会幻象
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../human-society/government/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    政府
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../human-society/society/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    工作生活
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../human-society/school-society/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    迈向社会
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../human-society/attention/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    注意力
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../human-society/strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    原则与策略
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../Experience/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    人之体验
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            人之体验
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Experience/mix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    杂言
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Experience/photo/photograph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    摄影
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    前人之言
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            前人之言
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Experience/quotes/Einstein/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    爱因斯坦
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Experience/quotes/SteveJobs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    乔布斯
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    感受
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            感受
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Experience/Feeling/emotion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    情绪
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Experience/Feeling/zen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    禅
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_6" id="__nav_7_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    书籍
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_6">
+            <span class="md-nav__icon md-icon"></span>
+            书籍
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Experience/Books/big_questions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    大问题:简明哲学导论
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Experience/Books/curve_time/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    雕刻时光
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Experience/Books/mao-xuan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    毛选
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_7" id="__nav_7_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    旧文
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_7">
+            <span class="md-nav__icon md-icon"></span>
+            旧文
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Experience/OldWords/lie-of-center/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    中心的骗局
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Experience/OldWords/tough-stone/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    坚韧不拔的磐石
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Experience/OldWords/old-words/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    初中片段
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Experience/OldWords/newlife/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    新
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_8" id="__nav_7_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    文学
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_8">
+            <span class="md-nav__icon md-icon"></span>
+            文学
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Experience/literature/fei-ming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    废名
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Experience/literature/lu-xun/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    鲁迅
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Experience/literature/mu-shi-ying/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    穆时英
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Experience/literature/shi-zhe-cun/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    施蛰存
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Experience/literature/wen-xue-hui-yan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    文学研究会
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Experience/literature/xiao-hong/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    萧红
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Experience/literature/yu-da-fu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    郁达夫
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Experience/literature/zhao-shu-li/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    赵树理
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_9" id="__nav_7_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    茶
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_9">
+            <span class="md-nav__icon md-icon"></span>
+            茶
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Experience/tea/tea-culture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    茶文化
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Experience/tea/tea-health/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    茶健康
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Experience/tea/tea-science/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    茶科技
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Experience/tea/tea-industry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    茶产业
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Experience/tea/tea-culture-tea-health-review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    茶文化与茶健康复习提纲
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    技术知识
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            技术知识
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    SSH
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_1">
+            <span class="md-nav__icon md-icon"></span>
+            SSH
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tech-know/SSH/SSH/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    什么是SSH
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    C++
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            C++
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tech-know/Cpp/Cpp-basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    基本语法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tech-know/Cpp/Cpp-rule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    编写规范
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tech-know/Cpp/Cpp-keyword/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    关键字
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tech-know/Cpp/Cpp-vector/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Vector 容器的使用
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tech-know/Cpp/Cpp-class/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    类的使用
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tech-know/Cpp/g%2B%2B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    G++ 编译事项
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tech-know/Cpp/Cpp-allocator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Allocator
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tech-know/Cpp/Cpp-exception/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    异常
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tech-know/Cpp/Cpp-iterators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    迭代器
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tech-know/Cpp/Cpp-async/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    异步执行
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    VNC
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_3">
+            <span class="md-nav__icon md-icon"></span>
+            VNC
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tech-know/VNC/VNC-bug/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    BUG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_4" id="__nav_8_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    鸿蒙应用开发经验
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_4">
+            <span class="md-nav__icon md-icon"></span>
+            鸿蒙应用开发经验
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tech-know/Harmony/HOS-basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    基础知识
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tech-know/Harmony/HOS-framework/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    框架
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tech-know/Python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_6" id="__nav_8_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Kotlin
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_6">
+            <span class="md-nav__icon md-icon"></span>
+            Kotlin
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tech-know/Kotlin-datatype/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    数据类型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tech-know/Kotlin-error/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    错误汇总
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tech-know/As/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Android Studio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_8" id="__nav_8_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Learn Git
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_8">
+            <span class="md-nav__icon md-icon"></span>
+            Learn Git
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tech-know/LearnGit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    基础知识
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tech-know/git-error/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    错误汇总
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tech-know/LearnLatex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Learn Latex
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tech-know/LearnMarkdown/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Learn Markdown
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tech-know/file-type/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    文件类型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tech-know/Makefile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Learn Makefile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    网站搭建
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            网站搭建
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_1" id="__nav_9_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    mkdocs配置
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_1">
+            <span class="md-nav__icon md-icon"></span>
+            mkdocs配置
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Website/mkdocs-pydownx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    pydownx
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Website/mkdocs-admonition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Admonitions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Website/mkdocs-tips/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    技巧
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Website/mkdocs-setting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    基础设置
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      世界观、方法论和哲学
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      马克思主义的产生
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="马克思主义的产生">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      物质与运动
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      意识观
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="意识观">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      物质与意识的辩证关系
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      唯物主义辩证法
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="唯物主义辩证法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      两个总特征：普遍联系和永恒发展
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="两个总特征：普遍联系和永恒发展">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      联系
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      发展
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      五大范畴
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      唯物辩证法的三大基本规律
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="唯物辩证法的三大基本规律">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      对立统一规律
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      量变质变规律
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      否定之否定规律
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      实践与认识
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="实践与认识">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      实践的本质
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="实践的本质">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      从认识到实践
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      真理与价值
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="真理与价值">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      真理与谬误
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      逻辑证明
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      实践标准
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      价值
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      唯物史观
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="唯物史观">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      人类社会发展的基本规律
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="人类社会发展的基本规律">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      生产力与生产关系矛盾运动的规律
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      经济基础与上层建筑矛盾运动的基础
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      社会基本矛盾
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      资本主义的本质及规律
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="资本主义的本质及规律">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      商品经济和价值规律
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="商品经济和价值规律">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      商品二因素
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      劳动二重性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      劳动力成为商品与货币转化为资本
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      资本主义所有制的本质
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      资本循环与周转
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      剩余价值理论的意义
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      资本主义国家的职能和本质
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      资本主义的发展及其趋势
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="资本主义的发展及其趋势">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      国家垄断资本主义
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      经济全球化及其影响
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="经济全球化及其影响">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      经济全球化的表现
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      经济全球化的动因
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      经济全球化的影响
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    <span class="md-ellipsis">
+      当代资本主义的新变化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    <span class="md-ellipsis">
+      资本主义的历史地位
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    <span class="md-ellipsis">
+      资本主义为社会主义所代替的历史必然性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    <span class="md-ellipsis">
+      启示
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>马克思主义</h1>
+
+<h2 id="_1">世界观、方法论和哲学</h2>
+<p><strong>世界观</strong>: 对整个世界的总体看法和根本观点。</p>
+<p><strong>方法论</strong>：认识和改造世界所遵循的根本方法的学说和理论体系。</p>
+<p><strong>哲学</strong>: 系统化、理论化的世界观，又是方法论</p>
+<div class="admonition info">
+<p class="admonition-title">哲学基本问题</p>
+<p>思维和存在的问题：第一性问题，同一性问题</p>
+<p>由此引申出<strong>(历史)唯物主义</strong>和<strong>(历史)唯心主义</strong>, <strong>可知论</strong>和<strong>不可知论</strong></p>
+</div>
+<p>唯物主义的历史形态: 古代朴素唯物主义-&gt;近代形而上学唯物主义-&gt;现代辩证唯物主义</p>
+<p>唯心主义的历史形态: 主观唯物主义-&gt;客观唯物主义</p>
+<p><strong>辩证法</strong>:用联系的、发展的观点看世界，发展的根本原因在于事物的内部矛盾</p>
+<p><strong>形而上学</strong>:用孤立的、静止的观点看世界，否认事物内部矛盾的存在和作用</p>
+<h2 id="_2">马克思主义的产生</h2>
+<ul>
+<li><strong>经济社会历史条件</strong>：资本主义与经济的发展</li>
+<li><strong>阶级基础和实践基础</strong>：无产阶级但对资产阶级的斗争日益激化，对科学理论的指导提出了强烈的需求</li>
+</ul>
+<p>马克思最重要的理论贡献：唯物史观和剩余价值理论</p>
+<ul>
+<li>
+<p>马克思主义的三个基本组成部分</p>
+<ul>
+<li>马克思主义哲学</li>
+<li>马克思主义政治经济学</li>
+<li>科学社会主义</li>
+</ul>
+</li>
+<li>
+<p>基本立场：以无产阶级的解放和全人类的解放为己任，以人的自由而全面发展为美好目标，以人民为中心，坚持一切为了人民，一切依靠人民，全心全意为人民谋幸福</p>
+</li>
+</ul>
+<p><strong>实践观点</strong>是马克思主义认识论的首要的和基本的观点</p>
+<h3 id="_3">物质与运动</h3>
+<p>物质的唯一特性是<strong>客观实在性</strong>：不依赖于人类的意识而存在，并能为人类的意识所反映的客观存在。</p>
+<ul>
+<li>运动是物质的存在方式和根本属性：运动是物质的运动，物质是运动着的物质——物质与运动一体不可分离<ul>
+<li>时间和空间是物质运动的存在方式——同样时间与空间和物质的运动相统一不可分割</li>
+</ul>
+</li>
+<li>运动是绝对的，静止是相对的</li>
+<li>实践是自然存在与社会存在区分和统一的基础，是理解和解释一切现象的钥匙</li>
+</ul>
+<p><strong>人类实践的客观实在性</strong>：物质资料生产方式是人类社会存在和发展的基础。</p>
+<p><strong>社会的物质性表现</strong>：</p>
+<ul>
+<li>人类社会依赖于自然界，是整个物质世界的组成部分</li>
+<li>人们谋取物质生活资料的实践活动是物质的活动</li>
+<li>物质资料的生产方式是人类社会存在和发展的基础，集中体现着人类社会的物质性</li>
+</ul>
+<h3 id="_4">意识观</h3>
+<p><strong>定义</strong>：意识是物质世界长期发展的产物，是人脑的机能和属性。</p>
+<p><strong>意识的形成三阶段</strong>：无生命的反映特性-&gt;低等生物的刺激感应性-&gt;高等动物的感觉和心理,最终发展为人的意识</p>
+<p>社会实践特别是劳动在意识的产生和发展中起着决定性作用</p>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>意识具有主观性特性：反映形式不同；不同意识主体的差别性；在映像上对客观有时甚至是虚幻的或歪曲的反映</p>
+</div>
+<h4 id="_5">物质与意识的辩证关系</h4>
+<ul>
+<li>物质决定意识</li>
+<li>意识对物质具有反作用<ul>
+<li>意识具有目的性和计划性</li>
+<li>意识具有创造性</li>
+<li>意识具有指导实践改造客观世界的作用</li>
+<li>意识具有调控人的行为和生理活动的作用</li>
+</ul>
+</li>
+<li>主观能动性和客观规律的统一：尊重客观规律是前提和基础，发挥主观能动性<ul>
+<li>从实际出发前提，努力认识和把握事物的发展规律</li>
+<li>实践是发挥人的主观能动性作用的基本途径</li>
+<li>发挥主观能动性还依赖于一定的物质条件与物质手段</li>
+</ul>
+</li>
+</ul>
+<h3 id="_6">唯物主义辩证法</h3>
+<ul>
+<li>客观辩证法：客观事物或客观存在的辩证法|运动和发展规律</li>
+<li>主观辩证法：人类认识和思维活动的辩证法</li>
+</ul>
+<p>辩证思维的主要方法：归纳与演绎、分析与综合、抽象与具体、逻辑与历史</p>
+<h4 id="_7">两个总特征：普遍联系和永恒发展</h4>
+<h5 id="_8">联系</h5>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>联系的观点和发展的观点是唯物主义辩证法的基本观点和总特征</p>
+</div>
+<ul>
+<li>联系具有客观性：事物的联系是事物本身固有的，不是主观臆想的</li>
+<li>联系具有普遍性：<ul>
+<li>任何事物内部的不同部分和要素之间都是相互联系的</li>
+<li>任何事物都不能孤立存在，都同其它事物处在一定联系中</li>
+<li>整个世界是相互联系的统一整体</li>
+</ul>
+</li>
+<li>联系具有多样性</li>
+<li>联系具有条件性<ul>
+<li>条件对事物发展和人的活动具有支持或制约作用</li>
+<li>条件是可以改变的</li>
+<li>改变和创造条件必须尊重事物发展的客观规律</li>
+</ul>
+</li>
+</ul>
+<h5 id="_9">发展</h5>
+<ul>
+<li>发展的实质是新事物的产生和旧事物的灭亡</li>
+<li>新生事物在辩证否定旧事物的基础上产生，有旧事物不具有的新内容</li>
+</ul>
+<h4 id="_10">五大范畴</h4>
+<ul>
+<li>任何事物都是内容与形式的统一：从构成要素和表现方式上反映事物的一对基本范畴</li>
+<li>本质与现象：揭示事物内在联系和外在表现的一对范畴</li>
+<li>原因与结果：揭示事物引起和被引起关系的一对范畴</li>
+<li>偶然与必然：揭示事物产生、发展和衰亡过程中的不同趋势的一对范畴</li>
+<li>现实与可能：反映事物的过去、现在和将来关系的一对范畴</li>
+</ul>
+<h4 id="_11">唯物辩证法的三大基本规律</h4>
+<h5 id="_12">对立统一规律</h5>
+<p>从根本上回答了事物为什么会发展的问题</p>
+<ul>
+<li>对立统一规律是事物发展的根本规律<ul>
+<li>矛盾具有斗争性（无条件的绝对的）和同一性（有条件的相对的）对应于两种基本属性：对立和统一</li>
+<li>矛盾的普遍性和特殊性<ul>
+<li>主要矛盾与次要矛盾：对事物发展起不同作用<ul>
+<li>主要矛盾在矛盾体系中处于支配地位，对事物发展起决定作用</li>
+</ul>
+</li>
+<li>主要方面与次要方面<ul>
+<li>主要矛盾的主要方法决定矛盾的性质</li>
+</ul>
+</li>
+<li>两点论与重点论相结合</li>
+</ul>
+</li>
+<li>矛盾分析方法的核心要求：具体矛盾具体分析，具体情况具体分析是马克思主义活的灵魂</li>
+<li>问题是事物矛盾的表现形式，增强问题意识、坚持问题导向，就是承认矛盾的普遍性、客观性</li>
+</ul>
+</li>
+</ul>
+<h5 id="_13">量变质变规律</h5>
+<ul>
+<li>量变是质变的必要准备</li>
+<li>质变是量变的必然结果</li>
+<li>量变与质变是相互渗透的</li>
+<li>揭示了事物发展的形式和状态，体现了事物发展的渐进性和飞跃性的统一</li>
+</ul>
+<h5 id="_14">否定之否定规律</h5>
+<ul>
+<li>否定是事物的自我否定</li>
+<li>否定式事物发展的环节</li>
+<li>否定是新旧事物联系的环节</li>
+<li>辩证否定的实质是“扬弃”</li>
+<li>从内容上看，是自己发展自己、自己完善自己的过程；从形式上看，是螺旋式上升或波浪式前进的过程，是前进性和曲折性的统一</li>
+</ul>
+<blockquote>
+<p>世界不是既成事物的集合体，而是过程的集合体</p>
+</blockquote>
+<h2 id="_15">实践与认识</h2>
+<blockquote>
+<p>实践观点是马克思主义认识论的首要的和基本的观点</p>
+</blockquote>
+<h3 id="_16">实践的本质</h3>
+<ul>
+<li>人类能动地改造世界的客观物质性活动</li>
+</ul>
+<p>三个基本特征</p>
+<ul>
+<li>客观实在性：实践是改造世界的客观物质活动</li>
+<li>自觉能动性：人的实践活动是一种有意识有目的的活动</li>
+<li>社会历史性：受到社会历史条件的制约</li>
+</ul>
+<p>基本结构</p>
+<ul>
+<li>实践主体、实践客体、实践中介</li>
+</ul>
+<p>实践形式的多样性</p>
+<ul>
+<li>物质生产实践、社会政治实践和科学文化实践</li>
+</ul>
+<p>实践在认识活动中的决定作用：</p>
+<ul>
+<li>实践是认识的来源：实践产生了认识的需要，为认识的形成提供了可能</li>
+<li>实践是认识发展的动力</li>
+<li>实践是认识的目的</li>
+<li>实践是检验认识真理性的唯一标准</li>
+</ul>
+<p><strong>认识的本质</strong>：主体在实践基础上对客体的能动反映（这其中也包含臆测的部分）
+主客体之间是改造与被改造的关系，而不只是反映与被反映的关系。</p>
+<p>感性的认识（感觉、知觉和表象）通过实践达成理性认识，二者辩证统一</p>
+<p>从感性认识到理性认识的两个基本条件：</p>
+<ul>
+<li>投身实践，深入调查，尽可能获取丰富和合乎实际的感性材料</li>
+<li>经过思考的作用，去粗取精，去伪存真</li>
+</ul>
+<h5 id="_17">从认识到实践</h5>
+<ul>
+<li>认识具有反复性和无限性<ul>
+<li>决定了主观与客观、认识与实践的统一是具体的、历史的。</li>
+</ul>
+</li>
+<li>认识世界的目的是为了改造世界</li>
+<li>认识的真理性只有在实践中才能得到检验和发展</li>
+</ul>
+<blockquote>
+<p>认识是一个反复循环和无限发展的过程。这是一个波浪式前进和螺旋式上升的过程。</p>
+</blockquote>
+<p>马克思主义认识论是党的群众路线工作方法的哲学基础</p>
+<h3 id="_18">真理与价值</h3>
+<ul>
+<li>真理具有客观性 |-&gt;认识是多元的，而真理是一元的</li>
+</ul>
+<p>真理是对客观事物及其规律的正确反映</p>
+<ul>
+<li>
+<p>对于特定实践活动中的特定的认识对象来说只能有一种认识是特定的认识客体状态、本质和规律
+相一致的，这种认识就是真理。</p>
+</li>
+<li>
+<p>真理具有绝对性和相对性</p>
+<ul>
+<li>绝对性：不依赖于人和人的意识</li>
+<li>相对性：任何真理所反映的范围有限度，人类的认识广度是有限度的</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>马克思主义作为客观真理，是绝对性和相对性的统一。</p>
+</blockquote>
+<h4 id="_19">真理与谬误</h4>
+<ul>
+<li>真理与谬误的区别：在于认识是否正确反映了客观事物及其规律</li>
+<li>真理与谬误相互对立</li>
+<li>真理与谬误的对立又是相对的，它们在一定条件下能够相互转化</li>
+</ul>
+<h4 id="_20">逻辑证明</h4>
+<ul>
+<li>逻辑证明，是指运用已知的正确概念和判断，通过一定的推理，从理论上确定另一个判断的正确性的逻辑方法</li>
+<li>逻辑证明只能回答前提与结论的关系是不是符合逻辑的问题，而不能回答结论是不是符合客观实际的问题。</li>
+</ul>
+<h4 id="_21">实践标准</h4>
+<ul>
+<li>确定性：唯一性和最终性</li>
+<li>不确定性：任何实践都会受到主客观条件的制约，实践是社会的历史的实践</li>
+</ul>
+<h3 id="_22">价值</h3>
+<ul>
+<li>主体性<ul>
+<li>价值关系的形成依赖于主体的存在和创造</li>
+</ul>
+</li>
+<li>客观性<ul>
+<li>在一定条件下客体对于主体的意义不依赖于主体的主观意识而存在</li>
+</ul>
+</li>
+<li>多维性<ul>
+<li>同一客体相对于主体的不同需要会产生不同的价值</li>
+</ul>
+</li>
+<li>社会历史性</li>
+</ul>
+<p>价值评价的三个基本特点</p>
+<ul>
+<li>评价以主客体的价值关系为认识对象</li>
+<li>评价结果与评价主体直接相关</li>
+<li>评价结果的正确与否依赖于对客体状况和主体需要的认识。</li>
+</ul>
+<p>价值观：是人们关于价值本质的认识以及对人和事物的评价标准、评价原则和评价方法的观点的体系。</p>
+<p>真理和价值在实践中的辩证统一</p>
+<ul>
+<li>价值尺度必须以真理为前提。</li>
+<li>人类自身需要的内在尺度，推动着人们不断发现新的真理</li>
+</ul>
+<h2 id="_23">唯物史观</h2>
+<ul>
+<li>
+<p>社会存在决定社会意识</p>
+</li>
+<li>
+<p>社会存在： 自然地理环境、人口因素、物质生产方式（社会历史发展的决定力量）</p>
+</li>
+<li><span class="arithmatex">\(物质生产方式 = 生产力 + 生产关系\)</span></li>
+<li>社会意识：社会心理、社会意识形式</li>
+<li>社会意识形式：意识形态、非意识形态</li>
+</ul>
+<p>社会意识与社会存在辩证统一</p>
+<p>社会意识具有相对独立性：社会意识与社会存在发展的不完全同步性和不平衡性</p>
+<ul>
+<li>物质资料生产活动及生产方式是人类社会赖以存在和发展的基础，是人类其它一切活动的首要前提</li>
+<li>物质生产活动及生产方式决定着社会的机构、性质和面貌，制约着人们的经济生活、政治生活和精神生活及全部社会生活</li>
+<li>物质生产活动及生产方式的变化发展决定整个社会历史的变化发展，决定社会形态从低级向高级的更替发展</li>
+</ul>
+<h3 id="_24">人类社会发展的基本规律</h3>
+<h4 id="_25">生产力与生产关系矛盾运动的规律</h4>
+<p>生产力是人类在生产实践中形成的改变和影响自然以使其适合社会需要的物质力量，生产力具有客观现实性和社会历史性</p>
+<p>生产关系是人们在物质生产过程中形成的不以人的意志为转移的经济关系</p>
+<p>生产力决定生产关系（性质与变化），而生产关系对生产力具有能动的反作用</p>
+<p>两种基本类型
+- 以生产资料公有制为基础的生产关系
+- 以生产资料私有制为基础的生产关系</p>
+<p>生产力基本要素：劳动资料、劳动对象、劳动者</p>
+<blockquote>
+<p>科学技术是先进生产力的集中体现和主要标志，是第一生产力</p>
+</blockquote>
+<p>生产力的性质取决于生产的物质技术性质</p>
+<h4 id="_26">经济基础与上层建筑矛盾运动的基础</h4>
+<p>经济基础是指由社会一定发展阶段的生产力所决定的生产关系的总和</p>
+<ul>
+<li>社会的一定发展阶段上往往存在多种生产关系，但决定一个社会性质的是其占支配低位的生产关系。</li>
+<li>经济基础与经济体制具有内在联系。经济体制是社会基本经济制度所采取的组织形式和管理形式，是生产关系的具体实现形式</li>
+</ul>
+<p>上层建筑是建立在一定经济基础之上的意识形态以及与之相应的制度、组织和设施</p>
+<p>上层建筑：观念上层建筑（意识形态）、政治上层建筑（政治法律制度及设施和政治组织）</p>
+<p><strong>国体</strong>是指社会各阶级在国家中的地位
+<strong>政体</strong>是指统治阶级实现其阶级统治的具体组织形式</p>
+<ul>
+<li>经济基础决定上层建筑</li>
+<li>上层建筑对经济基础具有反作用</li>
+<li>经济基础与上层建筑的相互作用构成二者的矛盾运动</li>
+<li>经济基础和上层建筑之间的内在联系构成了上层建筑一定要适应经济基础状况的规律</li>
+</ul>
+<h4 id="_27">社会基本矛盾</h4>
+<blockquote>
+<p>社会基本矛盾是历史发展的根本动力</p>
+</blockquote>
+<ul>
+<li>生产力和生产关系的矛盾</li>
+<li>
+<p>经济基础和上层建筑的矛盾</p>
+</li>
+<li>
+<p>阶级和阶级斗争是人类社会发展到一定阶段才会出现的社会现象</p>
+</li>
+<li>阶级斗争是阶级社会发展的直接动力</li>
+<li>马克思主义的阶级分析方法是认识阶级社会的科学方法</li>
+<li>社会革命的实质是革命阶级推翻反动阶级的统治，用新的社会制度代替旧的社会制度，解放生产力，推动社会发展</li>
+</ul>
+<p>人民群众是历史的创造者</p>
+<ul>
+<li>人民群众是社会物质财富的创造者</li>
+<li>人民群众是社会精神财富的创造者</li>
+<li>人民群众是社会变革的决定力量</li>
+</ul>
+<p>人民群众创造历史的活动受到一定社会历史条件的制约</p>
+<ul>
+<li>经济条件制约</li>
+<li>政治条件制约</li>
+<li>精神文化条件制约</li>
+</ul>
+<p>杰出人物是历史人物中对推动历史发展做出重要贡献或起重要作用的人</p>
+<p>历史人物，在历史上发挥什么样的作用，都要受到社会发展客观规律的制约，而不能决定和改变历史发展的总进程和总方向。</p>
+<h2 id="_28">资本主义的本质及规律</h2>
+<ul>
+<li><strong>资本主义的本质及规律</strong>：商品经济、价值规律、资本积累、资本周转、剩余价值理论、经济危机、国家政治制度和意识形态</li>
+</ul>
+<h3 id="_29">商品经济和价值规律</h3>
+<p><strong>自然经济的生产目的</strong>：是直接满足生产者个人或经济单位的需要</p>
+<p><strong>商品经济</strong>：是以交换为目的而进行生产的经济形式</p>
+<ul>
+<li>基本特征：为了交换而生产</li>
+<li>物质基础：社会化大生产</li>
+<li>社会历史条件：社会分工、生产资料和劳动产品属于不同的所有者</li>
+</ul>
+<h4 id="_30">商品二因素</h4>
+<ul>
+<li>使用价值-&gt;物品能够满足人们某种需要的属性-&gt;商品的自然属性</li>
+<li>
+<p>价值-&gt;凝结在商品中的无差别一般人类劳动-&gt;商品的社会属性</p>
+</li>
+<li>
+<p>交换价值首先表现为一种使用价值同另一种使用价值相交换的量的关系或比例</p>
+</li>
+<li>
+<p>价值是交换价值的基础，交换价值是价值的表现形式</p>
+</li>
+<li>
+<p>作为商品，必须同时具有使用价值和价值两个因素。</p>
+</li>
+</ul>
+<h4 id="_31">劳动二重性</h4>
+<ul>
+<li>具体劳动-&gt;生产一定使用价值的具体形式劳动-&gt;劳动的自然属性</li>
+<li>抽象劳动-&gt;撇开一切具体形式的、无差别的一般人类劳动，即人的脑力和体力的耗费-&gt;劳动的社会属性</li>
+</ul>
+<blockquote>
+<p>劳动的二重性决定了商品的二因素</p>
+</blockquote>
+<p>决定商品价值量的不是生产商品的个别劳动时间，而是社会必要劳动时间</p>
+<ul>
+<li>社会必要劳动时间：在现有的社会正常的生产条件下，在社会平均的劳动熟练程度和劳动强度下制造某种使用价值所需要的劳动时间</li>
+<li>劳动生产率：劳动者生产使用价值的效率</li>
+</ul>
+<p>劳动生产率水平越高，单位时间内生产的商品数量越多，生产每件商品所需要的社会必要劳动时间就越少，单位商品的价值量就越小，反之就越大。</p>
+<blockquote>
+<p>在相同的劳动时间里，复杂劳动创造的价值大于简单劳动创造的价值</p>
+</blockquote>
+<p><strong>商品价值形成的四个阶段</strong>：简单的或偶然的价值形式-&gt;总和的或扩大的价值形式、一般的价值形式以及货币形式</p>
+<p>货币的本质：长期交换过程中形成的固定地充当一般等价物的商品</p>
+<p>货币的出现：</p>
+<ul>
+<li>使商品内在的使用价值和价值的矛盾发展成为外在的商品和货币的矛盾</li>
+<li>没有也不可能解决商品经济的基本矛盾，即私人劳动和社会劳动的矛盾</li>
+</ul>
+<p>价值规律：</p>
+<ul>
+<li>商品的价值量由生产商品的社会必要劳动时间决定</li>
+<li>商品交换以价值量为基础，按照等价交换的原则进行</li>
+</ul>
+<p>价值规律的作用是自发的：</p>
+<ul>
+<li>自发地调节生产资料和劳动力在社会各生产部门之间地分配比例</li>
+<li>自发地刺激社会生产力地发展</li>
+<li>自发地调节社会收入的分配</li>
+</ul>
+<blockquote>
+<p>资本主义的基本矛盾：生产资料的资本主义私人占有和生产社会化之间矛盾</p>
+</blockquote>
+<h4 id="_32">劳动力成为商品与货币转化为资本</h4>
+<p>资本主义经济制度的产生：资本主义萌芽、资本原始积累：暴力掠夺土地，货币财富。</p>
+<p>资本主义雇佣劳动制度的形成是以劳动力成为商品为前提的。</p>
+<p>劳动力成为商品的基本条件：劳动者是自由的，劳动者没有别的商品可以出卖</p>
+<p>劳动力的价值：</p>
+<ul>
+<li>维持劳动者本人生存所必需的生活资料的价值</li>
+<li>维持劳动者家属的生存所必需的生活资料的价值</li>
+<li>劳动力接受交予贺寻龙所支出的费用</li>
+</ul>
+<p>劳动力商品的特点</p>
+<ul>
+<li>使用价值是价值源泉，它在消费过程中能够创造新的价值，而且这个新的价值比劳动力本身的价值大</li>
+</ul>
+<h4 id="_33">资本主义所有制的本质</h4>
+<ul>
+<li>资本家凭借对生产资料的占有，在等价交换原则的掩盖下，雇佣工人从事劳动，无偿占有雇佣工人创造的剩余价值，资本与雇佣劳动的关系由此具有了剥削与被剥削的对抗性质。</li>
+</ul>
+<p>资本主义生产过程：</p>
+<ul>
+<li>
+<p>生产物质资料</p>
+<ul>
+<li>劳动者的劳动</li>
+<li>劳动对象</li>
+<li>劳动资料</li>
+</ul>
+</li>
+<li>
+<p>生产剩余价值</p>
+<ul>
+<li>是超过劳动力价值的补偿这个一定点而延长了的价值形成过程<ul>
+<li>必要劳动：用于再生产劳动力的价值 &lt;- 工人获得相应报酬</li>
+<li>剩余劳动：用于无偿地为资本家生产剩余价值 &lt;- 工人本应该获得报酬但被资本家无偿占有</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>资本是可以带来剩余价值的价值</p>
+<ul>
+<li>生产资料（不变资本（c））<ul>
+<li>厂房、机器等</li>
+<li>原材料、燃料等</li>
+</ul>
+</li>
+<li>劳动力 - 工资 - 可变资本（v）（还包含一定量的剩余价值）</li>
+</ul>
+</li>
+<li>
+<p>资本主义劳动过程的两个特点</p>
+<ul>
+<li>工人在资本家的监督下劳动，他们的劳动隶属于资本家</li>
+<li>劳动的成果或产品全部归资本家所有</li>
+</ul>
+</li>
+<li>
+<p>资本主义生产过程的主要方面是价值增殖过程，即剩余价值的生产过程</p>
+</li>
+</ul>
+<p>商品的价值构成公式<span class="arithmatex">\(W=c + v + m\)</span>
+剩余价值率，剩余价值与可变资本的比率：<span class="arithmatex">\(m' = \frac{m}{v}\)</span></p>
+<p>生产剩余价值的两种基本方法
+- 绝对剩余价值的生产
+    - 在必要劳动时间不变的条件下，由于延长工作日的长度和提高劳动强度而产生的剩余价值
+- 相对剩余价值的生产
+    - 在工作日长度不变的条件下，通过缩短必要劳动时间而相对延长剩余劳动时间所生产的剩余价值</p>
+<p><img alt="" src="../assets/remain.png" /></p>
+<p>资本主义再生产的特点是扩大再生产</p>
+<p>资本构成：</p>
+<ul>
+<li>从自然形式看：由生产资料和劳动力构成（技术构成）</li>
+<li>从价值形式看：由不变资本和可变资本构成（价值构成资本有机构成（C:V））</li>
+</ul>
+<blockquote>
+<p>随着资本积累而产生的失业是由资本追逐剩余价值引起资本有机构成的提高所导致的</p>
+</blockquote>
+<h4 id="_34">资本循环与周转</h4>
+<p>资本循环三阶段</p>
+<ul>
+<li>购买阶段——货币资本职能（准备生产m）</li>
+<li>生产阶段——生产资本职能（生产m）</li>
+<li>售卖阶段——商品资本职能（实现m） </li>
+</ul>
+<p>生产力的发展和追逐超额剩余价值-&gt;资本有机构成提高-&gt;对劳动力需求减少但劳动力供给不变或增加-&gt;产生相对过剩人口（流动、潜在、停滞）-&gt;矛盾日益加剧-&gt;资本主义制度的必然灭亡</p>
+<p>影响资本周转的主要因素</p>
+<ul>
+<li>资本的周转时间</li>
+<li>生产资本的构成</li>
+</ul>
+<p>社会总产品
+- 社会在一定时期（通常为一年）所生产的全部物质资料的总和，在价值形态上又叫社会总产值</p>
+<p>资本主义工资本质是劳动力的价值或价格</p>
+<blockquote>
+<p>剩余价值是对可变资本而言，利润是对全部垫付资本而言，剩余价值是利润的本质，利润是剩余价值的转化形式，掩盖了资本主义剥削的实质。</p>
+</blockquote>
+<p>不同部门之间的竞争，资本自由转移的结果使利润趋于平均化，价值就转化为生产价格</p>
+<p>平均利润率是剩余价值总量对社会总资本的比率</p>
+<h4 id="_35">剩余价值理论的意义</h4>
+<ul>
+<li>解释了资本主义生产关系的剥削本质，阐明了资产阶级与无产阶级之间阶级斗争的经济根源，指出了无产阶级革命的历史必然性。</li>
+</ul>
+<p>资本主义的基本矛盾是生产社会化和生产资料资本主义私人占有之间的矛盾</p>
+<ul>
+<li>社会化<ul>
+<li>生产资料的共同使用</li>
+<li>生产过程是分工协作</li>
+<li>劳动产品由市场交换</li>
+</ul>
+</li>
+<li>私有制<ul>
+<li>生产资料的私人占有</li>
+<li>生产过程由个人控制</li>
+<li>劳动产品由个人支配</li>
+</ul>
+</li>
+</ul>
+<p>生产过剩是经济危机的本质特征</p>
+<ul>
+<li>工厂被迫减产或停产</li>
+<li>金融企业倒闭</li>
+<li>社会经济生活混乱</li>
+</ul>
+<p>资本主义的基本矛盾是经济危机的根本原因
+- 生产无限扩大的趋势与劳动人民有支付能力的需求相对缩小的矛盾
+- 单个企业内部生产的有组织性和整个社会生产的无政府状态之间的矛盾。</p>
+<p>资本主义国家的选举制度的实质政治作用时协调统治阶级内部利益关系和矛盾的重要措施</p>
+<h3 id="_36">资本主义国家的职能和本质</h3>
+<p>宪法原则</p>
+<ul>
+<li>私有制原则</li>
+<li>主权在民</li>
+<li>分权与制衡</li>
+<li>人权原则</li>
+</ul>
+<h2 id="_37">资本主义的发展及其趋势</h2>
+<ul>
+<li>私人垄断资本主义（生产集中和资本集中）<ul>
+<li>垄断组织的本质：通过联合实现独占和瓜分商品生产和销售市场，操纵垄断价格，以攫取高额垄断利润</li>
+</ul>
+</li>
+<li>金融资本和金融寡头</li>
+<li>金融资本：由工业垄断资本和银行垄断资本融合在一起而形成的一种垄断资本</li>
+<li>金融寡头：操纵国民经济命脉，并在实际上控制国家政权的少数垄断资本家或垄断资本家集团（同政府的“个人联合”（亲自担任或指派代理人担任政府要职））</li>
+<li>垄断利润：垄断资本家凭借其在社会生产和流通中的垄断地位而获得的超过平均利润的高额利润</li>
+<li>垄断价格（高价、低价）：抑制了市场上价格的自由波动，垄断价格长期贝利生产价格和价值</li>
+</ul>
+<h4 id="_38">国家垄断资本主义</h4>
+<p>形成原因
+- 社会生产力的发展，要求资本主义生产资料在更大范围内被支配
+- 经济波动和经济危机的深化
+- 缓和社会矛盾，协调利益关系</p>
+<p><strong>宏观调控</strong>：国家运用财政政策、货币政策等经济手段，对社会总供给和总需求进行调节，以实现经济快速增长、充分就业、物价稳定和国际收支平衡的目标。</p>
+<p><strong>微观调控</strong>：国家运用法律手段规范市场秩序，限制垄断，保护竞争，维护社会公众的合法权益。</p>
+<p>金融自由化和金融创新</p>
+<ul>
+<li>金融资本占比越来越大</li>
+<li>金融业就业人数逐步增加</li>
+<li>虚拟经济愈发脱离实体经济</li>
+</ul>
+<h3 id="_39">经济全球化及其影响</h3>
+<h4 id="_40">经济全球化的表现</h4>
+<ul>
+<li>生产全球化，分工</li>
+<li>贸易全球化，商品和劳务自由流动</li>
+<li>金融全球化。世界各国、各地区在金融业务、政策等方面相互协调、相互渗透、相互竞争不断价钱。</li>
+</ul>
+<h4 id="_41">经济全球化的动因</h4>
+<ul>
+<li>科学技术的进步和生产力的发展为经济全球化提供了坚实的物质基础和根本的推动力。</li>
+<li>跨国公司的发展为全球化提供了适宜的企业组织形式</li>
+<li>各国经济体制的变革和国际经济组织的发展是经济全球化的体制和组织保障</li>
+</ul>
+<h4 id="_42">经济全球化的影响</h4>
+<p>有利</p>
+<ul>
+<li>为发展中国家提供先进技术和管理经验。</li>
+<li>为发展中国家提供更多就业机会</li>
+<li>推动发展中国家的贸易发展</li>
+<li>促进发展中国家跨国公司发展</li>
+</ul>
+<p>不利</p>
+<ul>
+<li>发达国家与发展中国家在经济全球化进程中的地位和收益不平等、不平衡</li>
+<li>加剧了发展中国家资源短缺和环境污染</li>
+<li>一定程度上增加了经济风险。</li>
+</ul>
+<h4 id="_43">当代资本主义的新变化</h4>
+<ul>
+<li>
+<p>主要表现</p>
+<ul>
+<li>生产资料所有制的变化。<ul>
+<li>资本占有的社会化程度大大提高</li>
+</ul>
+</li>
+<li>劳动关系和分配关系的变化<ul>
+<li>资本主义国家工人阶级的生活状况得到一定改善</li>
+</ul>
+</li>
+<li>社会阶层和阶级结构的变化<ul>
+<li>体力劳动工人减少，白领工人增多，实现了从传统劳动方式向现代劳动方式的转变</li>
+</ul>
+</li>
+<li>经济调节机制和经济危机形态的变化<ul>
+<li>对全球经济产生打击</li>
+</ul>
+</li>
+<li>政治制度的变化<ul>
+<li>缓和矛盾冲突</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>变化的原因和实质</p>
+<ul>
+<li>科学技术革命和生产力的发展是资本主义发生变化的根本推动力量</li>
+<li>工人阶级争取自身权利和利益的斗争，是推动资本主义发生变化的重要力量</li>
+<li>社会主义制度初步显示的优越性对资本主义产生了重要影响。</li>
+<li>主张改良主义的政党对资本主义制度的改革。</li>
+</ul>
+</li>
+</ul>
+<p>从根本上说是人类社会发展一般规律和资本主义经济规律作用的结果。其变化是在资本主义制度基本框架内的变化，并不意味着资本主义生产关系的根本性质发生了变化。这些变化并没有触动资本主义统治地根基，并没有资本主义制度的性质，也没有改变马克思主义关于资本主义的基本原理的科学性。</p>
+<h4 id="_44">资本主义的历史地位</h4>
+<p>有一定的历史进步性</p>
+<ul>
+<li>将科学技术转变为强大的生产力</li>
+<li>资本追求剩余价值的内在动力和竞争的外在压力推动了社会生产力的迅速发展。</li>
+<li>资本主义的意识形态和政治制度作为上层建筑在战胜封建社会自给自足的小生产的生产方式，保护、促进和完善资本主义生产方式方面起着重要作用，从而推动了社会生产力的迅速发展，促进了社会进步。</li>
+</ul>
+<p>局限性</p>
+<ul>
+<li>资本主义的基本矛盾阻碍社会生产力的发展</li>
+<li>资本主义制度下财富占有两级分化，引起经济危机</li>
+<li>资产阶级支配和控制资本主义经济和政治的发展和允许，不断激化社会矛盾和冲突。</li>
+</ul>
+<h4 id="_45">资本主义为社会主义所代替的历史必然性</h4>
+<ul>
+<li>资本主义基本矛盾“包含着现代的一切冲突的萌芽”，社会化生产和资本主义占有的不相容性</li>
+<li>资本积累推动资本主义基本矛盾不断激化最终否定资本主义自身。</li>
+<li>国家垄断资本主义是资本主义社会化的更高形式，将成为社会主义的前奏。</li>
+<li>资本主义社会存在者资产阶级和无产阶级之间的矛盾和斗争。</li>
+</ul>
+<h2 id="_46">启示</h2>
+<p>将理论教条化，经验神圣化，必然犯错</p>
+<ul>
+<li>例如：1931年，党内的左倾错误，马克思主义教条化错误，使得革命遭受严重挫折</li>
+</ul>
+<blockquote>
+<p>马克思的整个世界观不是教义，而是方法。它提供的不是现成的教条，而是进一步研究的出发点和供这种研究使用的方法 —— 恩格斯</p>
+<p>理论的根本任务是回答并指导解决问题</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["search.suggest", "content.code.annotate", "content.code.select", "content.code.annotate", "content.code.copy", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

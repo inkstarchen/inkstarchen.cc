@@ -12,7 +12,7 @@
 - 假如这些处理器在功能权限上完全相同，则称此系统为对称多核系统 (Symmetric Multi-processor)
 - 只有一个系统镜像是多核系统区分于多计算机系统的重要特点
 
-![](assets/Pasted image 20250616165250.png)
+![](assets/Pasted_image_20250616165250.png)
 
 #### 内存访问模型
 
@@ -22,7 +22,7 @@
 - 所有处理器共享物理内存
 - 每个处理器可以有私有cache和内存
 
-![](assets/Pasted image 20250616170314.png)
+![](assets/Pasted_image_20250616170314.png)
 
 **Non Uniform Memory Access(NUMA)**
 
@@ -32,7 +32,7 @@
 - 访问远程内存比访问局部内存要慢
 - 可以使用cache
 
-![](assets/Pasted image 20250616170915.png)
+![](assets/Pasted_image_20250616170915.png)
 
 **NC-NUMA and CC-NUMA**
 
@@ -43,13 +43,13 @@
 - 所有内存被视为缓存，在使用时迁移到较近的处理器
 - NUMA 的特殊例子：每个处理器节点中没有存储继承，所有的cache组成一个统一地址空间
 
-![](assets/Pasted image 20250616171027.png)
+![](assets/Pasted_image_20250616171027.png)
 
 ### 多计算机系统——基于信息传递
 
 - 使用互连网络去传递信息
 
-![](assets/Pasted image 20250616165924.png)
+![](assets/Pasted_image_20250616165924.png)
 
 #### 进一步分类
 
@@ -58,23 +58,23 @@
 - 包含成百上千处理器，开发代价高
 - 使用高性能私有互连网络，能以低延迟高带宽传递数据
 
-![](assets/Pasted image 20250616171539.png)
+![](assets/Pasted_image_20250616171539.png)
 
 **Cluster of Workstations(COW)**
 
 - 由大量个人电脑或工作站连接而成的商业网络
 - 中心化或去中心化
 
-![](assets/Pasted image 20250616171739.png)
+![](assets/Pasted_image_20250616171739.png)
 
-![](assets/Pasted image 20250616171746.png)
+![](assets/Pasted_image_20250616171746.png)
 
 ### 共享的问题
 #### 内存的一致性
 
 一个处理器写入的数据，一定能全部被另一个处理器看到
 
-![](assets/Pasted image 20250616181117.png)
+![](assets/Pasted_image_20250616181117.png)
 
 **Relaxed Consistency Models**
 
@@ -109,12 +109,12 @@
 		- Shared：标识当前块在私有cache中被共享
 		- Invalid
 
-![](assets/Pasted image 20250616175912.png)
+![](assets/Pasted_image_20250616175912.png)
 
 - MESI protocol
 	- 增加一个exclusive状态：只在一个cache中（独占）被读或被写则转变状态
 
-![](assets/Pasted image 20250616180042.png)
+![](assets/Pasted_image_20250616180042.png)
 
 - MOESI：
 	- 增加一个owned状态：果过时信息
@@ -126,15 +126,15 @@
 - 同样是写入共享块时，通过目录点对点地无效化
 - 同样MSI三状态
 
-![](assets/Pasted image 20250616181037.png)
+![](assets/Pasted_image_20250616181037.png)
 
-![](assets/Pasted image 20250616180629.png)
+![](assets/Pasted_image_20250616180629.png)
 
 **Write-through**类协议
 
 - 四个阶段
 
-![](assets/Pasted image 20250616173400.png)
+![](assets/Pasted_image_20250616173400.png)
 
 ### Domain-Specific Architectures
 
@@ -186,7 +186,7 @@
 
 费林分类法（Flynn's Taxonomy） 
 
-![](assets/Pasted image 20250615162915.png)
+![](assets/Pasted_image_20250615162915.png)
 
 
 ### SIMD
@@ -350,7 +350,7 @@ Module availability = MTTF/MTBF
 
 **Register result status** : 标识那个功能单元会写每个寄存器
 
-![](assets/Pasted image 20250615185036.png)
+![](assets/Pasted_image_20250615185036.png)
 
 #### 托马斯罗方法Tomasulo’s Approach
 
@@ -378,7 +378,7 @@ Common data bus：data + destination（64 bits of data + 4 bits of Functional Un
 
 
 
-![](assets/Pasted image 20250615185052.png)
+![](assets/Pasted_image_20250615185052.png)
 
 #### 缺点
 - 乱序执行且乱序完成，在异常中断时无法保持一致性
@@ -391,7 +391,7 @@ Common data bus：data + destination（64 bits of data + 4 bits of Functional Un
 - 并依次提交
 - 执行时的数据依赖都从ROB中获取，而寄存器状态表也标识ROB中的条目
 
-![](assets/Pasted image 20250615193448.png)
+![](assets/Pasted_image_20250615193448.png)
 
 ### 异常和中断
 
@@ -406,7 +406,7 @@ Common data bus：data + destination（64 bits of data + 4 bits of Functional Un
 	- 超长指令字处理器(very long instruction word VLIW)：发射数固定，指令间并行关系由指令显式表达
 	- 超级流水线处理器
 
-![](assets/Pasted image 20250615193941.png)
+![](assets/Pasted_image_20250615193941.png)
 
 ### 缓存（cache）
 
@@ -458,7 +458,7 @@ Common data bus：data + destination（64 bits of data + 4 bits of Functional Un
 - 集合缓存
 - I\D分离缓存，Icache只读
 
-![](assets/Pasted image 20250615194847.png)
+![](assets/Pasted_image_20250615194847.png)
 
 ### TLB
 - 页表的缓存
@@ -475,7 +475,7 @@ Common data bus：data + destination（64 bits of data + 4 bits of Functional Un
 
 - 内存申请可以做到变量分离
 
-![](assets/Pasted image 20250615202254.png)
+![](assets/Pasted_image_20250615202254.png)
 
 **内存申请策略**
 
@@ -501,11 +501,11 @@ Common data bus：data + destination（64 bits of data + 4 bits of Functional Un
 - 在主存中存储，使用页表基地址寄存器（PTBR）来指向页表
 - 页表长度寄存器（PTLR）来表示页表的大小
 #### SV39
-![](assets/Pasted image 20250615212713.png)
+![](assets/Pasted_image_20250615212713.png)
 
-![](assets/Pasted image 20250615212721.png)
+![](assets/Pasted_image_20250615212721.png)
 
-![](assets/Pasted image 20250615212734.png)
+![](assets/Pasted_image_20250615212734.png)
 
 **TLB 优化**
 
@@ -514,7 +514,7 @@ Common data bus：data + destination（64 bits of data + 4 bits of Functional Un
 反置页表：Inverted Page Table：所有进程共用同一个页表
 
 
-![](assets/Pasted image 20250615204312.png)
+![](assets/Pasted_image_20250615204312.png)
 
 #### Demand Paging
 
@@ -557,7 +557,7 @@ Reclaiming Pages： 全局替换策略->当空闲链表低于一定阈值旧开�
 
 二的整数倍内存分配，相邻空闲块可以合并成更大的
 
-![](assets/Pasted image 20250615210045.png)
+![](assets/Pasted_image_20250615210045.png)
 
 $TLB\_reach = (TLB\_size)\times(page\_size)$
 
@@ -573,7 +573,7 @@ $TLB\_reach = (TLB\_size)\times(page\_size)$
 	- Empty - all free
 	- Partial - mix of free and used
 
-![](assets/Pasted image 20250616144643.png)
+![](assets/Pasted_image_20250616144643.png)
 
 ### 文件系统
 
@@ -604,9 +604,9 @@ $TLB\_reach = (TLB\_size)\times(page\_size)$
 - truncate：删除文件，但保留属性
 - Copying：create and read / write
 
-![](assets/Pasted image 20250616140157.png)
+![](assets/Pasted_image_20250616140157.png)
 
-![](assets/Pasted image 20250616140217.png)
+![](assets/Pasted_image_20250616140217.png)
 
 避免文件操作时的搜索文件，操作系统维护一个open-file table
 
@@ -629,7 +629,7 @@ File types：文件扩展名
 
 File type：magic number of the file - elf
 
-![](assets/Pasted image 20250615215920.png)
+![](assets/Pasted_image_20250615215920.png)
 
 #### 文件结构
 
@@ -716,20 +716,20 @@ Client-server 模型允许用户挂载服务器的文件系统
 
 挂载会使得在挂载点的目录不可见
 
-![](assets/Pasted image 20250615221823.png)
+![](assets/Pasted_image_20250615221823.png)
 
 #### 文件系统实现
 
 ##### 实例
 
-![](assets/Pasted image 20250616142452.png)
+![](assets/Pasted_image_20250616142452.png)
 
-![](assets/Pasted image 20250616142504.png)
+![](assets/Pasted_image_20250616142504.png)
 
 - Strlen : length of the name 
 - Reclen: length of the name plus left over space
 
-![](assets/Pasted image 20250616142641.png)
+![](assets/Pasted_image_20250616142641.png)
 
 
 - Linux : Ext2/3/4, Reiser FS/4, Btrfs
@@ -737,7 +737,7 @@ Client-server 模型允许用户挂载服务器的文件系统
 
 分层文件系统(Layered File System): application programs -> logical file system -> file-organization module-> basic file system -> IO control -> devices
 
-![](assets/Pasted image 20250616134418.png)
+![](assets/Pasted_image_20250616134418.png)
 
 - Device drivers:管理IO设备
 	- 给出指令"read drive 1, cylinder 72, track 2, sector 10, into memory location 1060",向硬件控制器输出特定的指令
@@ -792,7 +792,7 @@ Client-server 模型允许用户挂载服务器的文件系统
 - 需要知道文件位置和大小
 - 有外部碎片问题
 
-![](assets/Pasted image 20250616141056.png)
+![](assets/Pasted_image_20250616141056.png)
 
 #### 链接分配Linked Allocation
 
@@ -803,11 +803,11 @@ Client-server 模型允许用户挂载服务器的文件系统
 	- 指针可能损坏
 - 改进：块簇，但是有内部碎片问题
 
-![](assets/Pasted image 20250616141338.png)
+![](assets/Pasted_image_20250616141338.png)
 
 #### 索引分配Indexed Allocation
 
-![](assets/Pasted image 20250616141441.png)
+![](assets/Pasted_image_20250616141441.png)
 
 ### 空闲空间管理
 
@@ -817,7 +817,7 @@ Client-server 模型允许用户挂载服务器的文件系统
 
 ### Mass Storage
 
-![](assets/Pasted image 20250616095629.png)
+![](assets/Pasted_image_20250616095629.png)
 
 Average I/O time: average access time + (data to transfer / transfer rate) + controller overhead
 
@@ -897,35 +897,35 @@ Boot block 初始化系统：
 - Solaris ZFS 增加额外检查来检测异常，校验和与数据元数据指针并排排列
 	- 在池中申请磁盘，而不是卷和划分
 	  
-![](assets/Pasted image 20250616114721.png)
+![](assets/Pasted_image_20250616114721.png)
 
-![](assets/Pasted image 20250616114729.png)
+![](assets/Pasted_image_20250616114729.png)
 
 **RAID 0**: 将数据平分至两个或多个磁盘，除去校验位
 
-![](assets/Pasted image 20250616105141.png)
+![](assets/Pasted_image_20250616105141.png)
 
 **RAID 1** ：在另一个磁盘上保存一个镜像
 
-![](assets/Pasted image 20250616105216.png)
+![](assets/Pasted_image_20250616105216.png)
 
 **RAID 2**： 在比特层将数据分段：使用 Hamming code
 
 - Hamming code ： （4位数据，3位校验位）
 
-![](assets/Pasted image 20250616105928.png)
+![](assets/Pasted_image_20250616105928.png)
 
 **RAID 4**: 块层级分段，用一个作为校验磁盘
 
-![](assets/Pasted image 20250616110659.png)
+![](assets/Pasted_image_20250616110659.png)
 
 **RAID 5** ：块层级的分段，校验位数据分布到所有的磁盘
 
-![](assets/Pasted image 20250616114147.png)
+![](assets/Pasted_image_20250616114147.png)
 
 **RAID 6**：块层级的分段，两个校验位块
 
-![](assets/Pasted image 20250616114255.png)
+![](assets/Pasted_image_20250616114255.png)
 
 ### I/O Hardware
 
@@ -958,13 +958,13 @@ static void ns16550a_putchar(char ch) {
 
 **SMP IRQ Affinity**
 
-![](assets/Pasted image 20250616124614.png)
+![](assets/Pasted_image_20250616124614.png)
 
 - 有些CPU架构有专门的 I/O 指令：x86：in,out,ins,outs
 - 设备一般有为数据和控制I/O准备的寄存器
 - 通常1-4比特，或是先进先出的缓冲
 
-![](assets/Pasted image 20250616123951.png)
+![](assets/Pasted_image_20250616123951.png)
 
 #### Direct Memory Access
 
@@ -972,13 +972,13 @@ static void ns16550a_putchar(char ch) {
 
 - 但是也会引发安全问题
 
-![](assets/Pasted image 20250616125202.png)
+![](assets/Pasted_image_20250616125202.png)
 
 - 向DMA控制器发送指令
 
 **IOMMU**：将设备地址翻译成物理地址
 
-![](assets/Pasted image 20250616125126.png)
+![](assets/Pasted_image_20250616125126.png)
 
 ##### IO设备类型
 
@@ -1011,38 +1011,38 @@ Clocks and Timers ： 提供当前时间、经过时间
 
 IO保护：使用系统调用来执行IO
 
-![](assets/Pasted image 20250616130509.png)
+![](assets/Pasted_image_20250616130509.png)
 
 
 执行过程
 
-![](assets/Pasted image 20250616130938.png)
+![](assets/Pasted_image_20250616130938.png)
 
 网络通信
 
-![](assets/Pasted image 20250616131032.png)
+![](assets/Pasted_image_20250616131032.png)
 
 #### 性能优化
 
 - 减少上下文切换和避免拷贝：使用DMA
 
-![](assets/Pasted image 20250616131139.png)
+![](assets/Pasted_image_20250616131139.png)
 
-![](assets/Pasted image 20250616131209.png)
+![](assets/Pasted_image_20250616131209.png)
 
 - 共享缓存区
 
-![](assets/Pasted image 20250616131257.png)
+![](assets/Pasted_image_20250616131257.png)
 
-![](assets/Pasted image 20250616131321.png)
+![](assets/Pasted_image_20250616131321.png)
 
 - 使用sendfile
 
-![](assets/Pasted image 20250616131351.png)
+![](assets/Pasted_image_20250616131351.png)
 
 **Pagecache**：缓存最近从MMIO得到的数据
 
-![](assets/Pasted image 20250616131509.png)
+![](assets/Pasted_image_20250616131509.png)
 
 ## 寻址模式
 

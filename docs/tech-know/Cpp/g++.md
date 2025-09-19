@@ -1,4 +1,4 @@
 ## 自动生成文件依赖
 gcc -M命令会根据输入的源代码文件，输出这个源文件所包含的头文件清单。
 
-[](./assets/M_figure.png)
+[](assets/M_figure.png)

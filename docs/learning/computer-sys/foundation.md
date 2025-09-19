@@ -150,7 +150,7 @@ Go  Cardinals!
 **状态**:某一时刻存储在存储元件中的二进制信息称为该时刻存储元件的状态
 
 
-![time](./assets/time.png)
+![time](assets/time.png)
 
 **时序电路的类型**
 
@@ -160,7 +160,7 @@ Go  Cardinals!
 - **异步时序电路(asynchronous sequential circuit)**:其行为依赖于任意时间点的输入信号以及输入信号在连续的时间内的变化顺序。
 
 
-![](./assets/time_logic.png)
+![](assets/time_logic.png)
 
 > 触发器是以异步锁存器为模块来构造的
 
@@ -174,7 +174,7 @@ Go  Cardinals!
 - 有一个或两个输出端，其中一个存储正常值，另一个存储反值。
 > 触发器仅在响应时钟脉冲时改变其状态。
 
-![](./assets/clock_pulse.png)
+![](assets/clock_pulse.png)
 
 ### 锁存器
 
@@ -182,17 +182,17 @@ Go  Cardinals!
 
 **$SR和\overline{S} \overline{R}锁存器$**
 
-![](./assets/SRlock_not.png)
+![](assets/SRlock_not.png)
 
-![](./assets/SRstate.png)
+![](assets/SRstate.png)
 
-![](./assets/SR-not.png)
+![](assets/SR-not.png)
 
-![](./assets/SR_control.png)
+![](assets/SR_control.png)
 
 **D锁存器**
 
-![](./assets/D_lock.png)
+![](assets/D_lock.png)
 
 ### 触发器
 **触发**:输入信号值的改变可以控制内部锁存器的状态**（使能或触发触发器）**
@@ -205,12 +205,12 @@ Go  Cardinals!
 	- 当出现时钟脉冲时，输入信号控制触发器的状态
 	- 当没有出现时钟脉冲时，触发器的状态才会发生改变
 
-![](./assets/SR_MS.png)
-![](./assets/SR_MS_logic.png)
+![](assets/SR_MS.png)
+![](assets/SR_MS_logic.png)
 
 >主从式触发器也可称为**脉冲触发式（pulse-triggered）触发器**,因为它可以响应输入端在时钟脉冲期间任意时刻的变化；其次，设计电路时组合电路延迟要足够短以保证S和R在脉冲变为1之后停止变化
 
-![](./assets/down_D_trigger.png)
+![](assets/down_D_trigger.png)
 - **边沿触发式(edge-triggered)触发器**
 	- 只有在时钟由0变为1或者由1变为0时触发器被触发，其他时间（包括时钟脉冲维持为1时）。触发器都处于保持状态.
 

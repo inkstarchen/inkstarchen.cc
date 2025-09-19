@@ -30,7 +30,7 @@ func(10);  // 错误：二义性调用
 - 只能重载存在的操作符，同时有部分操作符无法被重载
     - 保持操作数与顺序
 
-![](./assets/operation_overload.png)
+![](assets/operation_overload.png)
 
 - 不用对接收者做类型转换，可以隐式声明参数
 

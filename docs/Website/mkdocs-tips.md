@@ -9,3 +9,13 @@
 [我是一个链接] 
 
 [我是一个链接]:https://squidfunk.github.io/mkdocs-material/
+
+### 跨文档连接
+
+```markdown title="doc1.md"
+test {#custom-id}
+```
+
+```markdown title="doc2.md"
+[link](pathto/doc1.md#custom-id)
+```

@@ -8,7 +8,7 @@
 
 ### 存储级别
 
-![存储级别](./assets/Storage_hierarchy.png)
+![存储级别](assets/Storage_hierarchy.png)
 
 ### Storage Interfaces
 - Disk interface standards families
@@ -22,7 +22,9 @@
 
 <div class='grid' markdown>
 <div class='card' markdown>
-![](./assets/disk.png)
+
+![](assets/disk.png)
+
 </div> 
 </div>
 
@@ -86,12 +88,12 @@
 ---
 单记录结构：(offset,length)s + fixed length attributes + Null bitmap + variable length attributes
 
-![](./assets/vrecord_structure.png)
+![](assets/vrecord_structure.png)
 
 分槽页结构（Slotted Page Structure）
 
 
-![](./assets/SPS.png)
+![](assets/SPS.png)
 
 - Slotted page (分槽页) header contains:
     - number of record entries
@@ -128,7 +130,7 @@
 - 加快多表连接操作，但堆单张表的操作变慢
 - 同样可以使用链表去维护
 
-![](./assets/cluster.png)
+![](assets/cluster.png)
 
 </div>
 
@@ -149,7 +151,7 @@
 - 存储了数据库对象信息，用户信息，物理文件组织信息和索引信息等.
 - 可以元数据作为关系存储，数据库初始化时。
 
-![alt text](./assets/syscata.png)
+![alt text](assets/syscata.png)
 
 
 ### 缓存管理

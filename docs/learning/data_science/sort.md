@@ -1,4 +1,4 @@
-![](./assets/sort_table.png)
+![](assets/sort_table.png)
 
 ## 冒泡排序
 - 逐步将排序靠前的元素上浮，比较交换

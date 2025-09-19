@@ -219,7 +219,7 @@ T(M,N) = O((M/logM)logN)
 ## 倒排索引(Inverted File Index)
 - 定义：index is a mechanism for locating a given term in a text
 - 定义:Inerted file cotains a list of potiners to all occurences of that term in teh text.
-![[images/Pasted image 20241228211824.png]]
+![[images/Pasted_image_20241228211824.png]]
 ```c
 Index Generator
 while (read a document D) {

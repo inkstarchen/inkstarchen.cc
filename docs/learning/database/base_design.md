@@ -14,7 +14,7 @@
 </div>
 
 <div class='card' markdown>
-![E-R 模型](./assets//Entity.png)
+![E-R 模型](assets/Entity.png)
 </div>
 
 <div class='card' markdown>
@@ -22,7 +22,7 @@
 
 ---
 
-![](./assets/rs_a.png)
+![](assets/rs_a.png)
 </div>
 
 <div class='card' markdown>
@@ -33,7 +33,7 @@
 
 - 只允许有一个箭头，多个则会引起歧义
 
-![](./assets/rs_3.png)
+![](assets/rs_3.png)
 
 </div>
 
@@ -43,7 +43,7 @@
 
 ---
 
-![](./assets/role.png)
+![](assets/role.png)
 
 </div>
 
@@ -65,7 +65,7 @@
 
 --- 
 
-![alt text](./assets/complext_attr.png)
+![alt text](assets/complext_attr.png)
 
 
 </div>
@@ -74,7 +74,7 @@
 
 ---
 
-![](./assets/1-1.png)
+![](assets/1-1.png)
 
 </div>
 
@@ -83,7 +83,7 @@
 
 ---
 
-![](./assets/1-n.png)
+![](assets/1-n.png)
 </div>
 
 <div class='card' markdown>
@@ -91,7 +91,7 @@
 
 ---
 
-![](./assets/t-p.png)
+![](assets/t-p.png)
 
 </div>
 
@@ -101,7 +101,7 @@
 
 ---
 
-![](./assets/np.png)
+![](assets/np.png)
 
 </div>
 
@@ -131,13 +131,13 @@
 
 ---
 
-![](./assets/weak.png)
+![](assets/weak.png)
 </div>
 </div>
 
 - 表示关系集合，Many-to-Many，只需要将最小主键取出来就行
 
-![](./assets/ex-ue.png)
+![](assets/ex-ue.png)
 
 
 ### 特化与概化(Specialization & Generalization)
@@ -154,7 +154,7 @@
 - 重叠特化：可以同时是两者
 - 不相交特化：只能选择其中之一
 
-![](./assets/specialization.png)
+![](assets/specialization.png)
 </div>
 </div>
 
@@ -168,7 +168,7 @@
 
 - 为R中的每一个关系$(a_i,b_i,c_i)$，创建一个实体$e_i$,并创建三个关系，依次加入.
 
-![](./assets/3to2.png)
+![](assets/3to2.png)
 
 </div>
 
@@ -176,11 +176,11 @@
 ### 标识表
 <div class='grid' markdown>
 <div class='card' markdown>
-![](./assets/ER-T_1.png)
+![](assets/ER-T_1.png)
 </div>
 
 <div class='card' markdown>
-![](./assets/ER-T_2.png)
+![](assets/ER-T_2.png)
 </div>
 </div>
 

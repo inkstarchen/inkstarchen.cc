@@ -79,15 +79,15 @@ Stage 1:Partitioning
 - $A\_Select(i) = A(1+(i-1)logn)\qquad T=O(logn)$
 - $B\_Select(i) =B(1+(i-1)logn) \qquad W=O(n)$
 
-![[images/Pasted image 20241230131043.png]]
+![[images/Pasted_image_20241230131043.png]]
 
 #### A Doubly-logarithmic Paradigm
 化分成$\sqrt{n}$大小的问题
 再分治法处理子问题
-![[images/Pasted image 20241230132149.png]]
+![[images/Pasted_image_20241230132149.png]]
 先分割，在每个分割问题下执行$\sqrt{n}$分治法,最后使用并行法
 以规模$h=loglogn$进行划分运行,凑出来的
-![[images/Pasted image 20241230132524.png]]
+![[images/Pasted_image_20241230132524.png]]
 
 ## Lock-Based Protocols
 

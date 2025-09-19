@@ -4,83 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "94d23fc91a2157db",
+        "id": "5e59db4823f32471",
         "type": "tabs",
         "children": [
           {
-            "id": "bfb569e4c131ea1e",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "新标签页"
-            }
-          },
-          {
-            "id": "d9e9b8e6b72806c7",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "新标签页"
-            }
-          },
-          {
-            "id": "2891a29afdbc3684",
+            "id": "7a399fe1ff14c8ef",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "未命名.md",
+                "file": "maths/mathematical_logic/infer.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "未命名"
-            }
-          },
-          {
-            "id": "815a967f7eeabae3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "class/tea/tea-industry.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "tea-industry"
-            }
-          },
-          {
-            "id": "d429a93508314798",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "新标签页"
-            }
-          },
-          {
-            "id": "24be2800a41c5ac5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "LearnGit.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "LearnGit"
+              "title": "infer"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -99,7 +40,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "文件列表"
@@ -136,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "7957f5e7bcb3c098",
@@ -153,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "class/tea/tea-industry.md",
+                "file": "maths/mathematical_logic/infer.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -163,7 +104,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "tea-industry 的反向链接列表"
+              "title": "infer 的反向链接列表"
             }
           },
           {
@@ -211,8 +152,8 @@
             "state": {
               "type": "calendar",
               "state": {},
-              "icon": "lucide-file",
-              "title": "插件不再活动"
+              "icon": "lucide-ghost",
+              "title": "calendar"
             }
           }
         ]
@@ -223,6 +164,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:创建新数据库": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -234,23 +176,41 @@
       "float-search:Search Obsidian In Modal": false
     }
   },
-  "active": "815a967f7eeabae3",
+  "active": "7a399fe1ff14c8ef",
   "lastOpenFiles": [
+    "maths/mathematical_logic/assets/Pasted_image_20250109160349.png",
+    "maths/mathematical_logic/assets/Pasted_image_20250109155712.png",
+    "assets/Pasted_image_2020250109154545.png.md",
+    "maths/mathematical_logic/infer.md",
+    "maths/mathematical_logic/assets/Pasted_image_20250109154545.png",
+    "未命名 1.base",
+    "maths/mathematical_logic/assets/Pasted_image_20250109154800.png",
+    "未命名.base",
+    "learning/database/physical-level.md",
+    "learning/database/base_design.md",
+    "learning/database/query.md",
+    "learning/database/assets/disk.png",
+    "learning/database/assets/atomicity.png",
+    "learning/computer-sys/assets/sys-call.png",
+    "learning/database/assets/Entity.png",
+    "learning/database/assets/precedence_graph.png",
+    "learning/computer-sys/assets/init_stack.png",
+    "learning/database/assets/query_processing.png",
+    "learning/computer-sys/sys-3.md",
+    "filename.py",
+    "assets/Pasted.md",
+    "assets",
+    "index.md",
+    "learning/communication/signal.md",
+    "learning/communication/communication-theory.md",
+    "learning/brain-interface/brain.md",
+    "learning/brain-interface/index.md",
+    "maths/Theorical/encoding.md",
     "learning/design/design.md",
     "learning/design",
     "class/tea/tea-culture-tea-health-review.md",
-    "images/Pasted image 20250112153206.png",
-    "images/Pasted image 20250112153155.png",
     "class/tea/tea-science.md",
     "class/tea/tea-industry.md",
-    "images/Pasted image 20250112153041.png",
-    "images/Pasted image 20250112153033.png",
-    "images/Pasted image 20250112153021.png",
-    "images/Pasted image 20250112153009.png",
-    "images/Pasted image 20250112153001.png",
-    "images/Pasted image 20250112152954.png",
-    "images/Pasted image 20250112152942.png",
-    "images/Pasted image 20250112152931.png",
     "class/tea/tea-culture.md",
     "class/tea/tea-health.md",
     "class/physics.md",
@@ -260,28 +220,10 @@
     "class/chinese-literature/yu-da-fu.md",
     "class/chinese-literature/xiao-hong.md",
     "class/chinese-literature/wen-xue-hui-yan.md",
-    "class/chinese-literature/shi-zhe-cun.md",
-    "class/chinese-literature/mu-shi-ying.md",
-    "class/chinese-literature/lu-xun.md",
-    "class/chinese-literature/fei-ming.md",
     "class/chinese-literature",
-    "class/chinese-literature.md",
-    "class/probability.md",
-    "class/distribution.md",
-    "class/possibility.md",
-    "knowledge/know.md",
-    "knowledge/know..md",
     "knowledge/know.,md",
-    "knowledge/education.md",
-    "knowledge/pass/ppt.md",
-    "knowledge/pass/listen.md",
-    "knowledge/pass/paper.md",
     "knowledge/pass/report",
     "knowledge/pass",
-    "knowledge",
-    "knowle",
-    "images",
-    "未命名.canvas",
-    "template"
+    "未命名.canvas"
   ]
 }

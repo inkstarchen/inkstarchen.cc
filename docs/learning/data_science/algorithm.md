@@ -94,7 +94,7 @@ $$D^k[i][j] = min\{D^{k-1}[i][j], D^{k-1} [i][k]+ D^{k-1}[k][j]\},k\geq 0$$
 
 #### Product Assembly
 
-![](./assets/product_assembly.png)
+![](assets/product_assembly.png)
 
 ```c linenums="1"
 f[0][0]=0;
@@ -125,7 +125,7 @@ for(stage=1; stage <= n; stage++){
 
 $$General\quad recurrence:T(N) = aT(N/b) + f(N)$$
 
-![](./assets/divide.png)
+![](assets/divide.png)
 
 #### Theorem
 The solution to the equation

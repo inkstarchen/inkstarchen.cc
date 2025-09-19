@@ -1,0 +1,51 @@
+### GLTF
+- Graphics Language Transmission Format（图形语言传输格式）
+- 这种跨平台格式已经成为Web上的3D对象标准
+- 作为一个中转格式，而不是一个新的3D数据格式
+- 本质：JSON文件，描述3D场景的内容
+### 组成部分
+- asset：gltf资产元信息
+- scene：属性表示加载资产时应显示的默认场景
+	- `"scene": 0`：默认场景定义在`scenes[0]`处
+	- `"nodes": [0]` ： 场景树从`nodes[0]`开始
+- nodes：
+	- `"mesh": 0`：此node附加了一个mesh，位于`meshes[0]`处
+	- `"rotation":[...]`：此node的旋转量
+- meshes：
+	- `"primitives"`:基元数组，每个基元定义要渲染的几何体
+	- `"attributes.POSITION": 0`：顶点位置数据的访问器索引，指向`accessors[0]`，必须是`VEC3`类型
+	- `"attributes.NORMAL": 1`：顶点法线数据的访问器索引，指向`accessors[1]`，必须是`VEC3`类型
+	- `"attributes.TEXCOORD_0": 2`:UV数据的访问器索引，指向`accessors[2]`，必须是`VEC2`类型
+	- `"indices":3`：顶点索引数据的访问器索引，指向`accessor[3]`，必须是`SCALAR`类型
+	- `"material": 0`：材质编号，指向`materials[0]`
+- materials
+	- `emissiveFactor`:自发光通道强度
+	- `emissiveTexture.index:0`：自发光贴图索引，指向`textures[0]`
+	- `normalTexture.index:1`：法线贴图索引，指向`texture[1]`
+	- `occlusionTexture.index:2`：遮挡贴图索引，指向`textures[2]`
+	- `pbrMetallicRoughness`: PBR金属流参数
+		- `baseColorTexture`:基础色贴图
+		- `metallicRoughnessTexture`:金属度贴图
+- textures:
+	- `sampler`：纹理采样模式
+	- `source`：指向的图片的索引，例如`source:0 -> images[0]`
+- accessors：将类型化视图转换为包含原始二进制数据的缓冲区视图
+	- `bufferView`:bufferViews索引
+	- `componentType`:访问器元件数据类型(这是一个枚举类)
+	- `type`:元素数据类型
+	- `count`:元素个数，例如`VEC3`的个数
+- componentType 枚举类
+	- `5120` BYTE
+	- `5121` UNSIGNED_BYTE
+	- `5122` SHORT
+	- `5123` UNSIGNED_SHORT
+	- `5125` UNSIGNED_INT
+	- `5126` FLOAT
+- type 枚举类
+	- `"SCARLAR"`
+	- `"VEC2"`
+	- `"VEC3"`
+	- `"VEC4"`
+	- `"MAT2"`
+	- `"MAT3"`
+	- `"MAT4"`

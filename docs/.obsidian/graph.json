@@ -1,20 +1,12 @@
 {
   "collapse-filter": false,
   "search": "",
-  "showTags": true,
+  "showTags": false,
   "showAttachments": true,
-  "hideUnresolved": true,
+  "hideUnresolved": false,
   "showOrphans": true,
   "collapse-color-groups": false,
-  "colorGroups": [
-    {
-      "query": "tag:#日记  ",
-      "color": {
-        "a": 1,
-        "rgb": 43002
-      }
-    }
-  ],
+  "colorGroups": [],
   "collapse-display": false,
   "showArrow": false,
   "textFadeMultiplier": -0.9,
@@ -25,6 +17,6 @@
   "repelStrength": 11.4968814968815,
   "linkStrength": 0.633056133056133,
   "linkDistance": 250,
-  "scale": 0.5334257528756647,
+  "scale": 0.19357346817857216,
   "close": true
 }

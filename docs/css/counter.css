@@ -44,18 +44,15 @@ h1 {
 
 p {
   text-indent: 30px;
-  letter-spacing: 2px;
-  font-size: .64rem;
+
 }
 
 li p{
   text-indent: 0px;
-  font-size: .64rem;
 }
 
 li {
   text-indent: 0px;
-  font-size: .64rem;
 }
 
 .quote-card{

@@ -138,7 +138,7 @@ void func() {
 
 - 标准库异常
 
-![](./assets/exception_table.png)
+![](assets/exception_table.png)
 
 -  声明可能抛出的异常,如果未在列表中的异常抛出则触发`unexpceted`
 

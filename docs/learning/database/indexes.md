@@ -12,7 +12,7 @@
 
 每一个搜索键都是索引
 
-![](./assets/dense_index.png)
+![](assets/dense_index.png)
 
 </div>
 </div>
@@ -33,7 +33,7 @@ Sparse Index Files
 
 ---
 
-![](./assets/multi-index.png)
+![](assets/multi-index.png)
 
 
 </div>
@@ -53,7 +53,7 @@ Sparse Index Files
 
 #### B+ Tree索引
 <div  class='grid' markdown>
-![](./assets/B+.png)
+![](assets/B+.png)
 </div>
 
 - 问题： 如果使用的是记录的指针，则若记录移动位置，所有的二级索引的记录都要移动位置。
@@ -81,7 +81,7 @@ example
 
 ---
 
-![](./assets/hash.png)
+![](assets/hash.png)
 
 </div>
 </div>
@@ -111,7 +111,7 @@ example
 
 ---
 
-![](./assets/LSMT.png)
+![](assets/LSMT.png)
 
 </div>
 

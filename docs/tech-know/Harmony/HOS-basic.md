@@ -58,7 +58,7 @@ struct Index {
 
 - products（产品定制层）：用于针对不同设备形态进行功能和特性集成。products层各个子目录各自编译为一个Entry类型的HAP包，作为应用主入口。products层不可以横向调用
 
-![](./assets/three-level-structure.png)
+![](assets/three-level-structure.png)
 
 ## 应用架构设计基础————MVVM模式
 
@@ -66,7 +66,7 @@ struct Index {
 
 MVVM = Model + View + ViewModel
 
-![MVVM](./assets/MVVM.png)
+![MVVM](assets/MVVM.png)
 
 - 常见的数据结构放在model文件夹中,
 - UI组件放在view文件夹中，并对组件命名

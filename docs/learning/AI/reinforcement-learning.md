@@ -7,7 +7,7 @@
 - 最大化期望奖励
 - 基于与环境交互学习
 
-![](./assets/reinforce_learning_basic.png)
+![](assets/reinforce_learning_basic.png)
 
 #### 基本概念
 
@@ -120,7 +120,7 @@ $$Q^{\pi}(s,a)=\textbf{E}_{\pi}[G_t|S_t=s,A_t=a]$$
 
 #### V和Q的关系(贝尔曼期望方程)
 
-![](./assets/bellman.png)
+![](assets/bellman.png)
 
 - 期望方程是一个迭代过程
 
@@ -181,7 +181,7 @@ $$q_\pi(s,\pi'(s))\geq q_\pi(s,\pi(s))$$
 
 - 一般策略迭代算法(General Policy Iteration, GPI) 
 
-![](./assets/evaluation-optim.png)
+![](assets/evaluation-optim.png)
 
 动态规划将复杂的多阶段决策问题分解为一系列简单的、离散的单阶段决策问题，采用顺序求解方法，通过求解一系列小问题达到求解整个问题的目的。
 
