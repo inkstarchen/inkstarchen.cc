@@ -12,7 +12,7 @@
         <link rel="prev" href="../../optimization/Lec1/">
       
       
-        <link rel="next" href="../../calculate/function/">
+        <link rel="next" href="../function/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -3031,6 +3031,8 @@
       
         
       
+        
+      
     
     
     
@@ -3091,6 +3093,29 @@
 
       </a>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../function/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    电路与函数
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -4396,6 +4421,8 @@
       
         
       
+        
+      
     
     
     
@@ -4975,6 +5002,82 @@
       
         
       
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_8" id="__nav_7_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    音乐
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_8">
+            <span class="md-nav__icon md-icon"></span>
+            音乐
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Experience/music/workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    工作流音乐
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
         
       
         
@@ -5000,10 +5103,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_9" >
         
           
-          <label class="md-nav__link" for="__nav_7_8" id="__nav_7_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7_9" id="__nav_7_9_label" tabindex="0">
             
   
   
@@ -5016,8 +5119,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_8">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_9">
             <span class="md-nav__icon md-icon"></span>
             文学
           </label>
@@ -5245,10 +5348,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_10" >
         
           
-          <label class="md-nav__link" for="__nav_7_9" id="__nav_7_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7_10" id="__nav_7_10_label" tabindex="0">
             
   
   
@@ -5261,8 +5364,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_10">
             <span class="md-nav__icon md-icon"></span>
             茶
           </label>
@@ -6606,14 +6709,21 @@
 
   <h1>编码</h1>
 
-<ul>
-<li>alphabet <span class="arithmatex">\(\Sigma = \{0,1\},\Sigma^n = \Sigma \times \dots \times \Sigma\)</span></li>
+<p><strong>重要概念</strong></p>
+<ol>
+<li>encoding scheme <span class="arithmatex">\(\leftrightarrow\)</span> countable</li>
+<li>
+<p>problem <span class="arithmatex">\(\leftrightarrow f:\{\0,1\}^* \rightarrow \{0,1\}^*\)</span> </p>
+</li>
+<li>
+<p>alphabet <span class="arithmatex">\(\Sigma = \{0,1\},\Sigma^n = \Sigma \times \dots \times \Sigma\)</span></p>
+</li>
 <li><span class="arithmatex">\(= \{(a_1,a_2,\dots,a_n):a_i \in \Sigma \} \rightarrow a_1a_2\dots a_n\)</span>binary string of length <span class="arithmatex">\(n\)</span></li>
 <li><span class="arithmatex">\(\Sigma^2 = \{00, 01, 11,10\}.\)</span></li>
 <li><span class="arithmatex">\(\Sigma^3 = \{000,001,\dots,111\}\)</span></li>
 <li><span class="arithmatex">\(\Sigma^0 = \{e\} \rightarrow empty \quad string\)</span></li>
 <li><span class="arithmatex">\(\Sigma^* = \Sigma^0 \cup\Sigma^1 \cup \Sigma^2 \cup\dots = \cup_{n\geq 0} \Sigma^n\)</span></li>
-</ul>
+</ol>
 <p><strong>concatenation</strong> : <span class="arithmatex">\(xy = a_1a_2\dots a_nb_1b_2\dotsb_n\)</span></p>
 <ul>
 <li><span class="arithmatex">\(x\)</span> is a prefix of <span class="arithmatex">\(y\)</span> if  <span class="arithmatex">\(y=xz\)</span> for some <span class="arithmatex">\(z\in \Sigma^*\)</span></li>
