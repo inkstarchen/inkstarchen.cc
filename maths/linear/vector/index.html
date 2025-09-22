@@ -2958,6 +2958,8 @@
       
         
       
+        
+      
     
     
     
@@ -3005,6 +3007,29 @@
   
   <span class="md-ellipsis">
     Lec1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../optimization/lagrange/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    拉格朗日乘子法
     
   </span>
   
@@ -3683,35 +3708,29 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      线性空间的基与坐标
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="线性空间的基与坐标">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      定义
+      向量的表示
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      向量的运算
+    </span>
+  </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      向量组的秩
+      线性空间的基与坐标
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="向量组的秩">
+    <nav class="md-nav" aria-label="线性空间的基与坐标">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3730,6 +3749,30 @@
       
         <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      向量组的秩
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="向量组的秩">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      定义
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       正交向量
     </span>
@@ -6797,35 +6840,29 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      线性空间的基与坐标
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="线性空间的基与坐标">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      定义
+      向量的表示
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      向量的运算
+    </span>
+  </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      向量组的秩
+      线性空间的基与坐标
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="向量组的秩">
+    <nav class="md-nav" aria-label="线性空间的基与坐标">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -6844,6 +6881,30 @@
       
         <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      向量组的秩
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="向量组的秩">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      定义
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       正交向量
     </span>
@@ -6871,13 +6932,24 @@
 
 
 <h1 id="_1">向量</h1>
-<h2 id="_2">线性空间的基与坐标</h2>
-<h3 id="_3">定义</h3>
+<h2 id="_2">向量的表示</h2>
+<p>一个向量可以用<span class="arithmatex">\(\vec{a}\)</span>或<span class="arithmatex">\(\textbf{a}\)</span>表示，或者用起始点到目标点的线段表示<span class="arithmatex">\(\vec{AB} = B - A\)</span></p>
+<ul>
+<li>向量拥有长度<span class="arithmatex">\(||\vec{a}||\)</span>和方向，但没有固定起始点</li>
+<li>转化为单位向量<span class="arithmatex">\(\hat{a} = \frac{\vec{a}}{||\vec{a}||}\)</span></li>
+</ul>
+<h2 id="_3">向量的运算</h2>
+<ul>
+<li>点乘</li>
+<li>叉乘</li>
+</ul>
+<h2 id="_4">线性空间的基与坐标</h2>
+<h3 id="_5">定义</h3>
 <p>设<span class="arithmatex">\(B=\{\beta_1,\beta_2,...,\beta_n\}\)</span>是<span class="arithmatex">\(n\)</span>维线性空间<span class="arithmatex">\(V(F)\)</span>中的一组基，如果<span class="arithmatex">\(V\)</span>中元素<span class="arithmatex">\(\alpha\)</span>表示为</p>
 <div class="arithmatex">\[\alpha=a_1\beta_1+a_2\beta_2+...+a_n\beta_n\]</div>
 <p>则其系数组<span class="arithmatex">\(a_1,a_2,...,a_n\)</span>叫做<span class="arithmatex">\(\alpha\)</span>在基<span class="arithmatex">\(B\)</span>下的坐标，记作<span class="arithmatex">\(\alpha_B=(a_1,a_2,...,a_n).\)</span></p>
-<h2 id="_4">向量组的秩</h2>
-<h3 id="_5">定义</h3>
+<h2 id="_6">向量组的秩</h2>
+<h3 id="_7">定义</h3>
 <p>设<span class="arithmatex">\(S\)</span>是线性空间<span class="arithmatex">\(V(F)\)</span>的一个子集，如果<span class="arithmatex">\(S\)</span>中存在线性无关的向量组</p>
 <div class="arithmatex">\[B=\{\alpha_1,..,\alpha_r\}\]</div>
 <p>且<span class="arithmatex">\(S\)</span>中每个向量可由<span class="arithmatex">\(B\)</span>线性表示，则<span class="arithmatex">\(B\)</span>中向量的个数<span class="arithmatex">\(r\)</span>叫做<span class="arithmatex">\(S\)</span>的秩，记作秩<span class="arithmatex">\((S)=r\)</span>.</p>
@@ -6888,7 +6960,7 @@
 <ol>
 <li><span class="arithmatex">\(秩(S)=r\)</span>，则<span class="arithmatex">\(S\)</span>中任何<span class="arithmatex">\(r+1\)</span>个向量都线性相关.因此<span class="arithmatex">\(S\)</span>中任何线性无关的向量组至多含有<span class="arithmatex">\(r\)</span>个向量，并把含<span class="arithmatex">\(r\)</span>个线性无关向量的向量组称为<span class="arithmatex">\(S\)</span>的极大线性无关组.</li>
 </ol>
-<h2 id="_6">正交向量</h2>
+<h2 id="_8">正交向量</h2>
 <p>若<span class="arithmatex">\(\alpha, \beta\)</span>为两个非零正交向量，则有：</p>
 <div class="arithmatex">\[(\alpha, \beta) = \alpha^T \beta=\beta^T \alpha=0\]</div>
 

@@ -2958,6 +2958,8 @@
       
         
       
+        
+      
     
     
     
@@ -3005,6 +3007,29 @@
   
   <span class="md-ellipsis">
     Lec1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../optimization/lagrange/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    拉格朗日乘子法
     
   </span>
   
@@ -6882,7 +6907,29 @@
 <p><span class="arithmatex">\(n\)</span>阶矩阵<span class="arithmatex">\(A=(a_{ij})_{n\times n}\)</span>的特征多项式为</p>
 <div class="arithmatex">\[f(\lambda)=\lambda^n+b_1\lambda^{n-1}+\cdots+b_k\lambda^{n-1}+\cdots+b_{n-1}\lambda+b_n,\]</div>
 <p>其中系数<span class="arithmatex">\(b_k=(-1)^kS_k,S_k\)</span>为<span class="arithmatex">\(A\)</span>的全体<span class="arithmatex">\(k\)</span>阶主子式之和，即</p>
-<p>$$S_k=\sum_{1\leq i_1&lt; i_2&lt;\cdots</p>
+<div class="arithmatex">\[S_k = \sum_{1\leq i_1&lt; i_2&lt; \cdots &lt; i_k \leq n}\left| \begin{matrix}a_{i_1i_1} &amp; a_{i_1i_2}&amp;\cdots&amp; a_{i_1i_k}\\ a_{i_2i_1} &amp; a_{i_2i_2} &amp; \cdots &amp; a_{i_2i_k}\\ \vdots &amp; &amp; &amp; \vdots \\ a_{i_ki_1} &amp; a_{i_ki_2} &amp; \cdots &amp; a_{i_ki_k} \end{matrix} \right|.\]</div>
+<p><strong>推论:</strong> 若<span class="arithmatex">\(n\)</span>阶矩阵<span class="arithmatex">\(A=(a_{ij})_{n\times n}\)</span>的<span class="arithmatex">\(n\)</span>个特征值为<span class="arithmatex">\(\lambda_1,\lambda_2,\cdots,\lambda_n\)</span>,则</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(\quad \sum_{i=1}^n\lambda_i=\sum_{i=1}^na_{ii}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\quad\prod_{i=1}^n\lambda_i=|A|\)</span></p>
+</li>
+</ol>
+<p>若矩阵<span class="arithmatex">\(A与B\)</span>相似，则它们的特征多项式相等，即</p>
+<div class="arithmatex">\[|\lambda E-A|=|\lambda E-B|\]</div>
+<p>设<span class="arithmatex">\(\lambda_j和V_{\lambda_j}(j=1,\cdots,m)\)</span>是<span class="arithmatex">\(n\)</span>维线性空间<span class="arithmatex">\(V(F)\)</span>的线性变换<span class="arithmatex">\(\sigma\)</span>和<span class="arithmatex">\(m\)</span>个互不相同的特征值及相应的特征子空间，则<span class="arithmatex">\(m\)</span>个特征子空间的和是直和，即</p>
+<div class="arithmatex">\[dim(V_{\lambda_1}+V_{\lambda_2}+\cdots+V_{\lambda_m})=\sum_{j=1}^mdimV_{\lambda_j}\]</div>
+<p><strong>推论1：</strong>若<span class="arithmatex">\(\lambda_1,\cdots,\lambda_m\)</span>,是<span class="arithmatex">\(\sigma\)</span>的互不相同的特征值，则</p>
+<div class="arithmatex">\[V_{\lambda_i}\cap\sum_{j\neq i}V_{\lambda_j}=\lbrace0\rbrace,\qquad i=1,\cdots,m.\]</div>
+<p>由此又可得，<span class="arithmatex">\(\lambda_i \neq \lambda_j\)</span>时，<span class="arithmatex">\(V_{\lambda_1}\cap V_{\lambda_j}=\{ 0 \}\)</span>,这表明一个特征向量不能属于两个不同的特征值</p>
+<p><strong>推论2：</strong><span class="arithmatex">\(\sigma\)</span>的不同特征值<span class="arithmatex">\(\lambda_1,\cdots,\lambda_m\)</span>对应的特征向量<span class="arithmatex">\(\xi_1,\cdots,\xi_m\)</span>是线性无关的，这时因为：如果<span class="arithmatex">\(\xi_1,\cdots,\xi_m\)</span>线性相关，则存在<span class="arithmatex">\(\xi_j\)</span>可由其他特征向量线性表出，不妨设</p>
+<div class="arithmatex">\[\xi_1=c_2\xi_2+\cdots,c_m\xi_m.\]</div>
+<p>于是有</p>
+<div class="arithmatex">\[\xi_1\in V_{\lambda_1}\cap\sum_{j=2}^m V_{\lambda_j}\]</div>
+<p>这与推论一矛盾</p>
+<p><strong>推论3：</strong><span class="arithmatex">\(\sigma\)</span>的不同特征值<span class="arithmatex">\(\lambda_1,\cdots,\lambda_m\)</span>的特征子空间<span class="arithmatex">\(V_{\lambda_1},V_{\lambda_2},\cdots,V_{\lambda_m}\)</span>的基向量合在一起构成的向量组是线性无关的，这个线性无关的向量组是<span class="arithmatex">\(V_{\lambda_1}+V_{\lambda_2}+\cdots+V_{\lambda_m}\)</span>的基.</p>
 
 
 
