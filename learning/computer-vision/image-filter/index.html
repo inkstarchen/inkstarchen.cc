@@ -6943,12 +6943,14 @@
 <blockquote>
 <p>同时考虑空间距离和颜色距离的滤波方式</p>
 </blockquote>
-<div class="arithmatex">\[I_{filtered}(p) = \frac{1}{W_p} \underset{q \in \Omega_p}{\sum} I(q) \cdot e^{-\frac{|p-1|^2}{2\sigma_s^2}} \cdot e^{-\frac{|I(p)-I(q)|^2}{2\sigma_r^2}}\]</div>
+<div class="arithmatex">\[I_{filtered}(p) = \frac{1}{W_p} \underset{q \in \Omega_p}{\sum} I(q) \cdot e^{-\frac{|q-p|^2}{2\sigma_s^2}} \cdot e^{-\frac{|I(q)-I(p)|^2}{2\sigma_r^2}}\]</div>
 <ul>
 <li><span class="arithmatex">\(p\)</span>：当前像素位置</li>
-<li><span class="arithmatex">\(q\)</span>：邻域像素</li>
+<li><span class="arithmatex">\(q\)</span>：邻域像素位置</li>
 <li><span class="arithmatex">\(\sigma_s\)</span>：空间标准差</li>
 <li><span class="arithmatex">\(\sigma_r\)</span>：颜色标准差</li>
+<li><span class="arithmatex">\(I(q)\)</span>: 邻域像素的像素值</li>
+<li><span class="arithmatex">\(I(p)\)</span>: 当前像素的像素值</li>
 <li><span class="arithmatex">\(W_p = \underset{q \in \Omega_p}{\sum}\)</span> ： 空间核 颜色核 <span class="arithmatex">\(\rightarrow\)</span>归一化因子</li>
 </ul>
 <div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">双边滤波</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
