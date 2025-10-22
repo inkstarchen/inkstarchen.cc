@@ -42,9 +42,16 @@ h1 {
     margin-right: 0.8rem;
   }
 
+.admonition p{
+  margin-top: 12px;
+}
+
+.md-content p{
+  margin: 5px;
+}
+
 p {
   text-indent: 30px;
-
 }
 
 li p{
