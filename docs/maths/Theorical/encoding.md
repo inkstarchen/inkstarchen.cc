@@ -1,3 +1,8 @@
+**重要概念**
+
+1. encoding scheme $\leftrightarrow$ countable
+2. problem $\leftrightarrow f:\{\0,1\}^* \rightarrow \{0,1\}^*$ 
+
 - alphabet $\Sigma = \{0,1\},\Sigma^n = \Sigma \times \dots \times \Sigma$
 - $= \{(a_1,a_2,\dots,a_n):a_i \in \Sigma \} \rightarrow a_1a_2\dots a_n$binary string of length $n$
 - $\Sigma^2 = \{00, 01, 11,10\}.$

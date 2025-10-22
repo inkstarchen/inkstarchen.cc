@@ -33,8 +33,10 @@ nav:
         - Nginx介绍: learning/computer-network/learn-Nginx.md
       - 计算机视觉: 
         - 引子: learning/computer-vision/introduction.md
+        - 图像滤波: learning/computer-vision/image-filter.md
       - 计算机图形学:
         - 总论: learning/computer-graphics/index.md
+        - 变换: learning/computer-graphics/transform.md
       - 信息安全:
         - 加密算法: learning/information_security/encryption.md
       - 量子计算:
@@ -49,6 +51,7 @@ nav:
       - 人工智能: 
         - 引论: learning/AI/ai-introduction.md
         - 机器学习: learning/AI/machine-learning.md
+        - 贝叶斯分类器: learning/AI/bayesian.md
         - 监督学习: learning/AI/supervised_learning.md
         - 深度学习: learning/AI/deep-learning.md
         - 强化学习: learning/AI/reinforcement-learning.md
@@ -81,13 +84,19 @@ nav:
         - SO文件: learning/files/so.md
   - 数学工具:
     - 总论: maths/index.md
+    - 数学基础:
+        - 欧几里得空间: maths/bases/euclidean-space.md
+        - 范数: maths/bases/norm.md
+        - 数学工具: maths/bases/math-tools.md
     - 数理逻辑: 
         - 命题逻辑与谓词逻辑: maths/mathematical_logic/statement_predicate_logic.md
         - 推理: maths/mathematical_logic/infer.md
     - 优化基础理论:
       - Lec1: maths/optimization/Lec1.md
+      - 拉格朗日乘子法: maths/optimization/lagrange.md
     - 理论计算机科学导引:
       - 编码: maths/Theorical/encoding.md
+      - 电路与函数: maths/Theorical/function.md
     - 数学分析:
       - 函数: maths/calculate/function.md
       - 函数极限: maths/calculate/functionlimit.md
@@ -97,10 +106,11 @@ nav:
       - 其它定理: maths/calculate/otherTheorem.md
       - 数列: maths/calculate/number.md
       - 实数系完备性定理: maths/calculate/Theorem1.md
-    - 线性代数:
-      - 线性代数：我能做什么: maths/linear/linear.md  
+    - 线性代数: 
+      - 总论: maths/linear/index.md 
       - 抽象部分: maths/linear/abstract.md
       - 矩阵: maths/linear/matrix.md
+      - 矩阵运算: maths/linear/calmatrix.md
       - 特殊矩阵分类: maths/linear/specialMatrix.md
       - 特征值与特征向量: maths/linear/characteristic.md
       - 线性代数证明: maths/linear/proof.md
@@ -150,6 +160,8 @@ nav:
       - 坚韧不拔的磐石: Experience/OldWords/tough-stone.md
       - 初中片段:  Experience/OldWords/old-words.md
       - 新: Experience/OldWords/newlife.md
+    - 音乐:
+      - 工作流音乐: Experience/music/workflow.md
     -  文学:
         - 废名: Experience/literature/fei-ming.md
         - 鲁迅: Experience/literature/lu-xun.md

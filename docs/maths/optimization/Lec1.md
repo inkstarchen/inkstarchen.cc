@@ -10,8 +10,11 @@ Part1 Chaps 1-4 Black-Box model of optimization problem
 - general minimization problem:
 
 $$ min\quad f_0(x),$$
+
 $$s.t. \quad f_j(x)\&0,\quad j=1\dots m,$$
+
 $$x\in Q$$
+
 - $\&$ 可以是$\leq,\geq,$或$=$
 - 我们将$f_0(\cdot)$称为问题的目标函数(objective function)
 
@@ -29,7 +32,7 @@ $$\mathcal{F}=\{x\in Q | f_j(x) \leq 0, j=1\dots m$$
 - **无约束问题(unconstrained problems):**$\mathcal{F} = R^n$
 - **光滑问题(smooth problems):** 所有的$f_j(x)$都是可微的（differentiable）
 - **非光滑问题(nonsmooth problems)：** 存在不可微(nondifferentiable)的分量$f_k(x)$
-- **线性约束问题（linearly constrained problems):** 所有泛函约束是线性的。进一步划分：
+- **线性约束问题(linearly constrained problems):** 所有泛函约束是线性的。进一步划分：
 	- **线性优化问题：** 如果$f_0(x)$也是线性的，那么就是**线性优化问题**
 	- **二次优化问题：** 如果$f_0(x)$是二次的，那么就是**二次优化问题**
 	- **二次约束的二次问题：** 如果所有$f_j$是二次的，那么就是一个**二次约束的二次问题(quadratically constrained quadratic problem)**
@@ -61,17 +64,22 @@ $$f_0(x^*) \leq f_0(x)$$
 令$x^{(1)},\dots,x^{(n)}$作为我们的**设计变量**(design variables)，我们可以固定一些决策的泛函特征:$f_0(x),\dots,f_m(x)$。将最重要的特征$f_0$作为我们的目标函数.对其它的特征做一些边界约束$a_j \leq f_j(x) \leq b_j$，就得到了一个优化问题
 
 $$\underset{x\in Q}{min}\; f_0(x),$$
+
 $$s.t.\; a_j\leq f_j(x)\leq b_j,\; j\; = \;1\dots m.$$
+
 其中$Q$代表结构约束(structural constraints)，例如非负性，变量的界限.
 
 #### Example 1.1.2
 或者初始问题如下：
+
 $$Find \;x\in \mathcal{R}^n \;such\; that\; f_j(x)=a_j,\;j= 1\dots m$$
 
 其中$a_j \in \mathcal{R}, \; j=1\dots m.$ 然后我们就能够考虑这样的问题：
 
 $$\underset{x\in \mathcal{R}^n}{min}\; \overset{m}{\underset{j=1}{\sum}}(f_j(x)-a_j)^2$$
+
 如果后面问题的优化值为0，则我们说此问题有解。
+
 在非线性分析中，这类问题是普遍存在的。
 
 #### Example 1.1.3
@@ -79,10 +87,15 @@ $$\underset{x\in \mathcal{R}^n}{min}\; \overset{m}{\underset{j=1}{\sum}}(f_j(x)-
 有时候我们的决策变量$x^{(1)},\dots x^{(n)}$必须是整数，这可以 用如下约束来描述：
 
 $$sin(\pi x^{(i)}) = 0, \quad i = 1\dots n.$$
+
 因此我们能够得到整数优化问题：
+
 $$\underset{x \in Q}{min} \; f_0(x),$$
+
 $$s.t. \; a_j \leq f_j(x) \leq b_j, \;j= 1\dots m$$
+
 $$sin(\pi x^{(i)} ) = 0, \; i = 1 \dots n.$$
+
 ### 数值方法的性能
 
 我们无法说出解决一个特定问题的最佳方法，考虑一个答案为$x^*=0$ 的问题$\mathcal{P}$，那么一个永远返回$0$的方法在这个问题上的性能是无可比拟的，但是它无法解决其它有特定答案的问题。
@@ -105,6 +118,7 @@ $$sin(\pi x^{(i)} ) = 0, \; i = 1 \dots n.$$
 这样一来我们就有了对一个问题类的描述
 
 $$\mathcal{P} \equiv (\Sigma, \mathcal{O}, \mathcal{J}_\epsilon)$$
+
 ### 普遍迭代过程
 
 - 输入：初始点$x_0$和准确度$\epsilon > 0$
@@ -117,6 +131,7 @@ $$\mathcal{P} \equiv (\Sigma, \mathcal{O}, \mathcal{J}_\epsilon)$$
 4. 检查停止条件$\mathcal{J}_\epsilon$.如果满足，则形成输出$\bar{x}$，否则设置$k:=k+1$且转到步骤1
 
 #### 定义复杂度
+
 - **解析复杂度**(analytical complexity)：求解问题$\mathcal{P}$，达到准确率$\epsilon$，所需要调用$oracle$的数量
 - **算数复杂度**（arithmetical complexity）：求解问题$\mathcal{P}$，达到准确率$\epsilon$，所需要的算术操作的总数量(包括$oracle$和方法的工作)
 
@@ -150,6 +165,7 @@ $$||x||_\infty = \underset{1 \leq i \leq n}{max}|x^{(i)}|.$$
 假设，对于这个范数，目标函数$f(x)$在$\mathcal{B}_n$上是Lipschitz连续的(Lipschitz continuous)：
 
 $$|f(x) - f(y)| \leq L||x-y||_\infty, \forall x, y \in \mathcal{B}_n$$
+
 其中$L$是某个Lipschitz常量 （Lipschitz constant）
 
 考虑一个简单解决方法 Uniform Grid Method.
@@ -174,6 +190,7 @@ $$Find \; \bar{x} \in \mathcal{B}_n : \quad f(\bar{x}) - f^* \leq \epsilon$$
 对于由上述问题、假设构成的问题类，方法$\mathcal{G}$的分析复杂度最多是
 
 $$\mathcal{A}(\mathcal{G}) = (\lfloor \frac{L}{2\epsilon}\rfloor + 1)^n$$
+
 **proof：** 具体查看PPT或原书
 - 取 $p$ 值，使得问题类被解决
 - 分析方法所用开销, 根据需要取$p = \lfloor \frac{L}{2\epsilon} \rfloor + 1$，一共构造并计算了$p^n$个点
@@ -181,6 +198,7 @@ $$\mathcal{A}(\mathcal{G}) = (\lfloor \frac{L}{2\epsilon}\rfloor + 1)^n$$
 我们仍然需要确定这问题类的下界
 
 **resisting oracle**:
+
 - 从一个空函数开始，试图用最坏可能的方式回答这个方法的每一个调用
 - 这个回答必须和前面的回答以及问题类的描述兼容
 
@@ -191,6 +209,7 @@ $$\mathcal{A}(\mathcal{G}) = (\lfloor \frac{L}{2\epsilon}\rfloor + 1)^n$$
 - 逼近解：寻找$\bar{x} \in \mathcal{B}_n: f(\bar{x}) -f^* \leq \epsilon$
 
 **Theorem 1.1.2**
-对于零阶方法，要取得$\epsilon$精度（这里$\epsilon < \frac{1}{2}L$),则$l$的解析复杂度至少为$(\lfloor \frac{L}{2\epsilon} \rfloor)^n$
+
+对于零阶方法，要取得$\epsilon$精度(这里$\epsilon < \frac{1}{2}L$),则$l$的解析复杂度至少为$(\lfloor \frac{L}{2\epsilon} \rfloor)^n$
 
 **proof:** 具体见ppt或原书P13

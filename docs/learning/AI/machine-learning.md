@@ -224,6 +224,13 @@ $$E(f;D)=bias^2(x) + var(x) + \epsilon^2$$
 ## 监督学习
 ### 回归分析
 
+> 回归内容需要重写
+
+####  归档材料
+
+[20250920 | 线性模型](https://inkstarchen.github.io/LifeNote/pages/62b3ce/#%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B)
+[20250922 | 附加内容](https://inkstarchen.github.io/LifeNote/pages/9c35b1/#%E9%99%84%E5%8A%A0%E5%86%85%E5%AE%B9%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B)
+
 #### 一元线性回归
 
 符号表示
@@ -424,19 +431,90 @@ $$Gain(D,a)=max_{t\in T_a}Gain(D,a,t)=max_{t\in T_a}Ent(D)-\sum_{\lambda\in\{-,+
 判断决策树泛化性能是否提升的方法
 - 留出法：预留一部分数据用作“验证集”以进行性能评估
 
-### 线性判别分析
+### 线性判别分析 (Linear Discriminant Analysis, LDA)
 
-- 线性判别分析（linear discriminant analysis, LDA）是一种基于监督学习的降维方法，也称为 Fisher 线性判别分析 （FDA）
-- 对于一组具有标签信息的高位数据样本，LDA 利用其类别信息将其线性投影到一个低维空间熵，在低维空间中同一类别样本尽可能靠近，不同类样本尽可能彼此原理
-	- 投影后类内方差最小，类间方差最大
-- LDA 与主成分分析（PCA）紧密相关，都在寻找最佳解释数据的变量线性组合
-- 对线性判别分析的降维步骤描述
-	- 计算数据样本集中每个类别样本的均值
-	- 计算以下两个矩阵：类内散度矩阵$S_w$($m_i$为第i个类别中包含样本数据的均值):$$S_w = \sum^K_{i=1}\sum_{x\in class_i}(x-m_i)(x-m_I)^T$$类间散度矩阵$S_b$:$$S_b=\sum^K_{i=1}\frac{N_i}{N}(m_i-m)(m_I-m)^T$$
-	- 根据$S_w^{-1}S_bW=\lambda W$来求解$S_w^{-1}S_b$所对应前r个最大特征值所对应特征向量$(w_1,w_2,\cdots,w_r)$，构成矩阵$W$
-	- 通过矩阵$W$将每个样本映射到低维空间，实现特征降维
+- 也称为 Fisher 线性判别分析 （FDA）
 
+> 由于投影过程中使用了类别信息，因此LDA也常被视为一种经典的监督降维技术.
 
+**与主成分分析（PCA）的关系：**都在寻找最佳解释数据的变量线性组合
+
+**思想：**给定一组具有标签信息的训练样例集，设法将样例投影到一条直线上，使得同类样例的投影点尽可能近，异类样例的投影点尽可能远.
+
+**实现方法：** 使得同类样例投影点的协方差尽可能小，而类中心的距离尽可能大。
+
+#### 实现过程
+
+- 定义“类内散度矩阵”（within-class scatter matrix）
+
+$$S_w = \Sigma_0 + \Sigma_1 = \underset{x\in X_0}{\sum}(x-\mu_0)(x-\mu_0)^T + \underset{x\in X_1}{\sum}(x-\mu_1)(x-\mu_1)^T$$
+
+- 定义“类间散度矩阵”(between-class scatter matrix)
+
+$$S_b = (\mu_0 + \mu_1)(\mu_0 - \mu_1)^T$$
+
+此时我们的最大化目标为：
+
+$$J= \frac{w^TS_b w}{w^TS_WW}$$
+
+这又被称为$S_b$与$S_w$的**“广义瑞利商”（generalized Rayleigh quotient）**
+
+注意到 最大化目标的分子分母都是关于$w$的二次项，因此其解与$w$的长度无关，只与其方向有关，不失一般性，令$w^TS_ww = 1$,则问题等价于
+
+$$\begin{array}{c} min_w & -w^TS_bw \\ s.t. & w^TS_ww = 1. \end{array}$$
+
+由拉格朗日乘子法，上式等价于
+
+$$S_bw = \lambda S_w w,$$
+
+其中$\lambda$是拉格朗日乘子，注意到$S_bw$的方向恒为$\mu_0 - \mu_1$,不妨令
+
+> 这是因为$S_b$中的$(\mu_0 - \mu_1)^T$与$w$相乘为标量.
+
+$$S_bw = \lambda(\mu_0 - \mu_1)$$
+
+回代则得到:
+
+$$w = S_w^{-1}(\mu_0 - \mu_1)$$
+
+考虑到数值解的稳定性，实践中通常对$S_w$进行奇异值分解，即$S_w = U \Sigma V^T$,这里$\Sigma$是一个实对角矩阵，其对角线上的元素是$S_w$的奇异值,然后再由$S_w^{-1} = V\Sigma^{-1}U^T$得到$S_w^{-1}$
+
+值得一提的是,LDA可从贝叶斯决策理论的角度阐释，并可证明，当两类数据同先验、满足高斯分布且协方差相等时，LDA可达到最优分类.
+
+先将LDA推广到多分类任务中:
+
+假定存在$N$个类，且第$i$类示例数为$m_i$,我们先定义“全局散度矩阵”
+
+$$S_t = S_b + S_w = \overset{m}{\underset{i=1}{\sum}} (x_i - \mu) ( x_i - \mu)^T$$
+
+其中$\mu$是所有示例的均值向量，将类内散度矩阵$S_w$重定义为每个类别的散度矩阵之和，即
+
+$$S_w = \underset{i=1}{\overset{N}{\sum}} S_{w_i},$$
+
+其中
+
+$$S_{w_i} = \underset{x \in X_i}{\sum}(x - \mu_i)(x - \mu_i)^T$$
+
+进一步得到
+
+$$S_b = S_t - S_w = \underset{i=1}{\overset{N}{\sum}}m_i (\mu_i - \mu)(\mu_i - \mu)^T$$
+
+多分类的LDA常见的实现是采用优化目标
+
+$$\underset{W}{max} \frac{tr(W^TS_bW)}{tr(W^TS_wW)},$$
+
+其中$W \in \mathcal{R}^{d \times (N-1)}$, $tr(\cdot)$表示矩阵的迹(trace)，上式可通过如下广义特征值问题求解：
+
+$$S_bW= \lambda S_w W$$
+
+$W$的闭式解则是$S_w^{-1}S_b$的$N-1$个最大广义特征值所对应的特征向量组成的矩阵.
+
+若将$W$视为一个投影矩阵，则多分类LDA将样本投影到$N-1$维空间，$N-1$通常远小于数据原有的属性数，于是可以通过这个投影点来减小样本点的维数.
+
+#### 内容来源
+
+- [20250920日报 | 线性判别分析](https://inkstarchen.github.io/LifeNote/pages/62b3ce/#%E7%BA%BF%E6%80%A7%E5%88%A4%E5%88%AB%E5%88%86%E6%9E%90)
+- [20250922日报 | 线性判别分析](https://inkstarchen.github.io/LifeNote/pages/9c35b1/#%E7%BA%BF%E6%80%A7%E5%88%A4%E5%88%AB%E5%88%86%E6%9E%90)
 
 ## 无监督学习
 

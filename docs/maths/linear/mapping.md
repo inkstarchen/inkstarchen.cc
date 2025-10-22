@@ -1,30 +1,84 @@
-# 线性映射
+## 线性映射
 
 ### 定义
-* 从线性空间$V_1(F)到V_2(F)的一个映射\sigma$是线性的，如果$\forall\alpha,\beta\in V_1和\forall\lambda,\mu\in F$都有$$\sigma(\lambda\alpha+\mu\beta)=\lambda\sigma(\alpha)+\mu\sigma(\beta)$$
-### 像和核
-#### 定义
-* 设$\sigma$是线性空间$V_1(F)到V_2(F)$的线性映射，$V_1$的所有元素在$\sigma$下的像所组成的集合$$\sigma(V_1)=\lbrace\beta|\beta=\sigma(\alpha),\alpha\in V_1\rbrace$$称为$\sigma$的像(或称$\sigma$的值域),$V_2$的零元$0_2$在$\sigma$下的完全原像$$\sigma^{-1}(0_2)=\lbrace\alpha|\sigma(\alpha)=0_2,\alpha\in V_1\rbrace$$称为$\sigma的核，\sigma(V_1)和\sigma^{-1}(0_2)也常记作Im\sigma和Ker\sigma$
+对于从线性空间$V_1(F)$到$V_2(F)$的一个映射$\sigma$，若
+
+$$ \begin{array}{c} \forall \alpha , \beta \in V_1, \; \forall \lambda, \mu \in F \; 有：\\ \sigma(\lambda\alpha+\mu\beta)=\lambda\sigma(\alpha)+\mu\sigma(\beta) \end{array}$$
+
+则称映射$\sigma$是**线性的**
+
+## 像和核
+
+### 定义
+
+设$\sigma$是线性空间$V_1(F)到V_2(F)$的线性映射
+
+- $V_1$的所有元素在$\sigma$下的像所组成的集合
+
+$$\sigma(V_1)=\{ \beta | \beta = \sigma (\alpha), \alpha \in V_1 \}$$
+
+称为**$\sigma$的像** (或称$\sigma$的值域)
+
+- $V_2$的零元$0_2$在$\sigma$下的完全原像
+
+$$\sigma^{-1}(0_2)=\lbrace\alpha|\sigma(\alpha)=0_2,\alpha\in V_1\rbrace$$
+
+称为**$\sigma$的核**
+
+
+> $\sigma(V_1)$和$\sigma^{-1}(0_2)$也常记作$Im\sigma$和$Ker\sigma$
 
 
 ### 定理
 * （1）线性映射$\sigma:V_1->V_2$是单射$<=>\sigma^{-1}(0_2)=\lbrace0_1\rbrace$
 
 ### 运算
+
 #### 定义
-* 设$\sigma,\tau\in L(V_1,V_2),$规定$\sigma与\tau之和\sigma+\tau及\lambda与\sigma之数量乘积\lambda\sigma$分别为$$(\sigma+\tau)(\alpha)=\sigma(\alpha)+\tau(\alpha),\qquad\alpha\in V_1,$$$$(\lambda\sigma)(\alpha)=\lambda(\sigma(\alpha)),\qquad\alpha\in V_1.$$
+
+设$\sigma,\tau\in L(V_1,V_2),$规定
+
+- $\sigma$ 与 $\tau$ 之和 $\sigma+\tau$ 为:
+
+$$(\sigma+\tau)(\alpha)=\sigma(\alpha)+\tau(\alpha),\qquad\alpha\in V_1,$$
+
+- $\lambda$ 与 $\sigma$ 的数量乘积 $\lambda\sigma$ 为:
+
+$$(\lambda\sigma)(\alpha)=\lambda(\sigma(\alpha)),\qquad\alpha\in V_1.$$
+
 ## 线性映射的矩阵表示
 
 ### 定义
-* $\sigma,V_1,V_2,B_1和B_2如上所设，我们把\sigma(\varepsilon_1),\sigma(\varepsilon_2),...,\sigma(\varepsilon_n)$关于基$B_2$的坐标按列排成的矩阵$M(\sigma)$,即$$M(\sigma)=\begin{pmatrix}a_{11} & a_{12} & ...& a_{1n} \\ a_{21} & a_22 &... & a_{2n} \\ \vdots& & & \vdots\\a_{m1} & a_{m2} &\cdots &a_{mn}\end{pmatrix},$$称为$\sigma关于B_1和B_2$的矩阵.
+
+设$\sigma$是$V_1$到$V_2$的一个映射,$B_1$和$B_2$分别为两个空间的基，我们把$\sigma(\varepsilon_1),\sigma(\varepsilon_2),...,\sigma(\varepsilon_n)$关于基$B_2$的坐标按列排成的矩阵$M(\sigma)$,即
+
+$$M(\sigma)=\begin{pmatrix}a_{11} & a_{12} & ...& a_{1n} \\ a_{21} & a_{22} &... & a_{2n} \\ \vdots& & & \vdots\\a_{m1} & a_{m2} &\cdots &a_{mn}\end{pmatrix}.$$
+
+称为$\sigma关于B_1和B_2$的矩阵.
 
 
 ## 线性映射的秩
 ### 定义
-* 设$\sigma\in L(V_1,V_2),$如果$\sigma(V_1)$是$V_2$的有限维子空间，则$\sigma(V_1)$的维数称为$\sigma$的秩，记作$r(\sigma)$,即$$r(\sigma)=dim\sigma(V_1)$$
+* 设$\sigma\in L(V_1,V_2),$如果$\sigma(V_1)$是$V_2$的有限维子空间，则$\sigma(V_1)$的维数称为$\sigma$的秩，记作$r(\sigma)$,即
+
+$$r(\sigma)=dim\sigma(V_1)$$
+
 ### 定理
-* 设$\sigma\in L(V_1,V_2),$如果$dim(V_1)=n$,则$$r(\sigma)+dim(Ker\sigma)=n.$$
-* 设$\sigma\in L(V_1,V_2),$如果$V_1和V_2$都是n维线性空间，则下列命题等价：$$(1)秩(\sigma)=n(或说\sigma满秩);(2)\sigma是单射;(3)\sigma是满射;(4)\sigma是可逆线性映射.$$
+* 设$\sigma\in L(V_1,V_2),$如果$dim(V_1)=n$,则
+
+$$r(\sigma)+dim(Ker\sigma)=n.$$
+
+设$\sigma\in L(V_1,V_2),$如果$V_1和V_2$都是n维线性空间，则下列命题等价：
+
+1. $秩(\sigma)=n$(或说$\sigma$满秩);
+
+2. $\sigma$是单射;
+
+3. $\sigma$是满射;
+
+4. $\sigma$是可逆线性映射.
+
+
 ## 双线性函数 二次型
 
 ### 定义

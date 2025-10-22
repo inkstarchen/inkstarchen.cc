@@ -42,9 +42,16 @@ h1 {
     margin-right: 0.8rem;
   }
 
+.admonition p{
+  margin-top: 12px;
+}
+
+.md-content p{
+  margin: 5px;
+}
+
 p {
   text-indent: 30px;
-
 }
 
 li p{
@@ -60,4 +67,61 @@ li {
   border-radius: 5rem;
   width: 5rem;
   background-color: aqua;
+}
+
+.video-container{
+
+  border-radius: 10px;
+  border-style: solid;
+  border-color: rgb(255, 255, 255);
+  border-width: 1px;
+  width: '100%';
+  height: 140px;
+  background-color: rgb(255, 255, 255);
+  display: grid;
+  align-content: center;
+  grid-template-columns: 200px 1fr; /* 两列：左边自适应宽度，右边占满剩余 */
+  grid-template-rows: 1fr 1fr;
+  column-gap: 40px;          /* 左右列之间的间距 */
+  transition-duration: 0.2s;
+  box-shadow: 2px 2px 5px #9c9b9b7b;
+  color: black;
+}
+
+.video-container:hover{
+  transition-duration: 0.2s;
+  background-color: #f5f5f5;
+}
+
+.video-container p:first-child {
+  grid-column: 1 / 2; /* 占据所有行（不管右边多少个 <p>） */
+  grid-row: 1 / 3;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  padding-left: 20px;
+  justify-items: center;
+}
+
+.video-container p:nth-child(2){
+  text-indent: 0px;
+  padding-right: 40px;
+  font-weight: 700;
+}
+
+.video-container p:last-child{
+  margin-top: 0px;
+  padding-right: 40px;
+  font-size: small;
+  color: #4c4d5f;
+}
+
+.video-container img{
+  border-radius: 9px;
+  height: 110px;
+}
+
+.alink{
+  text-decoration: none; 
+  color: inherit;
 }
