@@ -41,6 +41,11 @@ nav:
         - 加密算法: learning/information_security/encryption.md
       - 量子计算:
         - 总论: learning/quantum/quantum.md
+        - 量子比特: learning/quantum/qubit.md
+        - 量子门: learning/quantum/gate.md
+        - 量子计算: learning/quantum/quantum-computing.md
+        - 量子实验: learning/quantum/quantum-experiment.md
+        - 术语: learning/quantum/terminology.md
       - 脑机接口:
         - 总论: learning/brain-interface/index.md
         - 大脑模拟: learning/brain-interface/brain.md
@@ -70,6 +75,7 @@ nav:
           - 查询开销估计与优化: learning/database/query.md
           - 事务:  learning/database/transaction.md
           - 恢复管理器: learning/database/recoverymanager.md
+          - 动态内存调度: learning/database/memory-management.md
         - Mysql使用: learning/database/mysql.md
         - Mysql知识: learning/database/mysql-know.md
       - 通信原理: 
@@ -121,6 +127,8 @@ nav:
     - 概率论: 
       - 概率论知识: maths/probability/probability.md
       - 分布函数表: maths/probability/distribution.md
+    - 工具: 
+      - 卡尔曼滤波: maths/tools/Kalman-filter.md
   - 知识论:
       - 知识的传递: 
         - 写作: knowledge/pass/writing.md
