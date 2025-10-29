@@ -3,7 +3,7 @@ repo_name: inkstarchen/inkstarchen.cc
 repo_url: https://github.com/inkstarchen/inkstarchen.cc
 use_directory_urls: true
 nav:
-  - 首页: index.md
+  - 阅读指引: index.md
   - 思维与知识:
       - 总论: learning/index.md
       - 马克思主义: learning/marxism/marxism.md
@@ -49,9 +49,6 @@ nav:
       - 脑机接口:
         - 总论: learning/brain-interface/index.md
         - 大脑模拟: learning/brain-interface/brain.md
-      - 软件工程: 
-        - 前端: learning/software_construction/front-end.md
-        - 软件设计模式: learning/software_construction/design.md
       - 机器人学: learning/robotics.md
       - 人工智能: 
         - 引论: learning/AI/ai-introduction.md
@@ -88,11 +85,10 @@ nav:
       - 文件类型: 
         - GLTF文件: learning/files/gltf.md
         - SO文件: learning/files/so.md
-  - 计算机科学:
-    
   - 数学工具:
     - 总论: maths/index.md
     - 数学基础:
+        - 基本定理: maths/bases/basic-theorem.md
         - 欧几里得空间: maths/bases/euclidean-space.md
         - 范数: maths/bases/norm.md
         - 数学工具: maths/bases/math-tools.md
@@ -105,6 +101,7 @@ nav:
     - 理论计算机科学导引:
       - 编码: maths/Theorical/encoding.md
       - 电路与函数: maths/Theorical/function.md
+      - 参考书籍: maths/Theorical/reference.md
     - 数学分析:
       - 函数: maths/calculate/function.md
       - 函数极限: maths/calculate/functionlimit.md
@@ -142,9 +139,6 @@ nav:
       - 学习与教育: knowledge/education.md
       - 知识论: knowledge/know.md
       - 研究之路: knowledge/research.md
-  - 认知: 
-    - 软件调研: know/Software.md
-    - 名词解释: know/noun.md
   - 人与社会: 
     - 社会幻象: human-society/social-illusions.md
     -  政府: human-society/government.md
@@ -156,38 +150,16 @@ nav:
     - 生活: Experience/index.md
     - 杂言: Experience/mix.md
     - 摄影: Experience/photo/photograph.md
-    - 前人之言:
-      - 爱因斯坦: Experience/quotes/Einstein.md
-      - 乔布斯: Experience/quotes/SteveJobs.md
-    - 感受:
-      - 情绪: Experience/Feeling/emotion.md
-      - 禅: Experience/Feeling/zen.md
+    - 铭记前人之言: Experience/words.md
+    - 情绪: Experience/emotion.md
+    - 禅: Experience/zen.md
     - 书籍:
       - 大问题:简明哲学导论: Experience/Books/big_questions.md
       - 雕刻时光: Experience/Books/curve_time.md
-      - 毛选: Experience/Books/mao-xuan.md
-    - 旧文:
-      - 中心的骗局: Experience/OldWords/lie-of-center.md
-      - 坚韧不拔的磐石: Experience/OldWords/tough-stone.md
-      - 初中片段:  Experience/OldWords/old-words.md
-      - 新: Experience/OldWords/newlife.md
+    - 旧文: Experience/old-words.md
     - 音乐:
       - 工作流音乐: Experience/music/workflow.md
-    -  文学:
-        - 废名: Experience/literature/fei-ming.md
-        - 鲁迅: Experience/literature/lu-xun.md
-        - 穆时英: Experience/literature/mu-shi-ying.md
-        - 施蛰存: Experience/literature/shi-zhe-cun.md
-        - 文学研究会: Experience/literature/wen-xue-hui-yan.md
-        - 萧红: Experience/literature/xiao-hong.md
-        - 郁达夫: Experience/literature/yu-da-fu.md
-        - 赵树理: Experience/literature/zhao-shu-li.md
-    - 茶:
-        - 茶文化: Experience/tea/tea-culture.md
-        - 茶健康: Experience/tea/tea-health.md
-        - 茶科技: Experience/tea/tea-science.md
-        - 茶产业: Experience/tea/tea-industry.md
-        - 茶文化与茶健康复习提纲: Experience/tea/tea-culture-tea-health-review.md
+  
   - 技术知识:
       - SSH:
         - 什么是SSH: tech-know/SSH/SSH.md
