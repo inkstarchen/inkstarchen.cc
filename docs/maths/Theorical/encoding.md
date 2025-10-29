@@ -1,3 +1,42 @@
+## Introduction
+
+
+位-值 数字系统 是伟大的发明，拓展了我们表达的边界，它使我们能够表达极大的数量。
+
+- 我们所日常使用以及在计算机中抽象使用的位-值数字系统是十进制。任何其它的位-值系统向十进制的转化实际上是由一个由乘法和加法组成的算法系统.
+
+### Integer multiplication: an example of an algorithm
+
+计算机的出现越发要求我们使用更加高效的算法
+
+> 理论计算机科学关注算法与计算的固有性质。
+
+### Extended Example: A faster way to multiply (optional)
+
+Karatsuba multiplication 可以在$O(n^{log_23})$的复杂度下完成乘法运算.
+
+$$(10\bar{x} + \underline{x}) \times (10\bar{y} + \underline{y}) = 100 \bar{x}\bar{y} + 10(\bar{x}\underline{y} + \underline{x}\bar{y}) + \underline{x}\underline{y}$$
+
+> **Lemma 0.5**
+
+> 对于任意非负整数$x,y$，当给定输入$x,y$ **Algorithm 0.4** 会输出$x\cdot y$
+
+</br>
+
+
+> **Lemma 0.6**
+
+> 如果$x,y$是至多为 $n$ 位的整数，**Algorithm 0.4** 会在输入$x,y$上花费$O(n^{\log_23})$操作.
+
+在此之后仍有很多的改进算法出现
+
+
+### Algorithms beyond arithmetic
+
+### On the importance of negative results
+
+不可能的结果是世界的法则
+
 **重要概念**
 
 1. encoding scheme $\leftrightarrow$ countable

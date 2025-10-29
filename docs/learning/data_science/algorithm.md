@@ -127,23 +127,35 @@ $$General\quad recurrence:T(N) = aT(N/b) + f(N)$$
 
 ![](assets/divide.png)
 
-#### Theorem
-The solution to the equation
-$$T(N) = aT(N/b) + O(N^k\log^pN)$$
-where $a \geq 1, b \geq 1, and \quad p \geq 0$,
-$$
-T(N)=\left\{\begin{array}{ll}
-O(N^{\log_b a}) && if\quad a > b^k\\
-O(N^k\log^{p+1}N)  &&if\quad a = b^k \\
-O(N^k \log^pN) && if\quad a < b^k \\
-\end{array}
-\right.
-$$
+#### 主定理 Master Theorem
+
+主定理适用于求解的递归式算法的时间复杂度：
+
+$$T(n) = aT(\frac{n}{b}) + O(n^k\log^pN)$$
+
+其中：
+
+- $n$ 是问题规模大小
+- $a$ 划分出的子问题的数目
+- $\frac{n}{b}$ 是每个子问题的规模大小
+- $f(n)$ 是将原问题分解成子问题和将子问题的解合并成原问题的解的时间。 
+
+!!! note "分析"
+
+	1. $T(n) = \Theta(n^{\log_b a})$，如果对某个常数 $\epsilon > 0$ 有 $f(n) = O(n^{\log_b a - \epsilon})$
+
+	2. $T(n) = \Theta(n^{\log_b a} \log^{k+1} n)$，如果 $f(n) = \Theta(n^{\log_b a} \log^k n)$ 且 $k \geq 0$
+
+	3. $T(n) = \Theta(f(n))$ ， 如果对某个 $\epsilon > 0$ 有 $f(n) = \Omega(n^{\log_b a + \epsilon})$，并且 $f(n)$ 满足正则性条件
+	
+	> 正则性条件为：对某个常数 $c < 1$ 和所有足够大的 $n$，有 $a\,f(n/b) \leq c\,f(n)$。
+
 
 
 
 
 #### 空间最小距离对
+
 ```c
 sorted by y coordinates
 for(i =0; i < NumPointsInStrip; i++)

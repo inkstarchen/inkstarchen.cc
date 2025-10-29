@@ -88,6 +88,8 @@ nav:
       - 文件类型: 
         - GLTF文件: learning/files/gltf.md
         - SO文件: learning/files/so.md
+  - 计算机科学:
+    
   - 数学工具:
     - 总论: maths/index.md
     - 数学基础:
@@ -129,6 +131,7 @@ nav:
       - 分布函数表: maths/probability/distribution.md
     - 工具: 
       - 卡尔曼滤波: maths/tools/Kalman-filter.md
+      - 拉格朗日乘子法: maths/tools/lagrange.md
   - 知识论:
       - 知识的传递: 
         - 写作: knowledge/pass/writing.md
