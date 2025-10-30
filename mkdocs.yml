@@ -7,84 +7,12 @@ nav:
   - 思维与知识:
       - 总论: learning/index.md
       - 马克思主义: learning/marxism/marxism.md
-      - 数据科学:
-        - 数据结构: learning/data_science/data_structure.md
-        - 基本算法: learning/data_science/algorithm.md
-        - 近似算法: learning/data_science/approximate_algorithm.md
-        - 排序: learning/data_science/sort.md
-        - 搜索: learning/data_science/search.md
-        - 并行: learning/data_science/parallel.md
-      - 计算机系统: 
-        - 总论: learning/computer-sys/computer-system.md
-        - 计算机简史: learning/computer-sys/computer-history.md
-        - 计算机系统三: learning/computer-sys/sys-3.md
-        - 指标计算与思想: learning/computer-sys/mechanism.md
-        - 电路基础: learning/computer-sys/foundation.md
-        - 电路设计与Verilog使用: learning/computer-sys/verilog.md
-        - ELF文件: learning/computer-sys/ELF.md
-        - 操作系统结构: learning/computer-sys/structure.md
-        - 进程: learning/computer-sys/process.md
-        - 线程: learning/computer-sys/thread.md
-        - 计算机如何运作: learning/computer-sys/how-computer-work.md
-      - 计算机网络: 
-        - 网络: learning/computer-network/network.md
-        - 杂七杂八: learning/computer-network/other.md
-        - 服务器软件: learning/computer-network/serversoftware.md
-        - Nginx介绍: learning/computer-network/learn-Nginx.md
-      - 计算机视觉: 
-        - 引子: learning/computer-vision/introduction.md
-        - 图像滤波: learning/computer-vision/image-filter.md
-      - 计算机图形学:
-        - 总论: learning/computer-graphics/index.md
-        - 变换: learning/computer-graphics/transform.md
-      - 信息安全:
-        - 加密算法: learning/information_security/encryption.md
-      - 量子计算:
-        - 总论: learning/quantum/quantum.md
-        - 量子比特: learning/quantum/qubit.md
-        - 量子门: learning/quantum/gate.md
-        - 量子计算: learning/quantum/quantum-computing.md
-        - 量子实验: learning/quantum/quantum-experiment.md
-        - 术语: learning/quantum/terminology.md
-      - 脑机接口:
-        - 总论: learning/brain-interface/index.md
-        - 大脑模拟: learning/brain-interface/brain.md
-      - 机器人学: learning/robotics.md
-      - 人工智能: 
-        - 引论: learning/AI/ai-introduction.md
-        - 机器学习: learning/AI/machine-learning.md
-        - 贝叶斯分类器: learning/AI/bayesian.md
-        - 监督学习: learning/AI/supervised_learning.md
-        - 深度学习: learning/AI/deep-learning.md
-        - 强化学习: learning/AI/reinforcement-learning.md
-        - 决策与博弈算法: learning/AI/game-algorithm.md
-        - 多智能体强化学习: learning/AI/multi-agent-reinforcement-learning.md
-      - 技术原则: learning/tech_prin.md
       - 历史经验: learning/history.md
       - 博弈论基础: learning/game-theory.md
-      - 数据库系统:
-        - 理论知识:
-          - 总览: learning/database/theory.md
-          - 物理存储: learning/database/physical-level.md
-          - 关系模型: learning/database/relation_schema.md
-          - 数据库设计: learning/database/base_design.md
-          - 索引: learning/database/indexes.md
-          - 查询开销估计与优化: learning/database/query.md
-          - 事务:  learning/database/transaction.md
-          - 恢复管理器: learning/database/recoverymanager.md
-          - 动态内存调度: learning/database/memory-management.md
-        - Mysql使用: learning/database/mysql.md
-        - Mysql知识: learning/database/mysql-know.md
-      - 通信原理: 
-        - 相关数学知识: learning/communication/communication-theory.md
-        - 信号:  learning/communication/signal.md
       - 物理学: learning/physics.md
-      - 社会心理学: learning/social-psychology.md
       - 设计: learning/design.md
       - 毛泽东思想与中国特色社会主义理论体系概论: learning/maogai.md
-      - 文件类型: 
-        - GLTF文件: learning/files/gltf.md
-        - SO文件: learning/files/so.md
+      - 杂项: learning/others.md
   - 数学工具:
     - 总论: maths/index.md
     - 数学基础:
@@ -129,24 +57,76 @@ nav:
     - 工具: 
       - 卡尔曼滤波: maths/tools/Kalman-filter.md
       - 拉格朗日乘子法: maths/tools/lagrange.md
-  - 知识论:
-      - 知识的传递: 
-        - 写作: knowledge/pass/writing.md
-        - 报告写作: knowledge/pass/report.md
-        - 论文写作: knowledge/pass/paper.md
-        - 听的艺术: knowledge/pass/listen.md
-        - 内容呈现: knowledge/pass/ppt.md
-      - 学习与教育: knowledge/education.md
-      - 知识论: knowledge/know.md
-      - 研究之路: knowledge/research.md
+  - 计算机科学与技术:
+    - 阅读须知: cs-tech/index.md
+    - 数据库系统:
+        - 理论知识:
+          - 总览: cs-tech/database/theory.md
+          - 物理存储: cs-tech/database/physical-level.md
+          - 关系模型: cs-tech/database/relation_schema.md
+          - 数据库设计: cs-tech/database/base_design.md
+          - 索引: cs-tech/database/indexes.md
+          - 查询开销估计与优化: cs-tech/database/query.md
+          - 事务:  cs-tech/database/transaction.md
+          - 恢复管理器: cs-tech/database/recoverymanager.md
+          - 动态内存调度: cs-tech/database/memory-management.md
+        - Mysql使用: cs-tech/database/mysql.md
+        - Mysql知识: cs-tech/database/mysql-know.md
+    - 文件类型: 
+      - GLTF文件: cs-tech/files/gltf.md
+      - SO文件: cs-tech/files/so.md
+      - ELF文件: cs-tech/files/ELF.md
+    - 计算机系统: 
+      - 总论: cs-tech/computer-sys/computer-system.md
+      - 计算机如何运作: cs-tech/computer-sys/how-computer-work.md
+      - 计算机简史: cs-tech/computer-sys/computer-history.md
+      - 处理器架构: cs-tech/computer-sys/structure.md
+      - 缓存机制: cs-tech/computer-sys/cache.md
+      - 指标计算与思想: cs-tech/computer-sys/mechanism.md
+      - 分页机制: cs-tech/computer-sys/paging.md
+      - 流水线与乱序执行: cs-tech/computer-sys/pipeline.md
+      - 文件系统: cs-tech/computer-sys/filesystem.md
+      - 进程与线程: cs-tech/computer-sys/process-thread.md
+      - 磁盘管理: cs-tech/computer-sys/tape.md
+      - 并行计算: cs-tech/computer-sys/parallel.md
+      - IO: cs-tech/computer-sys/IO.md
+      - 电路设计与Verilog使用: cs-tech/computer-sys/verilog.md
+    - 计算机网络: 
+      - 网络: cs-tech/computer-network/network.md
+      - 杂七杂八: cs-tech/computer-network/other.md
+      - 服务器软件: cs-tech/computer-network/serversoftware.md
+      - Nginx介绍: cs-tech/computer-network/learn-Nginx.md
+    - 计算机视觉: 
+      - 引子: cs-tech/computer-vision/introduction.md
+      - 图像滤波: cs-tech/computer-vision/image-filter.md
+    - 计算机图形学:
+      - 总论: cs-tech/computer-graphics/index.md
+      - 变换: cs-tech/computer-graphics/transform.md
+    - 量子计算:
+      - 总论: cs-tech/quantum/quantum.md
+      - 量子比特: cs-tech/quantum/qubit.md
+      - 量子门: cs-tech/quantum/gate.md
+      - 量子计算: cs-tech/quantum/quantum-computing.md
+      - 量子实验: cs-tech/quantum/quantum-experiment.md
+      - 术语: cs-tech/quantum/terminology.md
+    - 人工智能: 
+      - 引论: cs-tech/AI/ai-introduction.md
+      - 机器学习: cs-tech/AI/machine-learning.md
+      - 贝叶斯分类器: cs-tech/AI/bayesian.md
+      - 深度学习: cs-tech/AI/deep-learning.md
+      - 强化学习: cs-tech/AI/reinforcement-learning.md
+      - 决策与博弈算法: cs-tech/AI/game-algorithm.md
+      - 多智能体强化学习: cs-tech/AI/multi-agent-reinforcement-learning.md
   - 人与社会: 
     - 社会幻象: human-society/social-illusions.md
+    - 社会心理学: human-society/social-psychology.md
     -  政府: human-society/government.md
     - 工作生活: human-society/society.md
     - 迈向社会: human-society/school-society.md
     - 注意力: human-society/attention.md
     - 原则与策略: human-society/strategy.md
   - 人之体验:
+    - 知识、教育、研究: Experience/know.md
     - 生活: Experience/index.md
     - 杂言: Experience/mix.md
     - 摄影: Experience/photo/photograph.md
@@ -159,7 +139,6 @@ nav:
     - 旧文: Experience/old-words.md
     - 音乐:
       - 工作流音乐: Experience/music/workflow.md
-  
   - 技术知识:
       - SSH:
         - 什么是SSH: tech-know/SSH/SSH.md
@@ -180,23 +159,10 @@ nav:
         - 基础知识: tech-know/Harmony/HOS-basic.md
         - 框架: tech-know/Harmony/HOS-framework.md
       - Python: tech-know/Python.md
-      - Kotlin: 
-        - 数据类型: tech-know/Kotlin-datatype.md
-        - 错误汇总: tech-know/Kotlin-error.md
-      - Android Studio: tech-know/As.md
-      - Learn Git: 
-        - 基础知识: tech-know/LearnGit.md
-        - 错误汇总: tech-know/git-error.md
-      - Learn Latex: tech-know/LearnLatex.md
-      - Learn Markdown: tech-know/LearnMarkdown.md
-      - 文件类型: tech-know/file-type.md
+      - Learn Git: tech-know/LearnGit.md
       - Learn Makefile: tech-know/Makefile.md
-  - 网站搭建:
-    - mkdocs配置:
-      - pydownx: Website/mkdocs-pydownx.md
-      - Admonitions: Website/mkdocs-admonition.md
-      - 技巧: Website/mkdocs-tips.md
-      - 基础设置: Website/mkdocs-setting.md
+      - 网站搭建:
+        - mkdocs配置: tech-know/mkdocs.md
  
 
 markdown_extensions:

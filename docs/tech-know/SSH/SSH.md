@@ -4,8 +4,6 @@
 - 为什么需要SSH？
 	- 历史上，网络主机之间的通信是不加密的，属于明文通信。并不安全，登录远程服务器时输入的密码时能够被线路所经过的中间计算机所获取。
 	- SSH能够加密计算机之间的通信，保证不被窃听或篡改。
-- SSH是如何诞生的？
-	- 在1995年，芬兰的研究员Tatu Ylönen设计，第一个版本（现称为 SSH 1）后来 SSH商业化。最后由OpenBSD的开发人员实现[OpenSSH](../../know/noun.md#openbsd)项目，基于SSH1.2.12版本。
 
 - SSH架构是服务器-客户端模式（Server - Client）
 
@@ -23,10 +21,7 @@
 			- 登陆时服务器发一个挑战（随机数），要求客户端用私钥签名
 			- 服务器用公钥验证签名
 	- 加密传输
-- 怎么协商？
-### 延伸问题
 
-[什么是非对称加密算法](../../learning/information_security/encryption.md)？
 ### 参考资料
 1. [SSH 基本知识 - SSH 教程 - 网道](https://wangdoc.com/ssh/basic)
 2. [超详细的图解SSH原理（真的超详细哦\~\~\~\~\~\~\~\~\~）-CSDN博客](https://blog.csdn.net/wang_qiu_hao/article/details/127902007)
