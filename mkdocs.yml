@@ -26,9 +26,13 @@ nav:
     - 优化基础理论:
       - Lec1: maths/optimization/Lec1.md
       - 拉格朗日乘子法: maths/optimization/lagrange.md
+      - 新记录: maths/optimization/Theorem.md
     - 理论计算机科学导引:
       - 编码: maths/Theorical/encoding.md
-      - 电路与函数: maths/Theorical/function.md
+      - 定义计算: maths/Theorical/computation.md
+      - 语法糖: maths/Theorical/sugar.md
+      - 代码与数据: maths/Theorical/code_data.md
+      - 无限域函数、自动机和正则表达式: maths/Theorical/regular.md
       - 参考书籍: maths/Theorical/reference.md
     - 数学分析:
       - 函数: maths/calculate/function.md
@@ -102,6 +106,8 @@ nav:
     - 计算机图形学:
       - 总论: cs-tech/computer-graphics/index.md
       - 变换: cs-tech/computer-graphics/transform.md
+      - 光照: cs-tech/computer-graphics/lighting.md
+      - 多实例: cs-tech/computer-graphics/instance.md
     - 量子计算:
       - 总论: cs-tech/quantum/quantum.md
       - 量子比特: cs-tech/quantum/qubit.md

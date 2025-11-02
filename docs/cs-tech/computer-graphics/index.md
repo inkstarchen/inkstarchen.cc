@@ -1,7 +1,3 @@
-## 课程分数组成
-
-lab 30% big project 40% class 30%
-
 ## 目标
 
 modeling, processing and displaying objects in the world in a computer.
