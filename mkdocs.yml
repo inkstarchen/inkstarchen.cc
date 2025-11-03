@@ -33,6 +33,7 @@ nav:
       - 语法糖: maths/Theorical/sugar.md
       - 代码与数据: maths/Theorical/code_data.md
       - 无限域函数、自动机和正则表达式: maths/Theorical/regular.md
+      - 未定义: maths/Theorical/un.md
       - 参考书籍: maths/Theorical/reference.md
     - 数学分析:
       - 函数: maths/calculate/function.md
