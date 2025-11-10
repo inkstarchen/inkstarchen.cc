@@ -62,6 +62,7 @@ nav:
     - 工具: 
       - 卡尔曼滤波: maths/tools/Kalman-filter.md
       - 拉格朗日乘子法: maths/tools/lagrange.md
+      - 傅里叶变换: maths/tools/fourier.md
   - 计算机科学与技术:
     - 阅读须知: cs-tech/index.md
     - 数据库系统:
@@ -102,13 +103,17 @@ nav:
       - 服务器软件: cs-tech/computer-network/serversoftware.md
       - Nginx介绍: cs-tech/computer-network/learn-Nginx.md
     - 计算机视觉: 
-      - 引子: cs-tech/computer-vision/introduction.md
-      - 图像滤波: cs-tech/computer-vision/image-filter.md
+      - 补充内容: cs-tech/computer-vision/appendix.md
     - 计算机图形学:
       - 总论: cs-tech/computer-graphics/index.md
+      - OpenGL使用: cs-tech/computer-vision/opengl.md
       - 变换: cs-tech/computer-graphics/transform.md
+      - 透明物体绘制: cs-tech/computer-graphics/transparency.md
       - 光照: cs-tech/computer-graphics/lighting.md
       - 多实例: cs-tech/computer-graphics/instance.md
+      - 后处理: cs-tech/computer-graphics/post-processing.md
+      - 物理: cs-tech/computer-graphics/physics.md
+      - 性能优化: cs-tech/computer-graphics/performance.md
     - 量子计算:
       - 总论: cs-tech/quantum/quantum.md
       - 量子比特: cs-tech/quantum/qubit.md
@@ -122,7 +127,7 @@ nav:
       - 贝叶斯分类器: cs-tech/AI/bayesian.md
       - 深度学习: cs-tech/AI/deep-learning.md
       - 强化学习: cs-tech/AI/reinforcement-learning.md
-      - 决策与博弈算法: cs-tech/AI/game-algorithm.md
+      - 蒙特卡洛搜索: cs-tech/AI/montecarlo.md
       - 多智能体强化学习: cs-tech/AI/multi-agent-reinforcement-learning.md
   - 人与社会: 
     - 社会幻象: human-society/social-illusions.md

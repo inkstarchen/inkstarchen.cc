@@ -24,3 +24,40 @@ n层次的证明用递推的形式
 
 AB=0的情况，则视作AX=0的解空间的讨论情况。（从不同的眼光去看待同样的式子）
 代数余子式是行列式计算
+
+## 上确界证明
+
+- 放缩出上界
+- 证明上界可取到
+
+**例题**：Operator norms
+
+> 从绝对数不等式入手证明其界，往题目的形式靠拢,凑形式是数学题目的重要手段.
+
+Suppose that $A \in \mathbb{R}^{m \times n}$, which can be viewed as a linear transformation from $\mathbb{R}^n$ to $\mathbb{R}^m$. Please show that the following operator norms’ equality.
+
+a.Let
+
+$$
+\|A\|_1 = \sup_{x \in \mathbb{R}^n,\, x \neq 0} \frac{\|Ax\|_1}{\|x\|_1}.
+$$
+
+Please show that
+
+$$
+\|A\|_1 = \max_{1 \le j \le n} \sum_{i=1}^{m} |a_{ij}|.
+\tag{3}
+$$
+
+b.Let
+
+$$
+\|A\|_\infty = \sup_{x \in \mathbb{R}^n,\, x \neq 0} \frac{\|Ax\|_\infty}{\|x\|_\infty}.
+$$
+
+Please show that
+
+$$
+\|A\|_\infty = \max_{1 \le i \le m} \sum_{j=1}^{n} |a_{ij}|.
+\tag{4}
+$$

@@ -25,6 +25,11 @@
 
     $$\langle \nabla f(x) - \nabla f(y), x - y \rangle \geq 0.$$
 
+!!! info "等价定义3"
+    Let $Q$ be an open set. A twice continuously differentiable function $f$ belongs to the class $\mathcal{F}^2(Q)$ if and only if for any $x \in Q$ we have
+
+    $$\nabla^2 f(x) \geq 0.$$
+
 > 有意思的换元 $x_\tau = x + \tau (y-x)$
 
 ### 凸函数的性质
