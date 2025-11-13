@@ -4,156 +4,84 @@ repo_url: https://github.com/inkstarchen/inkstarchen.cc
 use_directory_urls: true
 nav:
   - 阅读指引: index.md
-  - 思维与知识:
-      - 总论: learning/index.md
-      - 马克思主义: learning/marxism/marxism.md
-      - 历史经验: learning/history.md
-      - 博弈论基础: learning/game-theory.md
-      - 物理学: learning/physics.md
-      - 设计: learning/design.md
-      - 毛泽东思想与中国特色社会主义理论体系概论: learning/maogai.md
-      - 杂项: learning/others.md
-  - 数学工具:
-    - 总论: maths/index.md
-    - 数学基础:
-        - 基本定理: maths/bases/basic-theorem.md
-        - 欧几里得空间: maths/bases/euclidean-space.md
-        - 范数: maths/bases/norm.md
-        - 数学工具: maths/bases/math-tools.md
-    - 数理逻辑: 
-        - 命题逻辑与谓词逻辑: maths/mathematical_logic/statement_predicate_logic.md
-        - 推理: maths/mathematical_logic/infer.md
-    - 优化基础理论:
-      - Lec1: maths/optimization/Lec1.md
-      - 拉格朗日乘子法: maths/optimization/lagrange.md
-      - 新记录: maths/optimization/Theorem.md
-    - 理论计算机科学导引:
-      - 编码: maths/Theorical/encoding.md
-      - 定义计算: maths/Theorical/computation.md
-      - 语法糖: maths/Theorical/sugar.md
-      - 代码与数据: maths/Theorical/code_data.md
-      - 无限域函数、自动机和正则表达式: maths/Theorical/regular.md
-      - 未定义: maths/Theorical/un.md
-      - 参考书籍: maths/Theorical/reference.md
-    - 数学分析:
-      - 函数: maths/calculate/function.md
-      - 函数极限: maths/calculate/functionlimit.md
-      - 函数性质: maths/calculate/Pfunction.md
-      - 微积分定理: maths/calculate/cal2.md
-      - 无界函数反常积分: maths/calculate/cal1.md
-      - 其它定理: maths/calculate/otherTheorem.md
-      - 数列: maths/calculate/number.md
-      - 实数系完备性定理: maths/calculate/Theorem1.md
-    - 线性代数: 
-      - 总论: maths/linear/index.md 
-      - 抽象部分: maths/linear/abstract.md
-      - 矩阵: maths/linear/matrix.md
-      - 矩阵运算: maths/linear/calmatrix.md
-      - 特殊矩阵分类: maths/linear/specialMatrix.md
-      - 特征值与特征向量: maths/linear/characteristic.md
-      - 线性代数证明: maths/linear/proof.md
-      - 线性空间: maths/linear/space.md
-      - 线性映射: maths/linear/mapping.md
-      - 向量: maths/linear/vector.md
-      - 行列式: maths/linear/matrix2.md
-    - 概率论: 
-      - 概率论知识: maths/probability/probability.md
-      - 分布函数表: maths/probability/distribution.md
-    - 工具: 
-      - 卡尔曼滤波: maths/tools/Kalman-filter.md
-      - 拉格朗日乘子法: maths/tools/lagrange.md
-      - 傅里叶变换: maths/tools/fourier.md
-  - 计算机科学与技术:
-    - 阅读须知: cs-tech/index.md
-    - 数据库系统:
-        - 理论知识:
-          - 总览: cs-tech/database/theory.md
-          - 物理存储: cs-tech/database/physical-level.md
-          - 关系模型: cs-tech/database/relation_schema.md
-          - 数据库设计: cs-tech/database/base_design.md
-          - 索引: cs-tech/database/indexes.md
-          - 查询开销估计与优化: cs-tech/database/query.md
-          - 事务:  cs-tech/database/transaction.md
-          - 恢复管理器: cs-tech/database/recoverymanager.md
-          - 动态内存调度: cs-tech/database/memory-management.md
-        - Mysql使用: cs-tech/database/mysql.md
-        - Mysql知识: cs-tech/database/mysql-know.md
-    - 文件类型: 
-      - GLTF文件: cs-tech/files/gltf.md
-      - SO文件: cs-tech/files/so.md
-      - ELF文件: cs-tech/files/ELF.md
-    - 计算机系统: 
-      - 总论: cs-tech/computer-sys/computer-system.md
-      - 计算机如何运作: cs-tech/computer-sys/how-computer-work.md
-      - 计算机简史: cs-tech/computer-sys/computer-history.md
-      - 处理器架构: cs-tech/computer-sys/structure.md
-      - 缓存机制: cs-tech/computer-sys/cache.md
-      - 指标计算与思想: cs-tech/computer-sys/mechanism.md
-      - 分页机制: cs-tech/computer-sys/paging.md
-      - 流水线与乱序执行: cs-tech/computer-sys/pipeline.md
-      - 文件系统: cs-tech/computer-sys/filesystem.md
-      - 进程与线程: cs-tech/computer-sys/process-thread.md
-      - 磁盘管理: cs-tech/computer-sys/tape.md
-      - 并行计算: cs-tech/computer-sys/parallel.md
-      - IO: cs-tech/computer-sys/IO.md
-      - 电路设计与Verilog使用: cs-tech/computer-sys/verilog.md
-    - 计算机网络: 
-      - 网络: cs-tech/computer-network/network.md
-      - 杂七杂八: cs-tech/computer-network/other.md
-      - 服务器软件: cs-tech/computer-network/serversoftware.md
-      - Nginx介绍: cs-tech/computer-network/learn-Nginx.md
-    - 计算机视觉: 
-      - 补充内容: cs-tech/computer-vision/appendix.md
-    - 计算机图形学:
-      - 总论: cs-tech/computer-graphics/index.md
-      - OpenGL使用: cs-tech/computer-vision/opengl.md
-      - 变换: cs-tech/computer-graphics/transform.md
-      - 透明物体绘制: cs-tech/computer-graphics/transparency.md
-      - 光照: cs-tech/computer-graphics/lighting.md
-      - 多实例: cs-tech/computer-graphics/instance.md
-      - 后处理: cs-tech/computer-graphics/post-processing.md
-      - 物理: cs-tech/computer-graphics/physics.md
-      - 性能优化: cs-tech/computer-graphics/performance.md
-    - 量子计算:
-      - 总论: cs-tech/quantum/quantum.md
-      - 量子比特: cs-tech/quantum/qubit.md
-      - 量子门: cs-tech/quantum/gate.md
-      - 量子计算: cs-tech/quantum/quantum-computing.md
-      - 量子实验: cs-tech/quantum/quantum-experiment.md
-      - 术语: cs-tech/quantum/terminology.md
-    - 人工智能: 
-      - 引论: cs-tech/AI/ai-introduction.md
-      - 机器学习: cs-tech/AI/machine-learning.md
-      - 贝叶斯分类器: cs-tech/AI/bayesian.md
-      - 深度学习: cs-tech/AI/deep-learning.md
-      - 强化学习: cs-tech/AI/reinforcement-learning.md
-      - 蒙特卡洛搜索: cs-tech/AI/montecarlo.md
-      - 多智能体强化学习: cs-tech/AI/multi-agent-reinforcement-learning.md
-  - 人与社会: 
-    - 社会幻象: human-society/social-illusions.md
-    - 社会心理学: human-society/social-psychology.md
-    -  政府: human-society/government.md
-    - 工作生活: human-society/society.md
-    - 迈向社会: human-society/school-society.md
-    - 注意力: human-society/attention.md
-    - 原则与策略: human-society/strategy.md
-  - 人之体验:
-    - 知识、教育、研究: Experience/know.md
-    - 生活: Experience/index.md
-    - 杂言: Experience/mix.md
-    - 摄影: Experience/photo/photograph.md
-    - 铭记前人之言: Experience/words.md
-    - 情绪: Experience/emotion.md
-    - 禅: Experience/zen.md
+  - 信念网: my-blief.md
+  - 工作空间:
+      - 总论: workspace/index.md
+      - 优化基础理论:
+        - Lec1: workspace/optimization/Lec1.md
+        - 拉格朗日乘子法: workspace/optimization/lagrange.md
+        - 新记录: workspace/optimization/Theorem.md
+        - 作业: workspace/optimization/hw.md
+      - 理论计算机科学导引:
+        - 编码: workspace/Theorical/encoding.md
+        - 定义计算: workspace/Theorical/computation.md
+        - 语法糖: workspace/Theorical/sugar.md
+        - 代码与数据: workspace/Theorical/code_data.md
+        - 无限域函数、自动机和正则表达式: workspace/Theorical/regular.md
+        - 未定义: workspace/Theorical/un.md
+        - 参考书籍: workspace/Theorical/reference.md
+      - 工具: 
+        - 卡尔曼滤波: workspace/tools/Kalman-filter.md
+        - 拉格朗日乘子法: workspace/tools/lagrange.md
+        - 傅里叶变换: workspace/tools/fourier.md
+      - 计算机系统: 
+        - 总论: workspace/computer-sys/computer-system.md
+        - 计算机如何运作: workspace/computer-sys/how-computer-work.md
+        - 计算机简史: workspace/computer-sys/computer-history.md
+        - 缓存机制: workspace/computer-sys/cache.md
+        - 指标计算与思想: workspace/computer-sys/mechanism.md
+        - 分页机制: workspace/computer-sys/paging.md
+        - 流水线与乱序执行: workspace/computer-sys/pipeline.md
+        - 文件系统: workspace/computer-sys/filesystem.md
+        - 进程与线程: workspace/computer-sys/process-thread.md
+        - 并行计算: workspace/computer-sys/parallel.md
+        - IO: workspace/computer-sys/IO.md
+      - 计算机视觉: 
+        - 补充内容: workspace/computer-vision/appendix.md
+      - 计算机图形学:
+        - 总论: workspace/computer-graphics/index.md
+        - OpenGL使用: workspace/computer-graphics/opengl.md
+        - 变换: workspace/computer-graphics/transform.md
+        - 透明物体绘制: workspace/computer-graphics/transparency.md
+        - 光照: workspace/computer-graphics/lighting.md
+        - 多实例: workspace/computer-graphics/instance.md
+        - 后处理: workspace/computer-graphics/post-processing.md
+        - 物理: workspace/computer-graphics/physics.md
+        - 性能优化: workspace/computer-graphics/performance.md
+      - 量子计算:
+        - 总论: workspace/quantum/quantum.md
+        - 量子比特: workspace/quantum/qubit.md
+        - 量子门: workspace/quantum/gate.md
+        - 量子计算: workspace/quantum/quantum-computing.md
+        - 量子实验: workspace/quantum/quantum-experiment.md
+        - 量子算法: workspace/quantum/quantum-algorithm.md
+        - 量子测量: workspace/quantum/quantum-measurement.md
+        - 量子纠错: workspace/quantum/quantum-error-correction.md
+        - 术语: workspace/quantum/terminology.md
+      - 人工智能: 
+        - 机器学习: workspace/AI/machine-learning.md
+        - 贝叶斯分类器: workspace/AI/bayesian.md
+      - 线性代数: workspace/linear.md 
+      - 概率论知识: workspace/probability.md
+      - 技术累计:
+        - 索引结构: workspace/database/indexes.md
+        - 恢复管理器: workspace/database/recoverymanager.md
+        - 存储结构: workspace/database/physical-level.md
+      - 文件类型: 
+        - GLTF文件: workspace/files/gltf.md
+        - SO文件: workspace/files/so.md
+        - ELF文件: workspace/files/ELF.md
+  - 启发材料: 
     - 书籍:
-      - 大问题:简明哲学导论: Experience/Books/big_questions.md
-      - 雕刻时光: Experience/Books/curve_time.md
-    - 旧文: Experience/old-words.md
+      - 大问题:简明哲学导论: inspiration/Books/big_questions.md
+      - 雕刻时光: inspiration/Books/curve_time.md
+      - 社会幻象: inspiration/Books/social-illusions.md
+    - 博弈论: inspiration/game-theory.md
+    - 社会心理学: inspiration/social-psychology.md
+    - 旧文归档: inspiration/old-words.md
     - 音乐:
-      - 工作流音乐: Experience/music/workflow.md
+      - 工作流音乐: inspiration/music/workflow.md
   - 技术知识:
-      - SSH:
-        - 什么是SSH: tech-know/SSH/SSH.md
       - C++:
         - 基本语法: tech-know/Cpp/Cpp-basic.md
         - 编写规范: tech-know/Cpp/Cpp-rule.md
@@ -170,8 +98,6 @@ nav:
       - 鸿蒙应用开发经验:
         - 基础知识: tech-know/Harmony/HOS-basic.md
         - 框架: tech-know/Harmony/HOS-framework.md
-      - Python: tech-know/Python.md
-      - Learn Git: tech-know/LearnGit.md
       - Learn Makefile: tech-know/Makefile.md
       - 网站搭建:
         - mkdocs配置: tech-know/mkdocs.md
