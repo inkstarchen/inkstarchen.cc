@@ -81,27 +81,6 @@ nav:
     - 旧文归档: inspiration/old-words.md
     - 音乐:
       - 工作流音乐: inspiration/music/workflow.md
-  - 技术知识:
-      - C++:
-        - 基本语法: tech-know/Cpp/Cpp-basic.md
-        - 编写规范: tech-know/Cpp/Cpp-rule.md
-        - 关键字: tech-know/Cpp/Cpp-keyword.md
-        - Vector 容器的使用: tech-know/Cpp/Cpp-vector.md
-        - 类的使用: tech-know/Cpp/Cpp-class.md
-        - G++ 编译事项: tech-know/Cpp/g++.md
-        - Allocator: tech-know/Cpp/Cpp-allocator.md
-        - 异常: tech-know/Cpp/Cpp-exception.md
-        - 迭代器: tech-know/Cpp/Cpp-iterators.md
-        - 异步执行: tech-know/Cpp/Cpp-async.md
-      - VNC:
-        - BUG: tech-know/VNC/VNC-bug.md
-      - 鸿蒙应用开发经验:
-        - 基础知识: tech-know/Harmony/HOS-basic.md
-        - 框架: tech-know/Harmony/HOS-framework.md
-      - Learn Makefile: tech-know/Makefile.md
-      - 网站搭建:
-        - mkdocs配置: tech-know/mkdocs.md
- 
 
 markdown_extensions:
   - md_in_html  
