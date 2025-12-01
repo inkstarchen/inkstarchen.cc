@@ -38,29 +38,18 @@
 
 - 如何理解**P-R曲线**
 
-**平衡点（Break-Event Point, 简称：BEP）**： 曲线上“查准率=查全率”时的取值，评估P-R 曲线的性能
+**平衡点（Break-Event Point, 简称：BEP）*
 
 - BEP过于简化，我们进一步有F1 度量
-
-$F_1 = \frac{2 \times P \times R}{P + R} = \frac{2 \times TP}{样例总数 + TP - TN}$
 
 - 更一般形式，我们对于查准率和查全率有不同的重视程度
 
 $F_\beta = \frac{(1+\beta^2)\times P \times R}{(\beta^2 \times P + R)}$
 
-- $\beta = 1$:标准F1
-- $\beta > 1$:查全率（逃犯追查）
-- $\beta < 1$:查准率（商品推荐）
 
-- 当我们有多个混淆矩阵时，先分别计算查准率和查全率，再做平均后做后续计算，得到**宏F1（macro-F1）**，若先将矩阵的对应元素取平均，再做后续计算，则得到**微F1（micro-F1）**
+- **宏F1（macro-F1）**核**微F1（micro-F1）**
 
-**ROC曲线**：假正例率作为横轴，真正例率作为纵轴.根据学习器的预测结果对样例（连续值预测输出）排序，按次顺序逐个把样本作为正例预测。
-
-- 给定$m^+$个正例和$m^-$的反例，若当前点为真正例则对应标记点$(x,y+\frac{1}{m^+})$；反之则对应标记点坐标为$(x + \frac{1}{m^-},y)$
-
-- 假正例率：$FPR = \frac{FP}{FP + TN}$
-- 真正例率：$TPR = \frac{TP}{TP + FN}$
-
+**ROC曲线**的定义和构建
 
 **AUC值**：ROC曲线下的面积 | 衡量了样本预测的排序质量
 
@@ -114,80 +103,20 @@ $$\bar{\epsilon} = max \epsilon \quad s.t. \sum^{m}_{i=\epsilon_0 \times m + 1} 
 
 #### 偏差与方差 | 为什么具有这样性能
 
-以回归任务为例：学习算法的期望预期为：
-
-$$\bar{f}(x) = E_D [f(x;D)]$$
-
-使用样本数目相同的不同训练集产生的方差为
-
-$$var(x) = E_D[(f(x;D)-\bar{f}(x))^2]$$
-
-噪声为:
-
-$$\epsilon^2 = E_D[(y_D - y)^2]$$
-
-期望输出与真实标记的差别称为偏差
-
 假设噪声期望为0，期望泛化误差拆解为偏差、方差与噪声之和
 
-$$E(f;D) = E_D[(f(x;D)-\bar{f}(x))^2] + (\bar{f}(x) - y ) ^2 + E_D[(y_d - y)^2]$$
-
-$$E(f;D)=bias^2(x) + var(x) + \epsilon^2$$
-
-一般来说，偏差与方差有冲突，偏差-方差窘境（bias-variance dilemma）
-
-- 欠拟合时，偏差主导泛化错误率
-- 拟合程度增强，方差逐渐主导泛化误差
-- 拟合能力过强，训练数据轻微扰动会导学习器显著变化
-
-### 线性模型
-
-- $f(x_i;W,b)$ $W$ 为参数 $x_i$为特征 $b$为偏置项
-
-- 支持向量机、神经网络
+- 偏差-方差窘境（bias-variance dilemma）
 
 ## 监督学习
 ### 回归分析
 
-> 回归内容需要重写
+- 一元线性回归
+- 梯度下降，链式求导
+- 对数线性回归
 
-####  归档材料
-
-[20250920 | 线性模型](https://inkstarchen.github.io/LifeNote/pages/62b3ce/#%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B)
-[20250922 | 附加内容](https://inkstarchen.github.io/LifeNote/pages/9c35b1/#%E9%99%84%E5%8A%A0%E5%86%85%E5%AE%B9%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B)
-
-#### 一元线性回归
-
-符号表示
-
-- m: 训练集样本数
-- x：输入变量/特征
-- y：输出变量/目标变量
-- （x，y）：一个训练样本
-- $(x^{(i)},y^{(i)})$:第i个训练样本
-- h:代表学习算法的解决方案或函数也称为假设
-
-代价函数
-
-- 损失函数在整个训练集上的平均
-
-单变量线性回归
-
-$$\frac{1}{2m}\sum^m_{i=1}(h_\theta (x^{(i)})-y^{(i)})^2$$
-
-梯度下降
-
-$$\theta_j:= \theta_j - \alpha \frac{\partial}{\partial \theta_j}J(\theta_0,\theta_1)$$
-
-
-类型
-
-- 批量梯度下降(Batch Gradient Descent, BGD) ^e0f401
-	- 每一步使用整个训练集的全部样本
+- 批量梯度下降(Batch Gradient Descent, BGD)
 - 随机梯度下降(Stochastic Gradient Descent,SGD)
-	- 每次只用一个样本，收敛快，但可能出现目标函数震荡不稳定线性
 - 小批量梯度下降(Mini-batch Gradient Descent, MBGD)
-	- 使用一部分样本，最常用
 
 #### 多元线性回归
 
@@ -443,6 +372,26 @@ $W$的闭式解则是$S_w^{-1}S_b$的$N-1$个最大广义特征值所对应的�
 
 ## 支持向量机
 
+### 前置
+
+- 拉格朗日，KKT条件
+
+### 自查清单
+
+- 什么是支持向量（support vector）、间隔（margin）
+- 为啥要用到核函数，它的定义和要求
+- SMO（Sequential Minimal Optimization）的基本思路
+- 软间隔和硬间隔的区别、啥是松弛变量
+- 结构风险和经验风险
+- 什么是支持向量回归的思想
+- 什么是核线性判别分析
+
+### 简要知识
+
+基于训练集D在样本空间划分超平面
+
+
+
 hinge 损失: $\ell_{\text{hinge}}(z) = \max(0, 1 - z)$;    
 
 指数损失(exponential loss): $\ell_{\text{exp}}(z) = \exp(-z)$;    
@@ -675,6 +624,9 @@ LVW (Las Vegas Wrapper)方法，在拉斯维加斯方法(Las Vegas method)框架
 
 - 想法和优化公式
 
+## 卷积神经网络
+
+- 产生思路和适用
 
 
 
