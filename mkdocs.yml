@@ -13,6 +13,7 @@ nav:
         - 新记录: workspace/optimization/Theorem.md
         - 作业: workspace/optimization/hw.md
       - 理论计算机科学导引:
+        - 总论: workspace/Theorical/index.md
         - 编码: workspace/Theorical/encoding.md
         - 定义计算: workspace/Theorical/computation.md
         - 语法糖: workspace/Theorical/sugar.md
@@ -60,7 +61,6 @@ nav:
         - 术语: workspace/quantum/terminology.md
       - 人工智能: 
         - 机器学习: workspace/AI/machine-learning.md
-        - 贝叶斯分类器: workspace/AI/bayesian.md
       - 线性代数: workspace/linear.md 
       - 概率论知识: workspace/probability.md
       - 技术累计:

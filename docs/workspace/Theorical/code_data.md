@@ -64,7 +64,7 @@ for i in range(n):
     update(V,i,xi)
 for(i,j,k) in P:
     a = get(V,j)
-    b = get(b,k)
+    b = get(V,k)
     c = NAND(a,b)
     Update(V,i,c)
 for j in range(m):
