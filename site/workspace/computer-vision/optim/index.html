@@ -9,63 +9,86 @@
       
       
       
-        <link rel="prev" href="../machine-learning/">
       
       
-        <link rel="next" href="../../linear/">
+        
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>贝叶斯分类器 - 轻墨星的笔记库</title>
+        <title>优化 - 轻墨星的笔记库</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.4af4bdda.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
   
   
     
+      
+      
     
   
     
+      
+      
     
   
     
+      
+      
     
   
     
+      
+      
     
   
     
+      
+      
     
   
     
+      
+      
     
   
     
+      
+      
     
   
     
+      
+      
     
   
     
+      
+      
     
   
     
+      
+      
     
   
     
+      
+      
     
   
     
+      
+      
     
   
   
@@ -93,7 +116,6 @@
     
       
 
-    
     
     
   </head>
@@ -147,7 +169,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              贝叶斯分类器
+              优化
             
           </span>
         </div>
@@ -206,7 +228,7 @@
         <a href="https://github.com/inkstarchen/inkstarchen.cc" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     inkstarchen/inkstarchen.cc
@@ -270,12 +292,10 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../../" class="md-tabs__link">
           
   
@@ -357,7 +377,7 @@
       <a href="https://github.com/inkstarchen/inkstarchen.cc" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     inkstarchen/inkstarchen.cc
@@ -379,9 +399,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     阅读指引
+  
+
     
   </span>
+  
   
 
       </a>
@@ -401,9 +426,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     信念网
+  
+
     
   </span>
+  
   
 
       </a>
@@ -415,8 +445,6 @@
       
   
   
-    
-  
   
   
     
@@ -454,17 +482,14 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -473,24 +498,33 @@
   
   
   <span class="md-ellipsis">
+    
+  
     工作空间
+  
+
     
   </span>
+  
   
 
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            工作空间
+            
+  
+    工作空间
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -532,9 +566,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     优化基础理论
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -543,7 +582,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
-            优化基础理论
+            
+  
+    优化基础理论
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -559,9 +602,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Lec1
+  
+
     
   </span>
+  
   
 
       </a>
@@ -582,9 +630,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     拉格朗日乘子法
+  
+
     
   </span>
+  
   
 
       </a>
@@ -605,9 +658,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     新记录
+  
+
     
   </span>
+  
   
 
       </a>
@@ -628,9 +686,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     作业
+  
+
     
   </span>
+  
   
 
       </a>
@@ -655,6 +718,10 @@
   
     
     
+      
+        
+          
+        
       
         
       
@@ -684,25 +751,43 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
-          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
-            
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Theorical/" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
+    
+  
     理论计算机科学导引
+  
+
     
   </span>
   
+  
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
-            理论计算机科学导引
+            
+  
+    理论计算机科学导引
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -716,9 +801,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     编码
+  
+
     
   </span>
+  
   
 
       </a>
@@ -739,9 +829,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     定义计算
+  
+
     
   </span>
+  
   
 
       </a>
@@ -762,9 +857,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     语法糖
+  
+
     
   </span>
+  
   
 
       </a>
@@ -785,9 +885,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     代码与数据
+  
+
     
   </span>
+  
   
 
       </a>
@@ -808,9 +913,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     无限域函数、自动机和正则表达式
+  
+
     
   </span>
+  
   
 
       </a>
@@ -831,9 +941,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     未定义
+  
+
     
   </span>
+  
   
 
       </a>
@@ -854,9 +969,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     参考书籍
+  
+
     
   </span>
+  
   
 
       </a>
@@ -907,9 +1027,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     工具
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -918,7 +1043,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_4">
             <span class="md-nav__icon md-icon"></span>
-            工具
+            
+  
+    工具
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -934,9 +1063,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     卡尔曼滤波
+  
+
     
   </span>
+  
   
 
       </a>
@@ -957,9 +1091,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     拉格朗日乘子法
+  
+
     
   </span>
+  
   
 
       </a>
@@ -980,9 +1119,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     傅里叶变换
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1049,9 +1193,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     计算机系统
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1060,7 +1209,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_5">
             <span class="md-nav__icon md-icon"></span>
-            计算机系统
+            
+  
+    计算机系统
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1076,9 +1229,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     总论
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1099,9 +1257,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     计算机如何运作
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1122,9 +1285,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     计算机简史
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1145,9 +1313,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     缓存机制
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1168,9 +1341,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     指标计算与思想
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1191,9 +1369,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     分页机制
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1214,9 +1397,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     流水线与乱序执行
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1237,9 +1425,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     文件系统
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1260,9 +1453,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     进程与线程
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1283,9 +1481,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     并行计算
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1306,9 +1509,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     IO
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1355,9 +1563,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     计算机视觉
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1366,7 +1579,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_6">
             <span class="md-nav__icon md-icon"></span>
-            计算机视觉
+            
+  
+    计算机视觉
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1377,14 +1594,19 @@
   
   
     <li class="md-nav__item">
-      <a href="../../computer-vision/appendix/" class="md-nav__link">
+      <a href="../appendix.md" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
+    
+  
     补充内容
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1450,9 +1672,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     计算机图形学
+  
+
     
   </span>
+  
   
 
             </a>
@@ -1467,7 +1694,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_7">
             <span class="md-nav__icon md-icon"></span>
-            计算机图形学
+            
+  
+    计算机图形学
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1485,9 +1716,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     OpenGL使用
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1508,9 +1744,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     变换
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1531,9 +1772,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     透明物体绘制
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1554,9 +1800,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     光照
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1577,9 +1828,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     多实例
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1600,9 +1856,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     后处理
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1623,9 +1884,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     物理
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1646,9 +1912,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     性能优化
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1711,9 +1982,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     量子计算
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1722,7 +1998,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_8">
             <span class="md-nav__icon md-icon"></span>
-            量子计算
+            
+  
+    量子计算
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1738,9 +2018,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     总论
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1761,9 +2046,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     量子比特
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1784,9 +2074,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     量子门
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1807,9 +2102,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     量子计算
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1830,9 +2130,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     量子实验
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1853,9 +2158,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     量子算法
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1876,9 +2186,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     量子测量
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1899,9 +2214,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     量子纠错
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1922,9 +2242,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     术语
+  
+
     
   </span>
+  
   
 
       </a>
@@ -1945,17 +2270,13 @@
                 
   
   
-    
   
   
-  
     
     
       
         
       
-        
-      
     
     
     
@@ -1963,11 +2284,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
         
           
           <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
@@ -1975,18 +2296,27 @@
   
   
   <span class="md-ellipsis">
+    
+  
     人工智能
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_9">
             <span class="md-nav__icon md-icon"></span>
-            人工智能
+            
+  
+    人工智能
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1997,219 +2327,22 @@
   
   
     <li class="md-nav__item">
-      <a href="../machine-learning/" class="md-nav__link">
+      <a href="../../AI/machine-learning/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
+    
+  
     机器学习
+  
+
     
   </span>
+  
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    贝叶斯分类器
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    贝叶斯分类器
-    
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      贝叶斯决策论
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="贝叶斯决策论">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      极大似然估计
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#naive-bayes-classifier" class="md-nav__link">
-    <span class="md-ellipsis">
-      朴素贝叶斯分类器(naive Bayes classifier)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="朴素贝叶斯分类器(naive Bayes classifier)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#laplacian-correction" class="md-nav__link">
-    <span class="md-ellipsis">
-      拉普拉斯修正(Laplacian correction)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      朴素贝叶斯分类器的使用
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      半朴素贝叶斯分类器
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      其它分类器
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bayesian-network" class="md-nav__link">
-    <span class="md-ellipsis">
-      贝叶斯网(Bayesian network)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="贝叶斯网(Bayesian network)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      三变量间的典型依赖关系
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      分析条件独立性
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      评分函数
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      推断
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="推断">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    <span class="md-ellipsis">
-      吉布斯采样
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2235,9 +2368,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     线性代数
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2258,9 +2396,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     概率论知识
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2303,9 +2446,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     技术累计
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2314,7 +2462,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_12">
             <span class="md-nav__icon md-icon"></span>
-            技术累计
+            
+  
+    技术累计
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2330,9 +2482,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     索引结构
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2353,9 +2510,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     恢复管理器
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2376,9 +2538,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     存储结构
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2429,9 +2596,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     文件类型
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2440,7 +2612,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_13_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_13">
             <span class="md-nav__icon md-icon"></span>
-            文件类型
+            
+  
+    文件类型
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2456,9 +2632,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     GLTF文件
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2479,9 +2660,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     SO文件
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2502,9 +2688,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     ELF文件
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2566,9 +2757,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     启发材料
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2577,7 +2773,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            启发材料
+            
+  
+    启发材料
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2615,9 +2815,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     书籍
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2626,7 +2831,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_1">
             <span class="md-nav__icon md-icon"></span>
-            书籍
+            
+  
+    书籍
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2642,9 +2851,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     大问题:简明哲学导论
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2665,9 +2879,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     雕刻时光
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2688,9 +2907,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     社会幻象
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2719,9 +2943,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     博弈论
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2742,9 +2971,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     社会心理学
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2765,9 +2999,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     旧文归档
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2806,9 +3045,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     音乐
+  
+
     
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2817,7 +3061,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_5">
             <span class="md-nav__icon md-icon"></span>
-            音乐
+            
+  
+    音乐
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2833,9 +3081,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     工作流音乐
+  
+
     
   </span>
+  
   
 
       </a>
@@ -2876,155 +3129,8 @@
   
   
   
+    
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      贝叶斯决策论
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="贝叶斯决策论">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      极大似然估计
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#naive-bayes-classifier" class="md-nav__link">
-    <span class="md-ellipsis">
-      朴素贝叶斯分类器(naive Bayes classifier)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="朴素贝叶斯分类器(naive Bayes classifier)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#laplacian-correction" class="md-nav__link">
-    <span class="md-ellipsis">
-      拉普拉斯修正(Laplacian correction)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      朴素贝叶斯分类器的使用
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      半朴素贝叶斯分类器
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      其它分类器
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bayesian-network" class="md-nav__link">
-    <span class="md-ellipsis">
-      贝叶斯网(Bayesian network)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="贝叶斯网(Bayesian network)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      三变量间的典型依赖关系
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      分析条件独立性
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      评分函数
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      推断
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="推断">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    <span class="md-ellipsis">
-      吉布斯采样
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -3034,6 +3140,7 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
@@ -3043,112 +3150,13 @@
   
 
 
-  <h1>贝叶斯分类器</h1>
-
-<h2 id="_1">贝叶斯决策论</h2>
-<p>贝叶斯决策论(Bayesian decision theory)是概率框架下实施决策的基本方法.</p>
-<blockquote>
-<p>分类任务中，假设所有相关概率都已知的理想情形，选择最优的类别标记。</p>
-</blockquote>
-<p>给定 <span class="arithmatex">\(N\)</span> 个类别，令 <span class="arithmatex">\(\lambda_{ij}\)</span>代表将第<span class="arithmatex">\(j\)</span>类样本误分类为第<span class="arithmatex">\(i\)</span>类所产生的损失，则基于后验概率将样本<span class="arithmatex">\(x\)</span>分到第<span class="arithmatex">\(i\)</span>类的条件风险为：</p>
-<div class="arithmatex">\[R(c_i|x) = \overset{N}{\underset{j=1}{\sum}}\lambda_{ij}P(c_j|x)\]</div>
-<p><strong>贝叶斯判定准则(Bayes decision rule)</strong></p>
-<div class="arithmatex">\[h^*(x) = \underset{c \in \mathcal{Y}}{arg \; min}R(c|x)\]</div>
+<h1 id="_1">优化</h1>
 <ul>
-<li><span class="arithmatex">\(h^*\)</span>称为 <strong>贝叶斯最优分类器(Bayes optimal classifier)</strong>,其总体风险称为<strong>贝叶斯风险(Bayes risk)</strong></li>
-<li>反映了<strong>学习性能的理论上限</strong></li>
+<li>梯度下降有哪些方法他们的优缺点？</li>
+<li>Huber Loss 、 L1 Loss 、 L2 Loss分别是什么？</li>
+<li>RANSAC是怎么做的？</li>
+<li>怎么解决ill-posed problem？</li>
 </ul>
-<p>两种基本策略：</p>
-<ul>
-<li>
-<p><strong>判别式(discrimnative)模型</strong> </p>
-<ul>
-<li>思路：直接对<span class="arithmatex">\(P(c|x)\)</span>建模</li>
-<li>代表：决策树、BP神经网络、SVM</li>
-</ul>
-</li>
-<li>
-<p><strong>生成式(generative)模型</strong></p>
-<ul>
-<li>思路：先对联合概率分布<span class="arithmatex">\(P(x,c)\)</span>建模，再由此获得<span class="arithmatex">\(P(c|x)\)</span></li>
-<li>代表：贝叶斯分类器</li>
-</ul>
-</li>
-</ul>
-<h3 id="_2">极大似然估计</h3>
-<p><strong>先假设某种概率分布形式，再基于训练样例对参数进行估计</strong></p>
-<p>假定<span class="arithmatex">\(P(x | c)\)</span>具有确定的概率分布形式，且被参数<span class="arithmatex">\(\theta_c\)</span>唯一确定.则任务就是利用训练集<span class="arithmatex">\(D\)</span>来估计参数<span class="arithmatex">\(\theta_c\)</span></p>
-<blockquote>
-<p>估计结果的准确性严重依赖于所假设的概率分布形式是否符合潜在的真实分布</p>
-</blockquote>
-<h3 id="naive-bayes-classifier">朴素贝叶斯分类器(naive Bayes classifier)</h3>
-<p><strong>三个假设</strong></p>
-<ul>
-<li>概率模型假设</li>
-<li>样本独立同分布假设</li>
-<li><strong>属性条件独立性假设（attribute conditional independence assumption）</strong></li>
-</ul>
-<div class="arithmatex">\[P(c|\textbf{x}) = \frac{P(c)P(\textbf{x}|c)}{P(\textbf{x})}$ = \frac{P(c)}{P(\textbf{x})} \overset{d}{\underset{i=1}{\prod}}P(x_i|c)\]</div>
-<p><span class="arithmatex">\(P(\textbf{x})\)</span>对所有类别相同，于是</p>
-<div class="arithmatex">\[h_{nb}(x) = \underset{c \in \mathcal{Y}}{arg \; max}P(c)\overset{d}{\underset{i=1}{\prod}}P(x_i|c)\]</div>
-<ul>
-<li>估计 <span class="arithmatex">\(P(c) = \frac{|D_c|}{|D|}\)</span></li>
-<li>估计 <span class="arithmatex">\(P(\textbf{x}|c)\)</span><ul>
-<li>对于离散属性,令 <span class="arithmatex">\(D_{c,x_i}\)</span>表示<span class="arithmatex">\(D_c\)</span>中在第<span class="arithmatex">\(i\)</span>个属性上取值为<span class="arithmatex">\(x_i\)</span>的样本组成的集合，则<span class="arithmatex">\(P(x_i|c) = \frac{|D_{c,x_i}|}{|D_c|}\)</span></li>
-<li>对于连续属性，考虑概率密度函数，假定<span class="arithmatex">\(p(x_i|c) \sim \mathcal{N}(\mu_{c,i},\sigma_{c,i}^2)\)</span>,则有<span class="arithmatex">\(p(x_i|c) = \frac{1}{\sqrt{2\pi}\sigma_{c,i}}e^{-\frac{(x_i-\mu_{c,i})^2}{2\sigma_{c,i}^2}}\)</span></li>
-</ul>
-</li>
-</ul>
-<h4 id="laplacian-correction">拉普拉斯修正(Laplacian correction)</h4>
-<p>若某个属性值在训练集中没有与某个类同时出现过，则概率连乘时将“抹去”其它属性提供的信息.</p>
-<p>令 <span class="arithmatex">\(N\)</span> 表示训练集 <span class="arithmatex">\(D\)</span> 中可能的类别数，<span class="arithmatex">\(N_i\)</span>表示第<span class="arithmatex">\(i\)</span>个属性可能的取值数</p>
-<div class="arithmatex">\[\hat{P}(c) = \frac{|D_c| + 1}{|D| + N}, \; \hat{P}(x_i|c) = \frac{|D_{c,x_i}| + 1}{|D_c| + N_i}\]</div>
-<blockquote>
-<p>假设了属性值与类别的均匀分布，额外引入的bias</p>
-</blockquote>
-<h4 id="_3">朴素贝叶斯分类器的使用</h4>
-<ul>
-<li>如果对预测要求高：则预计算所有概率估值，使用时查表</li>
-<li>如果数据更替频繁：则不进行然后训练，收到预测请求时再估值（懒惰学习，lazy learning）</li>
-<li>如果数据不断增加：则基于现有估值，对新样本设计的概率估值进行修正（增量学习, incremental learning）</li>
-</ul>
-<h3 id="_4">半朴素贝叶斯分类器</h3>
-<h3 id="_5">其它分类器</h3>
-<p><strong>AODE(Averaged One-Dependent Estimator)</strong></p>
-<ul>
-<li>尝试将每个属性作为超父构建 SPODE</li>
-<li>将拥有足够训练数据指出的 SPODE 集成起来作为最终结果</li>
-</ul>
-<p><strong>高阶依赖</strong> 提高泛化性能</p>
-<ul>
-<li>明显障碍：随着 <span class="arithmatex">\(k\)</span> 的增加，估计<span class="arithmatex">\(P(x_i|y,\textbf{pa}_i)\)</span>所需样本数将以指数级增加</li>
-</ul>
-<h3 id="bayesian-network">贝叶斯网(Bayesian network)</h3>
-<div class="arithmatex">\[B = \langle G, \Theta \rangle\]</div>
-<p>也称为 <strong>信念网</strong>（brief network）</p>
-<p>强调</p>
-<ul>
-<li>输入信息的主观本质</li>
-<li>对贝叶斯条件的依赖性</li>
-<li>因果与证据推理的区别</li>
-</ul>
-<h4 id="_6">三变量间的典型依赖关系</h4>
-<ul>
-<li>用有向无环图来建模变量间的依赖关系.</li>
-</ul>
-<h4 id="_7">分析条件独立性</h4>
-<p><strong>有向分离(D-separation)</strong></p>
-<p>道德图(moral graph)</p>
-<h4 id="_8">评分函数</h4>
-<p>通常基于信息论准则</p>
-<p>例如 <strong>最小描述长度（MDL, Minimal Description Length）</strong></p>
-<p>给定数据集 <span class="arithmatex">\(D\)</span>, 贝叶斯网<span class="arithmatex">\(B = \langle G, \Theta \rangle\)</span> 在 <span class="arithmatex">\(D\)</span> 上的评分函数：</p>
-<div class="arithmatex">\[s(B | D)\]</div>
-<h3 id="_9">推断</h3>
-<ul>
-<li>基于已知属性变量的观测值</li>
-</ul>
-<h4 id="_10">吉布斯采样</h4>
 
 
 
@@ -3203,10 +3211,11 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["search.suggest", "content.code.annotate", "content.code.select", "content.code.annotate", "content.code.copy", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["search.suggest", "content.code.annotate", "content.code.select", "content.code.annotate", "content.code.copy", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="../../../javascripts/mathjax.js"></script>
       
